@@ -336,15 +336,18 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   z-index: 1999;
   position: absolute;
   width: 100%;
-  background: #fff;
+  transition: background-color 0.1s ease-in-out;
+}
+.site-navbar.white-bg {
+  background-color: #fff;
+}
+.site-navbar .site-navigation.border-bottom {
+  border-bottom: 1px solid #f3f3f4 !important;
 }
 .site-navbar .site-logo {
   position: relative;
   left: 0;
   top: -5px;
-}
-.site-navbar .site-navigation.border-bottom {
-  border-bottom: 1px solid #f3f3f4 !important;
 }
 .site-navbar .site-navigation .site-menu {
   margin-bottom: 0;
@@ -2481,4 +2484,17 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 }
 .portfolio_details_inner .portfolio_right_text .list li i{
   color:#f1cd09
+}
+.dnd-section {
+  padding-left: 14rem;
+  padding-right: 3rem;
+  padding-top: 12rem;
+  padding-bottom: 0rem;
+}
+
+.dnd_area-row-0-background-image {
+  background-image: url("https://images.pexels.com/photos/673018/pexels-photo-673018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
 }
