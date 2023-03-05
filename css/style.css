@@ -1381,13 +1381,16 @@ h5,
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 20px; /* or any other value you prefer */
   background: #dee2e6;
 }
 
 .slide-one-item .owl-dots .owl-dot.active span {
   background: #4285f4;
+  width: 50px; /* or any other value you want */
+  transition: all 0.3s ease;
 }
+
 
 .block-12 {
   position: relative;
@@ -1979,8 +1982,12 @@ h5,
   text-align: center;
 }
 
+#testimonials-section {
+  height: 500px; /* adjust the height to your preference */
+}
+
 .testimonial blockquote {
-  font-size: 1.5rem;
+  font-size: 20x;
   font-style: italic;
 }
 
@@ -1988,6 +1995,10 @@ h5,
   max-width: 100px;
   margin: 0 auto;
   border-radius: 50%;
+}
+.site-section.testimonial-wrap {
+  padding: 60px 0; /* adjust the padding as desired */
+  background-color: #f8f9fa; /* adjust the background color as desired */
 }
 
 .breadcrumb-custom {
@@ -3006,4 +3017,46 @@ h5,
 
 #count1, #count2, #count3, #count4 {
   color: gray;
+}
+
+
+
+/* ------------------------------------------------------------------- 
+ * ## slider
+ * ------------------------------------------------------------------- */
+ .clients-outer {
+  margin-top: 3.6rem;
+  padding-bottom: 9rem;
+  text-align: center;
+  position: relative;
+}
+
+.clients__slide {
+  display: block;
+  opacity: .55;
+  padding: 1.5rem 2.8rem;
+  max-width: 50%;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.clients__slide:hover, .clients__slide:focus {
+  opacity: 1;
+}
+.clients {
+  overflow: hidden;
+}
+.clients__slides {
+  display: flex;
+  animation: slide 30s linear infinite;
+  margin-right: 30px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
