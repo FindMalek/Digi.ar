@@ -18,7 +18,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="path/to/magnific-popup.css">
         <link rel="stylesheet" href="path/to/fontawesome.min.css">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
     </head>
     <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
         <div id="overlayer"></div>
@@ -84,24 +85,20 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="container py-5 text-white">
-                <div class="site-blocks-cover row justify-content-center text-center">
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                        <span id="count1" class="display-4"></span>
-                        <h3>Clients Worked With</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <span id="count2" class="display-4"></span>
-                        <h3>Projects Completed</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <span id="count3" class="display-4"></span>
-                        <h3>Clients Satisfied</h3>
-                    </div>
-                    <div class="col-md-3">
-                        <span id="count4" class="display-4"></span>
-                        <h3>Hours of Support Provided</h3>
+
+            <div class="row clients-outer" data-aos="fade-up">
+                <div class="col-full">
+                    <div class="clients">
+                        <div class="clients__slides">
+                            <div class="count"><img src="images/clients/apple.png" class="client-image" /></div>
+                            <div class="count"><img src="images/clients/atom.png" class="client-image" /></div>
+                            <div class="count"><img src="images/clients/blackberry.png" class="client-image" /></div>
+                            <div class="count"><img src="images/clients/dropbox.png" class="client-image" /></div>
+                            <div class="count"><img src="images/clients/envato.png" class="client-image" /></div>
+                            <div class="count"><img src="images/clients/firefox.png" class="client-image" /></div>
+                            <div class="count"><img src="images/clients/joomla.png" class="client-image" /></div>
+                            <div class="count"><img src="images/clients/magento.png" class="client-image" /></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,20 +261,23 @@
                 </div>
             </div>
                 
-            <div class="row clients-outer" data-aos="fade-up">
-                <div class="col-full">
-                    <div class="clients">
-                        <div class="clients__slides">
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/apple.png" class="client-image" /></a>
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/atom.png" class="client-image" /></a>
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/blackberry.png" class="client-image" /></a>
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/dropbox.png" class="client-image" /></a>
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/envato.png" class="client-image" /></a>
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/firefox.png" class="client-image" /></a>
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/joomla.png" class="client-image" /></a>
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/magento.png" class="client-image" /></a>
-                            
-                        </div>
+            <div class="container py-5 text-white">
+                <div class="site-blocks-cover row justify-content-center text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-3">
+                        <span id="count1" class="display-4"></span>
+                        <h3>Clients Worked With</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <span id="count2" class="display-4"></span>
+                        <h3>Projects Completed</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <span id="count3" class="display-4"></span>
+                        <h3>Clients Satisfied</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <span id="count4" class="display-4"></span>
+                        <h3>Hours of Support Provided</h3>
                     </div>
                 </div>
             </div>
@@ -331,29 +331,183 @@
                     </div>
                 </div>
             </div>
-            <div class="footer py-5 text-center">
-                <div class="container">
-                    <div class="row mb-5">
-                        <div class="col-12">
-                            <p class="mb-0">
-                                <a href="#" class="p-3"><span class="icon-facebook"></span></a>
-                                <a href="#" class="p-3"><span class="icon-twitter"></span></a>
-                                <a href="#" class="p-3"><span class="icon-instagram"></span></a>
-                                <a href="#" class="p-3"><span class="icon-linkedin"></span></a>
-                                <a href="#" class="p-3"><span class="icon-pinterest"></span></a>
-                            </p>
+
+            <footer id="dk-footer" class="dk-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-4">
+                                <div class="dk-footer-box-info">
+                                    <a href="index.html" class="footer-logo">
+                                        <img src="images/Digital Army - black.svg" alt="footer_logo" class="img-fluid smoothscroll">
+                                    </a>
+                                    <p class="footer-info-text">
+                                       Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
+                                    </p>
+                                    <div class="footer-social-link">
+                                        <h3>Follow us</h3>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End Social link -->
+                                </div>
+                                <!-- End Footer info -->
+                                <div class="footer-awarad">
+                                    <img src="images/icon/best.png" alt="">
+                                    <p>We offer the best of the best!</p>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-12 col-lg-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="contact-us">
+                                            <div class="contact-icon">
+                                                <i class="fa fa-map-o" aria-hidden="true"></i>
+                                            </div>
+                                            <!-- End contact Icon -->
+                                            <div class="contact-info">
+                                                <h3>Jaipur India</h3>
+                                                <p>5353 Road Avenue</p>
+                                            </div>
+                                            <!-- End Contact Info -->
+                                        </div>
+                                        <!-- End Contact Us -->
+                                    </div>
+                                    <!-- End Col -->
+                                    <div class="col-md-6">
+                                        <div class="contact-us contact-us-last">
+                                            <div class="contact-icon">
+                                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                            </div>
+                                            <!-- End contact Icon -->
+                                            <div class="contact-info">
+                                                <h3>56 519 870</h3>
+                                                <p>Give us a call</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-6">
+                                        <div class="footer-widget footer-left-widget">
+                                            <div class="section-heading">
+                                                <h3>Useful Links</h3>
+                                                <span class="animate-border border-black"></span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#aboutus-section" class="smoothscroll">About us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#services-section" class="smoothscroll">Services</a>
+                                                </li>
+                                                <li>
+                                                    <a href="portfolio.html" class="smoothscroll">Projects</a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <a href="#contact-section"  class="smoothscroll">Contact us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog.html"  class="smoothscroll">Blog</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#testimonials-section"  class="smoothscroll">Testimonials</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- End Footer Widget -->
+                                    </div>
+                                    <!-- End col -->
+                                    <div class="col-md-12 col-lg-6">
+                                        <div class="footer-widget">
+                                            <div class="section-heading">
+                                                <h3>Subscribe</h3>
+                                                <span class="animate-border border-black"></span>
+                                            </div>
+                                            <p><!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                                            Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
+                                            <form action="#">
+                                                <div class="form-row">
+                                                    <div class="col dk-footer-form">
+                                                        <input type="email" class="form-control" placeholder="Email Address" style="color: white;">
+                                                        <button type="submit">
+                                                            <i class="fa fa-send"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p class="mb-0">
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://www.facebook.com/malekgh.py/" target="_blank" >Malek Gara-Hellal</a>
-                            </p>
+            
+                    <div class="copyright">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="https://github.com/FindMalek" target="_blank">Copyright © 2023, All Right Reserved Malek Gara-Hellal</a>
+                                  </div>                                  
+                                <div class="col-md-6">
+                                    <div class="copyright-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="#home-section" class="smoothscroll">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="smoothscroll">Terms</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="smoothscroll">Privacy Policy</a>
+                                            </li>
+                                            <li>
+                                                <a href="#contact-section" class="smoothscroll">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <!-- Button up
+                        <div id="back-to-top" class="back-to-top">
+                            <button class="btn btn-dark" title="Back to Top" style="display: block;">
+                                <a href="#home-section" style="scroll-behavior: smooth;"><i class="fa fa-angle-up"></i></a>
+                            </button>
+                        </div>
+                    -->
+            </footer>
         </div>
+
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/jquery-ui.js"></script>
         <script src="js/popper.min.js"></script>
@@ -367,7 +521,7 @@
         <script src="js/jquery.sticky.js"></script>
         <script src="js/navbar-scroll.js"></script>
         <script src="js/number-counter-animation.js"></script>
-
+            
         <script src="js/main.js"></script>
     </body>
 </html>
