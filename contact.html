@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="path/to/fontawesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
         
-        <script src="js/navbar-scroll.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
     </head>
 
     <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -33,6 +33,11 @@
         </div>
         
         <div id="header"></div>
+        <script>
+            $(function(){
+              $("#header").load("includes/header.html");
+            });
+        </script>
 
         <div class="site-section bg-image2 overlay" id="contact-section" style="background-image: url('images/hero_1.jpg');">
             <div class="container">
@@ -210,7 +215,7 @@
             });
         </script>
 
-        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/navbar-scroll.js"></script>
         <script src="js/jquery-ui.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
