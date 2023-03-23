@@ -402,7 +402,7 @@ h5,
 
 @media (min-width: 768px) {
 	.site-section {
-		padding: 6em 0;
+		padding: 2em;
 	}
 }
 
@@ -684,6 +684,24 @@ h5,
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4286f4', endColorstr='#42e2f4', GradientType=1);
 }
 
+.site-blocks-cover-bg {
+	background-image: url("https://images.pexels.com/photos/1674118/pexels-photo-1674118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
+	background-size: cover !important;
+	background-position: center top !important;
+	background-repeat: no-repeat !important;
+}
+  
+@media (max-width: 768px) {
+	.site-blocks-cover-bg {
+		background-image: url("https://images.pexels.com/photos/1674118/pexels-photo-1674118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
+		background-size: cover !important;
+		background-position: center top calc(20vh - 190px) !important;
+		background-repeat: no-repeat !important;
+		height: calc(75vh - 20px);
+		bottom: -20px;
+	}
+}
+
 .site-blocks-cover h1 {
 	font-size: 3.5rem;
 	font-weight: 400;
@@ -705,9 +723,17 @@ h5,
 }
 
 .site-blocks-cover p {
-	color: #6c757d;
+	color: #535353;
 	font-size: 1rem;
 	font-weight: 300;
+}
+
+@media (max-width: 768px) {
+	.site-blocks-cover p {
+		color: #dfdfdf;
+		font-size: 1rem;
+		font-weight: 300;
+	}
 }
 
 .site-blocks-cover .intro-text {
@@ -2784,10 +2810,6 @@ h5,
 	visibility: visible
 }
 
-.rowMain {
-	margin-left: 5%;
-}
-
 .portfolio_details_inner .row {
 	margin-bottom: 35px
 }
@@ -2850,25 +2872,19 @@ h5,
 .dnd-section {
 	padding-left: 14rem;
 	padding-right: 3rem;
-	padding-top: 12rem;
-	padding-bottom: 0rem;
+	padding-top: 10%;
 }
 
-.dnd_area-row-0-background-image {
-	/*background-image: url("https://images.pexels.com/photos/691716/pexels-photo-691716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
-*/
-	background-image: url("https://images.pexels.com/photos/1674118/pexels-photo-1674118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
-	/*background-image: url("https://images.pexels.com/photos/3680111/pexels-photo-3680111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
-*/
-	background-size: cover !important;
-	background-position: center top !important;
-	background-repeat: no-repeat !important;
-	height: calc(75vh);
+@media (max-width: 768px) {
+	.dnd-section {
+		padding-left: 10%;
+		padding-right: 3rem;
+		padding-top: 40%;
+	}
 }
 
 #count {
 	color: gray;
-
 }
 
 .clients-outer {
