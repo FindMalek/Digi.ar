@@ -1,41 +1,67 @@
-// Scroll functionality for navbar
-var navbar = document.querySelector('.navbar');
+$(document).ready(function() {
+  var navbar = $("#navbar");
+  var navbarLogo = $(".navbarLogo");
+  var navLinks = $(".nav-link");
 
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 0) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+  if ($(window).width() > 992 && navbarLogo.attr("src") === "images/Digital Army - white.svg") {
+    navbarLogo.attr("src", "images/Digital Army - black.svg");
+  }
+
+  $(window).scroll(function() {
+    if ($(window).width() > 992) {
+      if ($(window).scrollTop() > 50) {
+        navbar.addClass("scroll");
+        navbarLogo.attr("src", "images/Digital Army - white.svg");
+        navLinks.removeClass("text-dark").addClass("text-light");
+      } else {
+        navbar.removeClass("scroll");
+        navbarLogo.attr("src", "images/Digital Army - black.svg");
+        navLinks.removeClass("text-light").addClass("text-dark");
+      }
+    } else if ($(window).width() > 992) {
+      navbar.removeClass("scroll");
+      navbarLogo.attr("src", "images/Digital Army - black.svg");
+      navLinks.removeClass("text-light").addClass("text-dark");
     }
+  });
 });
 
-// Mobile responsive functionality for navbar
-var checkbox = document.querySelector('.navbar-container input[type="checkbox"]');
-var menuLinks = document.querySelectorAll('.menu-items a');
 
-menuLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-        checkbox.checked = false;
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+const navLinks = document.querySelectorAll('.navbar-nav li a');
+const contactBtn = document.querySelector('.nav-link.btn.btn-primary');
+
+navbarToggler.addEventListener('click', () => {
+  navbarToggler.classList.toggle('ms-auto');
+  navbarCollapse.classList.toggle('collapse');
+  navbarCollapse.classList.toggle('show');
+
+  const expanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+  navbarToggler.setAttribute('aria-expanded', !expanded);
+
+  if (navbarCollapse.classList.contains('show')) {
+    navbarCollapse.style.maxHeight = navbarCollapse.scrollHeight + "px";
+
+    navLinks.forEach((link) => {
+      link.classList.remove('text-dark');
+      link.classList.add('text-light');
     });
+
+    contactBtn.style.bottom = "0";
+    contactBtn.style.background = "#145fd8";
+    contactBtn.style.borderColor = "#105fdf";
+  } else {
+    navbarCollapse.style.maxHeight = "0";
+
+    navLinks.forEach((link) => {
+      link.classList.remove('text-light');
+      link.classList.add('text-dark');
+    });
+
+    contactBtn.style.bottom = "20%";
+    contactBtn.style.background = "#4285f4";
+    contactBtn.style.borderColor = "#4285f4";
+  }
 });
 
-const header = document.querySelector('header');
-const logo = document.querySelector('#navbarLogo');
-
-// Use window.getComputedStyle to get the background color of the header
-const bgColor = window.getComputedStyle(header).getPropertyValue('background-color');
-
-// Check if the background color is light or dark
-// You can use any other method to check the background color, this is just an example
-const isLight = bgColor.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-const r = isLight[1];
-const g = isLight[2];
-const b = isLight[3];
-const brightness = Math.round(((parseInt(r) * 299) + (parseInt(g) * 587) + (parseInt(b) * 114)) / 1000);
-
-// Change the image source based on the brightness of the background
-if (brightness > 125) {
-    logo.src = 'images/Digital Army - white.svg';
-} else {
-    logo.src = 'images/Digital Army - black.svg';
-}
