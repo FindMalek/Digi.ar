@@ -2559,15 +2559,8 @@ Showcase Client CSS 1
 #count3,
 #count4 {
 	color: gray;
-	opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
-
-/*
-------------------------
-Showcase Client CSS 2
------------------------
-*/
 
 .ftco-section-counter {
 	position: relative;
@@ -3702,3 +3695,4 @@ Showcase Client CSS 2
 		transform: translateX(-100%);
 	}
 }
+

@@ -15,26 +15,8 @@ const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
 //#endregion - end of - number counter animation
 
 document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll("#count1, #count2, #count3, #count4");
-
-    const options = {
-        rootMargin: "0px",
-        threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const count = entry.target.dataset.count;
-                const duration = entry.target.dataset.duration;
-                counterAnim(`#${entry.target.id}`, 0, count, duration);
-                entry.target.style.opacity = 1;
-                observer.unobserve(entry.target);
-            }
-        });
-    }, options);
-
-    counters.forEach((counter) => {
-        observer.observe(counter);
-    });
+    counterAnim("#count1", 0, 300, 3000);
+    counterAnim("#count2", 0, 250, 1500);
+    counterAnim("#count3", 0, 150, 2000);
+    counterAnim("#count4", 0, 100, 2500);
 });
