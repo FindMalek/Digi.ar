@@ -19,7 +19,7 @@ learnMoreLinks.forEach(link => {
 
 function loadServiceDetails(url) {
   // Use fetch API to get the service details HTML
-  fetch(url)
+  fetch(`./${url}`)
     .then(response => response.text())
     .then(html => {
       // Insert the service details HTML into the #service-details element
@@ -34,3 +34,4 @@ function loadServiceDetails(url) {
       });
     });
 }
+
