@@ -26,3 +26,51 @@ categoryDropdown.addEventListener("change", function() {
         partnershipSection.style.display = "none";
     }
 });
+
+// Get the input elements
+const fullnameInput = document.getElementById('fullname');
+const emailInput = document.getElementById('email');
+
+// Add event listeners for input
+fullnameInput.addEventListener('input', validateFullname);
+emailInput.addEventListener('input', validateEmail);
+
+// Validation functions
+function validateFullname() {
+    const fullnameRegex = /^[A-Za-z- ]+$/;
+    const fullname = this.value.trim();
+    if (fullnameRegex.test(fullname)) {
+        this.classList.remove('is-invalid');
+        document.getElementById('fullname-error').style.display = 'none';
+    } else {
+        this.classList.add('is-invalid');
+        document.getElementById('fullname-error').style.display = 'block';
+    }
+}
+
+function validateEmail() {
+    const emailRegex = /^\S+@\S+\.\S+$/;
+    const email = this.value.trim();
+    if (emailRegex.test(email)) {
+        this.classList.remove('is-invalid');
+        document.getElementById('email-error').style.display = 'none';
+    } else {
+        this.classList.add('is-invalid');
+        document.getElementById('email-error').style.display = 'block';
+    }
+}
+form.addEventListener('submit', (event) => {
+    // prevent form submission if it's not completely filled out
+    if (!isFormFilled) {
+        event.preventDefault();
+    }
+});
+
+function updateSubmitButtonState() {
+    // check if all fields are filled out and conditions are met
+    isFormFilled = nameInput.value && emailInput.value;
+    const isButtonEnabled = isNameValid && isEmailValid && isFormFilled;
+
+    // enable/disable submit button
+    submitButton.disabled = !isButtonEnabled;
+}

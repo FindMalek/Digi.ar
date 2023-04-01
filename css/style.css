@@ -726,6 +726,16 @@ h5,
 -----------------------
 */
 
+#contact-section {
+  padding-top: 10%;
+}
+
+@media (max-width: 768px) {
+	#contact-section {
+		padding-top: 25%;
+	  }
+}
+
 .contact-us {
 	position: relative;
 	z-index: 2;
