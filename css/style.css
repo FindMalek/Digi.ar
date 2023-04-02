@@ -85,6 +85,34 @@ h5,
 
 /*
 ------------------------
+      PRELOADING CSS
+-----------------------
+*/
+
+#overlayer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 7100;
+    background: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.loader {
+    z-index: 7700;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*
+------------------------
       Navbar CSS
 -----------------------
 */
@@ -222,7 +250,6 @@ h5,
     height: 75vh;
 }
 
-
 @media (max-width: 768px) {
     .site-blocks-cover-bg {
         background-image: url("https://images.pexels.com/photos/1674118/pexels-photo-1674118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
@@ -239,6 +266,20 @@ h5,
         align-items: center;
     }
 }
+
+@media (max-width: 576px) {
+	.site-blocks-cover h1,
+	.site-blocks-cover p {
+	  text-align: left;
+	  margin-left: 10%;
+	}
+
+	.get-started {
+		margin-top: -50%;
+		margin-left: 18%;
+		width: 100%;
+	}
+  }
 
 .site-blocks-cover h1 {
     font-size: 3.5rem;
@@ -261,14 +302,14 @@ h5,
 }
 
 .site-blocks-cover p {
-    color: #535353;
+    color: #202020;
     font-size: 1rem;
     font-weight: 300;
 }
 
 @media (max-width: 768px) {
     .site-blocks-cover p {
-        color: #dfdfdf;
+        color: #ffffff;
         font-size: 1rem;
         font-weight: 300;
     }
@@ -3236,29 +3277,6 @@ Showcase Client CSS 1
     margin-bottom: 10px;
 }
 
-/*PRELOADING------------ */
-#overlayer {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 7100;
-    background: #fff;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.loader {
-    z-index: 7700;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
 .form-subscribe .btn:hover,
 .form-subscribe .btn:active,
 .form-subscribe .btn:focus {
@@ -3515,18 +3533,4 @@ Showcase Client CSS 1
 
 .portfolio_details_inner .portfolio_right_text .list li i {
     color: #f1cd09
-}
-
-.dnd-section {
-    padding-left: 14rem;
-    padding-right: 3rem;
-    padding-top: 10%;
-}
-
-@media (max-width: 768px) {
-    .dnd-section {
-        padding-left: 10%;
-        padding-right: 3rem;
-        padding-top: 40%;
-    }
 }
