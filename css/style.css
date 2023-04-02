@@ -2126,6 +2126,23 @@ Showcase Client CSS 1
 	transition: opacity 0.5s ease-in-out;
 }
 
+
+/*
+------------------------
+    Blog CSS
+-----------------------
+*/
+
+#blog-section {
+	padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+	#blog-section {
+		padding-top: 20%;
+	}
+}
+
 .ftco-section-counter {
 	position: relative;
 	padding: 7em 0;
@@ -3028,6 +3045,22 @@ Showcase Client CSS 1
 	line-height: 1.8;
 	color: #8f8f8f;
 	margin-top: 60px;
+}
+
+/*
+------------------------
+    Portfolio CSS
+-----------------------
+*/
+
+#portfolio-section {
+	padding-top: 5%;
+}
+
+@media (max-width: 768px) {
+	#portfolio-section {
+		padding-top: 15%;
+	}
 }
 
 .portfolio_area {
