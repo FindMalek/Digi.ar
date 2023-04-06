@@ -1395,7 +1395,34 @@ Mobile Testimonials CSS
         padding-top: 25%;
     }
 }
+.primary-gradient,
+.bg-image2.overlay:before {
+    background: #e298ad;
+    background: -moz-linear-gradient(left, #e298ad 0%, #4A017D 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #e298ad), color-stop(100%, #4A017D));
+    background: -webkit-linear-gradient(left, #e298ad 0%, #4A017D 100%);
+    background: -o-linear-gradient(left, #e298ad 0%, #4A017D 100%);
+    background: -ms-linear-gradient(left, #e298ad 0%, #4A017D 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#e298ad), to(#4A017D));
+    background: linear-gradient(to right, #e298ad 0%, #4A017D 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e298ad', endColorstr='#4A017D', GradientType=1);
+}
 
+.bg-image2 {
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.bg-image2.overlay:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .7;
+}
 .contact-us {
     position: relative;
     z-index: 2;
@@ -1689,18 +1716,7 @@ button[type="submit"] {
 }
 
 /* Blocks */
-.primary-gradient,
-.bg-image2.overlay:before {
-    background: #4286f4;
-    background: -moz-linear-gradient(left, #4286f4 0%, #42e2f4 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #4286f4), color-stop(100%, #42e2f4));
-    background: -webkit-linear-gradient(left, #4286f4 0%, #42e2f4 100%);
-    background: -o-linear-gradient(left, #4286f4 0%, #42e2f4 100%);
-    background: -ms-linear-gradient(left, #4286f4 0%, #42e2f4 100%);
-    background: -webkit-gradient(linear, left top, right top, from(#4286f4), to(#42e2f4));
-    background: linear-gradient(to right, #4286f4 0%, #42e2f4 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4286f4', endColorstr='#42e2f4', GradientType=1);
-}
+
 
 .img-absolute {
     position: absolute;
@@ -2991,21 +3007,7 @@ Showcase Client CSS 1
     }
 }
 
-.bg-image2 {
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
 
-.bg-image2.overlay:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .7;
-}
 
 /*
 ------------------------
