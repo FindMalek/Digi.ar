@@ -42,12 +42,12 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => {
                 galleryItems.forEach((item) => {
                     const classes = item.getAttribute("class");
-
+                  
                     if (classes.split(' ').map(c => c.trim()).includes(filterCategory.substring(1)) || filterCategory === "all") {
                         item.style.display = "inline-block";
                     }
-                });
-            }, 0);
+                  });
+            }, 100);
         });
     });
 });
