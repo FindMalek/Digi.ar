@@ -39,20 +39,6 @@ $(document).ready(function() {
         $(this).removeClass("active");
     });
 
-    // Smooth scrolling for menu links
-    $('a.nav-link').on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function() {
-                window.location.hash = hash;
-            });
-        }
-        // Hide mobile menu after clicking on a link
-        $('.navbar-collapse').collapse('hide');
-    });
 });
 
 // Get the About dropdown menu item
@@ -74,7 +60,7 @@ aboutDropdown.addEventListener('click', function(event) {
             item.classList.remove('show');
         }
     });
-    
+
     // Prevent the default behavior of the link
     event.preventDefault();
 });
