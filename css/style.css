@@ -3184,7 +3184,7 @@ Showcase Client CSS 1
 .owl-theme .owl-nav button.owl-next:hover,
 .owl-theme .owl-nav button.owl-prev:hover,
 .owl-theme .owl-nav [class*=owl-]:hover:not(.disabled) {
-    background-color: #4c84ff;
+    background-color: #E0013F;
 }
 
 .owl-theme .owl-nav button:focus {
@@ -3192,17 +3192,17 @@ Showcase Client CSS 1
 }
 
 .owl-theme .owl-dots .owl-dot span:after {
-    background-color: #4c84ff;
+    background-color: #E0013F;
 }
 
 .owl-theme .owl-dots .owl-dot.active span:after,
 .owl-theme .owl-dots .owl-dot:hover span:after {
-    background-color: #4c84ff;
+    background-color: #E0013F;
 }
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-    border-color: #4c84ff;
+    border-color: #E0013F;
 }
 
 .owl-theme .owl-dots .owl-dot:focus {
@@ -3248,7 +3248,6 @@ Showcase Client CSS 1
     margin-bottom: 20px;
 }
 
-
 .portfolio-details .content .title {
     font-size: 22px !important;
     font-weight: 500;
@@ -3260,7 +3259,7 @@ Showcase Client CSS 1
 }
 
 .portfolio-details .info span i {
-    color: #4285F4;
+    color: #E0013F;
     margin-right: 7px;
 }
 
@@ -3357,7 +3356,7 @@ Showcase Client CSS 1
 }
 
 .portfolio-details .info li a {
-    color: #4285F4;
+    color: #E0013F;
 }
 
 
