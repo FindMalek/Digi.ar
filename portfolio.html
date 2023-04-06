@@ -1,153 +1,239 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Digi.ar &mdash; Digital Army</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
-        <link rel="stylesheet" href="fonts/icomoon/style.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/jquery-ui.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-        <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-        <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-        <link rel="stylesheet" href="css/aos.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="path/to/magnific-popup.css">
-        <link rel="stylesheet" href="path/to/fontawesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    
-        <script src="js/jquery-3.6.0.min.js"></script>
-    </head>
 
-    <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-        <div id="overlayer"></div>
+<head>
+    <title>Digi.ar &mdash; Digital Army</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="path/to/magnific-popup.css">
+    <link rel="stylesheet" href="path/to/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
-        <div class="loader">
-            <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/portfolio.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div id="overlayer"></div>
+
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div id="header"></div>
+    <script>
+        $(function() {
+            $("#header").load("header.html");
+        });
+    </script>
+
+    <section id="portfolio-section" class="project-gallery section-padding">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title mb-3">Portfolio</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="project-gallery-filter d-flex justify-content-center">
+                        <ul class="project-gallery-menu">
+                            <li class="filter active" data-filter="all">All</li>
+                            <li class="filter" data-filter=".cat-1">Marketing</li>
+                            <li class="filter" data-filter=".cat-2">Management</li>
+                            <li class="filter" data-filter=".cat-3">Consulting</li>
+                            <li class="filter" data-filter=".cat-4">Social Media</li>
+                        </ul>
+                    </div>
+
+                    <div class="row project-gallery-item">
+                        <div class="mix col-md-6 col-lg-4 gallery-item cat-1 cat-3" data-bound="" style="display: inline-block;">
+                            <a href="portfolio.html" class="gallery-item-content pp">
+                                <div class="item-thumbnail">
+                                    <img src="https://via.placeholder.com/500x350.png?text=Project" alt="Project 1" class="img-fluid" id="Project-1">
+                                    <div class="content-overlay">
+                                        <div class="content">
+                                            <h4 class="project-title">
+                                                Project Title
+                                            </h4>
+                                            <span class="project-category">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mix col-md-6 col-lg-4 gallery-item cat-3 cat-4" data-bound="" style="display: inline-block;">
+                            <a href="portfolio.html" class="gallery-item-content pp">
+                                <div class="item-thumbnail">
+                                    <img src="https://via.placeholder.com/500x350.png?text=Project" alt="Project 1" class="img-fluid" id="Project-1">
+                                    <div class="content-overlay">
+                                        <div class="content">
+                                            <h4 class="project-title">
+                                                Project Title
+                                            </h4>
+                                            <span class="project-category">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mix col-md-6 col-lg-4 gallery-item cat-2 cat-1" data-bound="" style="display: inline-block;">
+                            <a href="portfolio.html" class="gallery-item-content pp">
+                                <div class="item-thumbnail">
+                                    <img src="https://via.placeholder.com/500x350.png?text=Project" alt="Project 1" class="img-fluid" id="Project-1">
+                                    <div class="content-overlay">
+                                        <div class="content">
+                                            <h4 class="project-title">
+                                                Project Title
+                                            </h4>
+                                            <span class="project-category">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mix col-md-6 col-lg-4 gallery-item cat-1 cat-3" data-bound="" style="display: inline-block;">
+                            <a href="portfolio.html" class="gallery-item-content pp">
+                                <div class="item-thumbnail">
+                                    <img src="https://via.placeholder.com/500x350.png?text=Project" alt="Project 1" class="img-fluid" id="Project-1">
+                                    <div class="content-overlay">
+                                        <div class="content">
+                                            <h4 class="project-title">
+                                                Project Title
+                                            </h4>
+                                            <span class="project-category">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mix col-md-6 col-lg-4 gallery-item cat-3 cat-4" data-bound="" style="display: inline-block;">
+                            <a href="portfolio.html" class="gallery-item-content pp">
+                                <div class="item-thumbnail">
+                                    <img src="https://via.placeholder.com/500x350.png?text=Project" alt="Project 1" class="img-fluid" id="Project-1">
+                                    <div class="content-overlay">
+                                        <div class="content">
+                                            <h4 class="project-title">
+                                                Project Title
+                                            </h4>
+                                            <span class="project-category">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mix col-md-6 col-lg-4 gallery-item cat-1 cat-2" data-bound="" style="display: inline-block;">
+                            <a href="portfolio.html" class="gallery-item-content pp">
+                                <div class="item-thumbnail">
+                                    <img src="https://via.placeholder.com/500x350.png?text=Project" alt="Project 1" class="img-fluid" id="Project-1">
+                                    <div class="content-overlay">
+                                        <div class="content">
+                                            <h4 class="project-title">
+                                                Project Title
+                                            </h4>
+                                            <span class="project-category">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mix col-md-6 col-lg-4 gallery-item cat-4 cat-2" data-bound="" style="display: inline-block;">
+                            <a href="portfolio.html" class="gallery-item-content pp">
+                                <div class="item-thumbnail">
+                                    <img src="https://via.placeholder.com/500x350.png?text=Project" alt="Project 1" class="img-fluid" id="Project-1">
+                                    <div class="content-overlay">
+                                        <div class="content">
+                                            <h4 class="project-title">
+                                                Project Title
+                                            </h4>
+                                            <span class="project-category">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mix col-md-6 col-lg-4 gallery-item cat-3 cat-2" data-bound="" style="display: inline-block;">
+                            <a href="portfolio.html" class="gallery-item-content pp">
+                                <div class="item-thumbnail">
+                                    <img src="https://via.placeholder.com/500x350.png?text=Project" alt="Project 1" class="img-fluid" id="Project-1">
+                                    <div class="content-overlay">
+                                        <div class="content">
+                                            <h4 class="project-title">
+                                                Project Title
+                                            </h4>
+                                            <span class="project-category">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="mix col-md-6 col-lg-4 gallery-item cat-3 cat-1" data-bound="" style="display: inline-block;">
+                            <a href="portfolio.html" class="gallery-item-content pp">
+                                <div class="item-thumbnail">
+                                    <img src="https://via.placeholder.com/500x350.png?text=Project" alt="Project 1" class="img-fluid" id="Project-1">
+                                    <div class="content-overlay">
+                                        <div class="content">
+                                            <h4 class="project-title">
+                                                Project Title
+                                            </h4>
+                                            <span class="project-category">Marketing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div id="header"></div>
-        <script>
-            $(function(){
-              $("#header").load("header.html");
-            });
-        </script>
+    </section>
 
-        <section class="site-section portfolio_area section-margin pb-0" id="portfolio-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="main_title">
-                            <p class="top_text">Our Portfolio <span></span></p>
-                            <h2>Check Our Recent <br>
-                                Client Work 
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="filters portfolio-filter">
-                    <ul>
-                        <li class="active" data-filter="*">all</li>
-                        <li data-filter=".popular">popular</li>
-                        <li data-filter=".latest"> latest</li>
-                        <li data-filter=".following">following</li>
-                        <li data-filter=".upcoming">upcoming</li>
-                    </ul>
-                </div>
-                <div class="filters-content">
-                    <div class="row portfolio-grid" style="position: relative; height: 1197.41px;">
-                        <div class="grid-sizer col-md-3 col-lg-3"></div>
-                        <div class="col-lg-6 col-md-6 all following" style="position: absolute; left: 0%; top: 0px;">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="images/portfolio/p1.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 all latest popular upcoming" style="position: absolute; left: 50%; top: 0px;">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="images/portfolio/p4.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 all latest following" style="position: absolute; left: 50%; top: 216px;">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="images/portfolio/p2.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 all latest upcoming" style="position: absolute; left: 0%; top: 541px;">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="images/portfolio/p3.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 all popular" style="position: absolute; left: 50%; top: 639px;">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="images/portfolio/p6.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 all popular latest following" style="position: absolute; left: 0%; top: 964px;">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="images/portfolio/p5.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div id="footer"></div>
+    <script>
+        $(function() {
+            $("#footer").load("footer.html");
+        });
+    </script>
 
-        <div id="footer"></div>
-        <script>
-            $(function(){
-              $("#footer").load("footer.html");
-            });
-        </script>
+    <script src="js/navbar-scroll.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
 
-        <script src="js/navbar-scroll.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery.countdown.min.js"></script>
-        <script src="js/bootstrap-datepicker.min.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/aos.js"></script>
-        <script src="js/jquery.fancybox.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+</body>
 
-        <script src="js/main.js"></script>
-    </body>
 </html>
