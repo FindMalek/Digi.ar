@@ -3019,8 +3019,18 @@ Showcase Client CSS 1
 
 @media (max-width: 768px) {
     #portfolio-section {
-        padding-top: 15%;
+        padding-top: 20%;
     }
+
+    .project-gallery-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      } 
+    
+      .project-gallery .project-gallery-filter .project-gallery-menu li.filter {
+        margin-bottom: 6px;
+      }
 }
 
 .project-gallery {
@@ -3408,6 +3418,3 @@ Showcase Client CSS 1
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
 }
-
-
-  
