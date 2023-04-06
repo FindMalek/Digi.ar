@@ -68,7 +68,7 @@ h5,
 }
 
 .text-black {
-    color: #000 !important;
+    color: #1C1517 !important;
 }
 
 .bg-black {
@@ -81,6 +81,10 @@ h5,
 
 .color-white-opacity-5 {
     color: rgba(255, 255, 255, 0.5);
+}
+
+.text-primary {
+    color: #E0013F !important;
 }
 
 /*
@@ -120,19 +124,48 @@ h5,
 .navbarLogo {
     max-height: 100%;
     max-width: 100%;
-    width: 60%;
+    width: 90%;
 }
 
 .mobile-nav {
     display: none;
 }
 
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 10rem;
+    z-index: 1;
+    background-color: #0b0146;
+    border: 1px solid #0b0146;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu {
+    background-color: #0b0146;
+}
+
 @media (max-width: 992px) {
+    .bg-dark {
+        background-color: #0b0146 !important;
+    }
+
     .mobile-nav {
         display: block;
     }
 
+    .desktop-nav {
+        display: none;
+    }
+
     .navbarLogo {
+        display: none;
+    }
+
+    .navbarLogo-mobile {
         width: 45%;
     }
 
@@ -148,28 +181,24 @@ h5,
     .navbar-toggler {
         width: -30%;
     }
+
+    .dropdown-menu {
+        margin-left: -10px;
+        background-color: #1c03a7;
+    }
 }
 
 .navbar {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    color: #000;
-}
-
-.navbar-collapse {
     width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #000;
+    font-family: "Montserrat";
 }
 
 @media (min-width: 992px) {
@@ -191,7 +220,7 @@ h5,
 }
 
 .ftco-navbar-light.scroll {
-    background-color: #0779e4;
+    background-color: #0b0146;
     padding: 0;
 }
 
@@ -201,7 +230,7 @@ h5,
     padding-bottom: 1.4rem;
     padding-left: 25px;
     padding-right: 25px;
-    color: black;
+    color: #0b0146;
     font-weight: 500;
 }
 
@@ -268,18 +297,19 @@ h5,
 }
 
 @media (max-width: 576px) {
-	.site-blocks-cover h1,
-	.site-blocks-cover p {
-	  text-align: left;
-	  margin-left: 10%;
-	}
 
-	.get-started {
-		margin-top: -50%;
-		margin-left: 18%;
-		width: 100%;
-	}
-  }
+    .site-blocks-cover h1,
+    .site-blocks-cover p {
+        text-align: left;
+        margin-left: 10%;
+    }
+
+    .get-started {
+        margin-top: -50%;
+        margin-left: 18%;
+        width: 100%;
+    }
+}
 
 .site-blocks-cover h1 {
     font-size: 3.5rem;
@@ -364,6 +394,11 @@ h5,
     overflow: hidden;
 }
 
+.blue-image {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg) brightness(3%);
+}
+
+
 .client-image {
     width: 120px;
     height: auto;
@@ -372,11 +407,7 @@ h5,
 .clients__slides {
     display: flex;
     animation: slide 60s linear infinite;
-    margin-left: 1px
-}
-
-#count {
-    color: gray;
+    margin-left: 1px;
 }
 
 @keyframes slide {
@@ -528,9 +559,9 @@ h5,
     position: relative;
     border-radius: 50%;
     display: inline-block;
-    background-color: #4285f4;
-    -webkit-box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
-    box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
+    background-color: #E0013F;
+    -webkit-box-shadow: 0 4px 20px -5px #E0013F;
+    box-shadow: 0 4px 20px -5px #E0013F;
 }
 
 .unit-4 .unit-4-icon .icon-wrap span {
@@ -546,6 +577,7 @@ h5,
 
 .unit-4 h3 {
     font-size: 18px;
+    font-weight: bold;
     color: #000;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
@@ -564,7 +596,7 @@ h5,
 }
 
 .unit-4:hover {
-    background: #4285f4;
+    background: #E0013F;
     -webkit-box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
     box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
     top: -7px;
@@ -575,7 +607,7 @@ h5,
 }
 
 .unit-4:hover .icon-wrap span {
-    color: #4285f4 !important;
+    color: #E0013F !important;
 }
 
 .unit-4:hover h3 {
@@ -589,6 +621,14 @@ h5,
 
 .unit-4:hover p a {
     color: #fff;
+}
+
+.service-card .learn-more {
+    color: #E0013F;
+}
+
+.service-card .learn-more:hover {
+    color: white;
 }
 
 /*
@@ -674,6 +714,17 @@ Mobile Testimonials CSS
     padding: 10px 30px;
 }
 
+.btn-sec {
+    font-size: 16px;
+    border-radius: 40px;
+    padding: 8px 30px;
+    /* decrease the top and bottom padding */
+    line-height: 1;
+    /* set the line-height to match the new height */
+    margin-top: 3px;
+    /* add margin-top to lower the button */
+}
+
 .btn-fontfixed {
     font-size: 19px;
     border-radius: 30px;
@@ -696,39 +747,67 @@ Mobile Testimonials CSS
     box-shadow: none !important;
 }
 
-.btn.btn-primary {
-    background: #4285f4;
-    border-color: #4285f4;
+.btn.btn-primary-nav {
+    font-family: "Montserrat";
+    font-weight: bold;
+    background: #0b0146;
+    border-color: #0b0146;
     color: #fff;
     position: relative;
     top: 0;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
-    -webkit-box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
-    box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
+    -webkit-box-shadow: 0 4px 20px -5px #E0013F;
+    box-shadow: 0 4px 20px -5px #E0013F;
 }
 
-.btn.btn-secondary {
-    background: #145fd8;
-    border-color: #105fdf;
+.btn.btn-primary {
+    font-family: "Montserrat";
+    font-weight: bold;
+    background: #E0013F;
+    border-color: #E0013F;
     color: #fff;
     position: relative;
     top: 0;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
-    -webkit-box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
-    box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
+    -webkit-box-shadow: 0 4px 20px -5px #E0013F;
+    box-shadow: 0 4px 20px -5px #E0013F;
+}
+
+.btn-sec.btn-secondary {
+    font-family: "Montserrat";
+    font-weight: bold;
+    background: #E0013F;
+    border-color: #E0013F;
+    color: #fff;
+    position: relative;
+    top: 0;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    -webkit-box-shadow: 0 4px 20px -5px #E0013F;
+    box-shadow: 0 4px 20px -5px #E0013F;
+}
+
+.btn.btn-secondary:hover {
+    top: -2px;
+    background: #e0014021;
+    border-color: #E0013F;
+    color: #E0013F;
+    -webkit-box-shadow: 0 5px 30px -5px #E0013F !important;
+    box-shadow: 0 5px 30px -5px #E0013F !important;
 }
 
 .btn.btn-primary:hover {
     top: -2px;
-    background: #4285f4;
-    border-color: #4285f4;
-    color: #fff;
-    -webkit-box-shadow: 0 5px 30px -5px rgba(66, 133, 244, 0.7) !important;
-    box-shadow: 0 5px 30px -5px rgba(66, 133, 244, 0.7) !important;
+    background: #e0014021;
+    border-color: #E0013F;
+    color: #E0013F;
+    -webkit-box-shadow: 0 5px 30px -5px #E0013F !important;
+    box-shadow: 0 5px 30px -5px #E0013F !important;
 }
 
 .line-height-1 {
@@ -747,7 +826,7 @@ Mobile Testimonials CSS
 
 .form-control:active,
 .form-control:focus {
-    border-color: #4285f4;
+    border-color: #E0013F;
 }
 
 .form-control:hover,
@@ -794,9 +873,18 @@ Mobile Testimonials CSS
 -----------------------
 */
 
+#dk-footer .container {
+    max-width: 85%;
+}
+
 .site-footer {
     padding: 4em 0;
     background: #333333;
+}
+
+.footer-logo img {
+    max-width: 700px !important;
+    width: 600px;
 }
 
 .site-footer .border-top {
@@ -840,7 +928,7 @@ Mobile Testimonials CSS
     display: block;
     width: 115px;
     height: 3px;
-    background: #4285f4;
+    background: #E0013F;
 }
 
 .animate-border:after {
@@ -885,8 +973,8 @@ Mobile Testimonials CSS
 }
 
 .animate-border.border-orange:after {
-    border-right-color: #4285f4;
-    border-left-color: #4285f4;
+    border-right-color: #E0013F;
+    border-left-color: #E0013F;
 }
 
 .animate-border.border-ash:after {
@@ -954,13 +1042,12 @@ Mobile Testimonials CSS
     font-size: 24px;
     top: -15px;
     position: relative;
-    color: #4285f4;
+    color: #E0013F;
 }
 
 .dk-footer-box-info {
     position: absolute;
-    top: -122px;
-    background: #ffffff;
+    top: -45px;
     padding: 40px;
     z-index: 2;
 }
@@ -994,23 +1081,23 @@ Mobile Testimonials CSS
 }
 
 .dk-footer-box-info .footer-social-link a i.fa-facebook {
-    background-color: #3B5998;
+    background-color: #E0013F;
 }
 
 .dk-footer-box-info .footer-social-link a i.fa-twitter {
-    background-color: #55ACEE;
+    background-color: #E0013F;
 }
 
 .dk-footer-box-info .footer-social-link a i.fa-google-plus {
-    background-color: #DD4B39;
+    background-color: #E0013F;
 }
 
 .dk-footer-box-info .footer-social-link a i.fa-linkedin {
-    background-color: #0976B4;
+    background-color: #E0013F;
 }
 
 .dk-footer-box-info .footer-social-link a i.fa-instagram {
-    background-color: #B7242A;
+    background-color: #E0013F;
 }
 
 .footer-awarad {
@@ -1086,7 +1173,7 @@ Mobile Testimonials CSS
 }
 
 .footer-widget a:hover {
-    color: #4285f4;
+    color: #E0013F;
 }
 
 .footer-widget:after {
@@ -1131,8 +1218,8 @@ Mobile Testimonials CSS
     padding: 12px 24px 12px 17px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    border: 1px solid #4285f4;
-    background: #4285f4;
+    border: 1px solid #E0013F;
+    background: #E0013F;
     color: #fff;
 }
 
@@ -1157,6 +1244,45 @@ Mobile Testimonials CSS
 
     .dk-footer {
         padding-top: 20% !important;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .footer-logo img {
+        max-width: 100%;
+        height: auto;
+        width: 300px;
+    }
+
+    #left-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 130%;
+    }
+
+    #contact-us1 {
+        left: -22px;
+    }
+
+    #contact-us1,
+    #contact-us2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #contact-us1 .contact-icon,
+    #contact-us2 .contact-icon {
+        margin-bottom: 10px;
+        margin-right: 50%;
     }
 
     .site-footer h2,
@@ -1221,13 +1347,14 @@ Mobile Testimonials CSS
 
 .contact-icon {
     position: absolute;
+    color: #E0013F !important;
 }
 
 .contact-icon i {
     font-size: 36px;
     top: -5px;
     position: relative;
-    color: #4285f4;
+    color: #E0013F;
 }
 
 .contact-info {
@@ -1256,7 +1383,7 @@ Mobile Testimonials CSS
 }
 
 .copyright a:hover {
-    color: #4285f4;
+    color: #E0013F;
 }
 
 .copyright-menu ul {
@@ -1445,7 +1572,7 @@ button[type="submit"] {
 }
 
 .ul-check.primary li:before {
-    color: #4285f4;
+    color: #E0013F;
 }
 
 .select-wrap,
@@ -1881,7 +2008,7 @@ button[type="submit"] {
 
 .site-block-tab .nav-item>a:hover,
 .site-block-tab .nav-item>a.active {
-    border-bottom: 2px solid #4285f4;
+    border-bottom: 2px solid #E0013F;
     color: #000;
 }
 
@@ -2009,12 +2136,11 @@ button[type="submit"] {
     width: 10px;
     height: 10px;
     border-radius: 20px;
-    /* or any other value you prefer */
     background: #dee2e6;
 }
 
 .slide-one-item .owl-dots .owl-dot.active span {
-    background: #4285f4;
+    background: #E0013F;
     width: 50px;
     transition: all 0.3s ease;
 }
@@ -2094,7 +2220,7 @@ button[type="submit"] {
     width: 80px;
     height: 4px;
     margin-top: -4px;
-    background: #4285f4;
+    background: #E0013F;
     top: 0;
 }
 
@@ -2122,7 +2248,7 @@ button[type="submit"] {
     display: block;
     border-radius: 50%;
     opacity: 1;
-    color: #4285f4 !important;
+    color: #E0013F !important;
 }
 
 .block-16 figure .play-button:hover {
@@ -2171,7 +2297,7 @@ button[type="submit"] {
 }
 
 .block-25 ul li a .meta {
-    color: #4285f4;
+    color: #E0013F;
 }
 
 .block-25 ul li a:hover img {
@@ -2210,7 +2336,7 @@ button[type="submit"] {
     position: absolute;
     width: 30px;
     height: 30px;
-    background: #4285f4;
+    background: #E0013F;
     border-radius: 50%;
     color: #fff;
 }
@@ -2260,7 +2386,7 @@ button[type="submit"] {
 
 .site-block-27 ul li.active a,
 .site-block-27 ul li.active span {
-    background: #4285f4;
+    background: #E0013F;
     color: #fff;
     border: 1px solid transparent;
 }
@@ -2314,7 +2440,7 @@ button[type="submit"] {
 .feature-1,
 .free-quote,
 .feature-3 {
-    background: #4285f4;
+    background: #E0013F;
     padding: 30px 50px;
     color: rgba(255, 255, 255, 0.6);
     font-size: 15px;
@@ -2414,7 +2540,7 @@ button[type="submit"] {
     bottom: 0;
     width: 80px;
     height: 3px;
-    background: #4285f4;
+    background: #E0013F;
 }
 
 .border-primary.text-center:after {
@@ -2566,7 +2692,7 @@ Showcase Client CSS 1
 .how-it-work-item .number {
     width: 50px;
     height: 50px;
-    background: #4285f4;
+    background: #E0013F;
     color: #fff;
     line-height: 55px;
     font-weight: 300;
@@ -2637,7 +2763,7 @@ Showcase Client CSS 1
     line-height: 40px;
     border-radius: 50%;
     display: inline-block;
-    background: #4285f4;
+    background: #E0013F;
     color: #fff;
 }
 
@@ -2720,7 +2846,7 @@ Showcase Client CSS 1
 }
 
 .popular-category:hover {
-    background: #4285f4;
+    background: #E0013F;
     -webkit-box-shadow: 0 5px 30px -5px rgba(66, 133, 244, 0.5);
     box-shadow: 0 5px 30px -5px rgba(66, 133, 244, 0.5);
 }
@@ -2790,7 +2916,7 @@ Showcase Client CSS 1
     font-size: 12px;
     display: inline-block;
     padding: 5px 30px;
-    background: #4285f4;
+    background: #E0013F;
     border-radius: 30px;
     color: #fff;
     letter-spacing: .2em;
@@ -2846,7 +2972,7 @@ Showcase Client CSS 1
 }
 
 .accordion-item[aria-expanded="true"] {
-    color: #4285f4;
+    color: #E0013F;
 }
 
 .social-media {
@@ -2898,7 +3024,7 @@ Showcase Client CSS 1
     display: inline-block;
     width: 50px;
     height: 50px;
-    background: #4285f4;
+    background: #E0013F;
     margin-right: 1.5rem;
     border-radius: 50%;
     line-height: 50px;
@@ -3041,7 +3167,7 @@ Showcase Client CSS 1
 
 .section-sub-title {
     font-size: 13px;
-    color: #4285f4;
+    color: #E0013F;
     letter-spacing: .2em;
     text-transform: uppercase;
 }
@@ -3066,7 +3192,7 @@ Showcase Client CSS 1
     position: absolute;
     bottom: -10px;
     right: -10px;
-    background: #4285f4;
+    background: #E0013F;
     padding: 20px;
 }
 
@@ -3111,7 +3237,7 @@ Showcase Client CSS 1
     border-radius: 4px;
     padding: 20px;
     border: 1px solid #eee;
-    border-left: 10px solid #4285f4;
+    border-left: 10px solid #E0013F;
 }
 
 .author-box *:last-child {
@@ -3198,7 +3324,7 @@ Showcase Client CSS 1
     top: 10px;
     right: 10px;
     bottom: 10px;
-    border: 2px solid #4285f4;
+    border: 2px solid #E0013F;
     opacity: 1;
     visibility: visible;
     -webkit-transition: .3s all ease;
@@ -3240,7 +3366,7 @@ Showcase Client CSS 1
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
-    background: #4285f4;
+    background: #E0013F;
 }
 
 .person .bio-img .social a {
@@ -3273,15 +3399,15 @@ Showcase Client CSS 1
     letter-spacing: .1em;
     font-size: 12px;
     font-weight: 700;
-    color: #4285f4;
+    color: #E0013F;
     margin-bottom: 10px;
 }
 
 .form-subscribe .btn:hover,
 .form-subscribe .btn:active,
 .form-subscribe .btn:focus {
-    background-color: #4285f4 !important;
-    border-color: #4285f4 !important;
+    background-color: #E0013F !important;
+    border-color: #E0013F !important;
     color: #fff;
 }
 
@@ -3290,7 +3416,7 @@ Showcase Client CSS 1
 }
 
 .about-caption span {
-    color: #4285f4;
+    color: #E0013F;
     font-size: 18px;
     font-weight: 500;
     display: block;
@@ -3306,7 +3432,7 @@ Showcase Client CSS 1
 
 .btn_02 {
     display: inline-block;
-    background-color: #4285f4;
+    background-color: #E0013F;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -3318,8 +3444,8 @@ Showcase Client CSS 1
 
 .btn_02:hover {
     background-color: #fff;
-    color: #4285f4;
-    border: 2px solid #4285f4;
+    color: #E0013F;
+    border: 2px solid #E0013F;
 }
 
 .skill-ara {
@@ -3344,7 +3470,7 @@ Showcase Client CSS 1
 }
 
 .progress-bar {
-    background-color: #4285f4;
+    background-color: #E0013F;
     height: 100%;
 }
 
