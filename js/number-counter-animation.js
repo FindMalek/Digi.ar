@@ -14,9 +14,40 @@ const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
 };
 //#endregion - end of - number counter animation
 
-document.addEventListener("DOMContentLoaded", () => {
+const showcaseSection = document.getElementById("showcase-client-section");
+let isCounting = false;
+
+const startCounting = () => {
+    if (isCounting) return;
+
+    isCounting = true;
     counterAnim("#count1", 0, 300, 3000);
     counterAnim("#count2", 0, 250, 1500);
     counterAnim("#count3", 0, 150, 2000);
     counterAnim("#count4", 0, 100, 2500);
+};
+
+const stopCounting = () => {
+    isCounting = false;
+};
+
+const isInView = (elem) => {
+    const bounding = elem.getBoundingClientRect();
+    return (
+        bounding.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.bottom >= 0
+    );
+};
+
+window.addEventListener("scroll", () => {
+    if (isInView(showcaseSection)) {
+        startCounting();
+    } else {
+        stopCounting();
+    }
 });
+
+// start counting immediately if the section is already in view
+if (isInView(showcaseSection)) {
+    startCounting();
+}

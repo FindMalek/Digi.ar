@@ -364,7 +364,6 @@ h5,
 
 .clients-outer {
     margin-top: 3.6rem;
-    padding-bottom: 9rem;
     text-align: center;
     position: relative;
 }
@@ -443,7 +442,7 @@ h5,
 */
 
 #aboutme-section {
-    padding-top: 5%;
+    padding-top: 8%;
 }
 
 @media (max-width: 768px) {
@@ -1395,6 +1394,7 @@ Mobile Testimonials CSS
         padding-top: 25%;
     }
 }
+
 .primary-gradient,
 .bg-image2.overlay:before {
     background: #e298ad;
@@ -1423,6 +1423,7 @@ Mobile Testimonials CSS
     bottom: 0;
     opacity: .7;
 }
+
 .contact-us {
     position: relative;
     z-index: 2;
@@ -3016,7 +3017,7 @@ Showcase Client CSS 1
 */
 
 #portfolio-section {
-    padding-top: 7%;
+    padding-top: 15%;
 }
 
 @media (max-width: 768px) {
