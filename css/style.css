@@ -939,6 +939,21 @@ Mobile Testimonials CSS
 -----------------------
 */
 
+@media (max-width: 767px) {
+    .contact-icon {
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .contact-info {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+
+
+
 #dk-footer .container {
     max-width: 85%;
 }
@@ -1093,15 +1108,34 @@ Mobile Testimonials CSS
 .dk-footer .contact-us {
     margin-top: 0;
     margin-bottom: 30px;
-    padding-left: 80px;
+    padding-left: 90px;
+}
+
+.dk-footer .contact-us-last {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-left: 0px;
+}
+
+@media (max-width: 767px) {
+    .dk-footer .contact-us {
+        margin-top: -20px;
+        padding-left: 0px;
+        align-items: left;
+    }
+
+    .dk-footer .contact-us-last {
+        margin-left: -50%;
+        align-items: left;
+    }
 }
 
 .dk-footer .contact-us .contact-info {
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
-.dk-footer .contact-us.contact-us-last {
-    margin-left: -80px;
+.dk-footer .contact-us .contact-us-last {
+    margin-right: -10px;
 }
 
 .dk-footer .contact-icon i {
@@ -1330,25 +1364,6 @@ Mobile Testimonials CSS
         justify-content: center;
         align-items: center;
         padding-bottom: 130%;
-    }
-
-    #contact-us1 {
-        left: -22px;
-    }
-
-    #contact-us1,
-    #contact-us2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    #contact-us1 .contact-icon,
-    #contact-us2 .contact-icon {
-        margin-bottom: 10px;
-        margin-right: 50%;
     }
 
     .site-footer h2,
@@ -3029,11 +3044,11 @@ Showcase Client CSS 1
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-      } 
-    
-      .project-gallery .project-gallery-filter .project-gallery-menu li.filter {
+    }
+
+    .project-gallery .project-gallery-filter .project-gallery-menu li.filter {
         margin-bottom: 6px;
-      }
+    }
 }
 
 .project-gallery {
