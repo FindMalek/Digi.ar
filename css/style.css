@@ -397,7 +397,6 @@ h5,
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg) brightness(3%);
 }
 
-
 .client-image {
     width: 120px;
     height: auto;
@@ -407,6 +406,12 @@ h5,
     display: flex;
     animation: slide 60s linear infinite;
     margin-left: 1px;
+}
+
+@media (max-width: 768px) {
+    .clients__slides {
+        animation: slide 10s linear infinite;
+    } 
 }
 
 @keyframes slide {
