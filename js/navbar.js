@@ -39,6 +39,12 @@ $(document).ready(function() {
         $(this).removeClass("active");
     });
 
+    // Trigger the collapse toggle button to close the navbar
+    $(".nav-link").click(function() {
+        setTimeout(function() {
+            $("#navbarToggleExternalContent").collapse("hide");
+        }, 200);
+    });
 });
 
 // Get the About dropdown menu item
