@@ -540,6 +540,10 @@ h5,
     }
 }
 
+#service-details {
+    padding-bottom: 30px;
+}
+
 .unit-1 {
     position: relative;
     width: 100%;
