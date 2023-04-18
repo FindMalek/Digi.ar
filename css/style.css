@@ -131,6 +131,8 @@ h5,
     display: none;
 }
 
+
+
 .sub-menu {
     display: none;
     position: absolute;
@@ -143,7 +145,7 @@ h5,
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
-
+  
 .dropdown-menu {
     background-color: #0b0146;
 }
@@ -185,6 +187,21 @@ h5,
     .dropdown-menu {
         margin-left: -10px;
         background-color: #1c03a7;
+    }
+
+    .navbar-toggler {
+        padding: 0;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 0px solid transparent;
+        border-radius: 0;  
+    }
+
+    .menu-icon {
+        width: 40px;
+        height: 30px; 
+        filter: invert(23%) sepia(87%) saturate(4578%) hue-rotate(337deg) brightness(97%) contrast(104%);
     }
 }
 
