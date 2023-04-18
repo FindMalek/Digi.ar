@@ -532,7 +532,11 @@ h5,
 
 @media (max-width: 767px) {
     #why-choose-us {
-        padding-bottom: 10% !important;
+        display: none;
+    }
+
+    #services-cards {
+        margin-top: -10px;
     }
 }
 
@@ -765,7 +769,7 @@ Mobile Testimonials CSS
 @media (max-width: 768px) {
     #testimonials-section {
         height: 500px;
-        padding-bottom: 200%;
+        padding-bottom: 150%;
         margin-top: -25%;
     }
 
@@ -775,9 +779,10 @@ Mobile Testimonials CSS
     }
 
     .testimonial-img {
-        width: 80% !important;
+        width: 50% !important;
         margin: 0 auto;
         text-align: center;
+        border-radius: 50%;
     }
 }
 
