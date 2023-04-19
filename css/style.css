@@ -150,7 +150,7 @@ h2,
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
-  
+
 .dropdown-menu {
     background-color: #0b0146;
 }
@@ -159,53 +159,53 @@ h2,
     .bg-dark {
         background-color: #0b0146 !important;
     }
-
+    
     .mobile-nav {
         display: block;
     }
-
+    
     .desktop-nav {
         display: none;
     }
-
+    
     .navbarLogo {
         display: none;
     }
-
+    
     .navbarLogo-mobile {
         width: 45%;
     }
-
+    
     .navbar-brand {
         flex: 1;
     }
-
+    
     .mobile-nav .navbar {
         height: 50px;
         padding-top: 5px;
     }
-
+    
     .navbar-toggler {
         width: -30%;
     }
-
+    
     .dropdown-menu {
         margin-left: -10px;
         background-color: #1c03a7;
     }
-
+    
     .navbar-toggler {
         padding: 0;
         font-size: 1.25rem;
         line-height: 1;
         background-color: transparent;
         border: 0px solid transparent;
-        border-radius: 0;  
+        border-radius: 0;
     }
-
+    
     .menu-icon {
         width: 40px;
-        height: 30px; 
+        height: 30px;
         filter: invert(23%) sepia(87%) saturate(4578%) hue-rotate(337deg) brightness(97%) contrast(104%);
     }
 }
@@ -309,7 +309,7 @@ h2,
         background-repeat: no-repeat !important;
         height: calc(80vh - 20px);
     }
-
+    
     .site-blocks-cover {
         display: flex;
         flex-direction: column;
@@ -319,13 +319,13 @@ h2,
 }
 
 @media (max-width: 576px) {
-
+    
     .site-blocks-cover h1,
     .site-blocks-cover p {
         text-align: left;
         margin-left: 10%;
     }
-
+    
     .get-started {
         margin-top: -50%;
         margin-left: 18%;
@@ -433,14 +433,14 @@ h2,
 @media (max-width: 768px) {
     .clients__slides {
         animation: slide 10s linear infinite;
-    } 
+    }
 }
 
 @keyframes slide {
     0% {
         transform: translateX(0);
     }
-
+    
     100% {
         transform: translateX(-100%);
     }
@@ -452,11 +452,11 @@ h2,
         position: relative;
         margin-top: -2%;
     }
-
+    
     .clients__slides {
         margin-left: 0;
     }
-
+    
     .clients__slide {
         max-width: 100%;
     }
@@ -539,7 +539,7 @@ h2,
     #why-choose-us {
         display: none;
     }
-
+    
     #services-cards {
         margin-top: -10px;
     }
@@ -781,12 +781,12 @@ Mobile Testimonials CSS
         padding-bottom: 150%;
         margin-top: -25%;
     }
-
+    
     .testimonial {
         max-width: 350px;
         text-align: center;
     }
-
+    
     .testimonial-img {
         width: 50% !important;
         margin: 0 auto;
@@ -981,7 +981,7 @@ Mobile Testimonials CSS
         float: left;
         margin-right: 10px;
     }
-
+    
     .contact-info {
         display: inline-block;
         margin-left: 10px;
@@ -1066,7 +1066,7 @@ Mobile Testimonials CSS
         -webkit-transform: translateX(0px);
         transform: translateX(0px);
     }
-
+    
     100% {
         -webkit-transform: translateX(240%);
         transform: translateX(240%);
@@ -1078,7 +1078,7 @@ Mobile Testimonials CSS
         -webkit-transform: translateX(0px);
         transform: translateX(0px);
     }
-
+    
     100% {
         -webkit-transform: translateX(240%);
         transform: translateX(240%);
@@ -1109,11 +1109,11 @@ Mobile Testimonials CSS
     0% {
         width: 15%;
     }
-
+    
     50% {
         width: 90%;
     }
-
+    
     100% {
         width: 10%;
     }
@@ -1123,11 +1123,11 @@ Mobile Testimonials CSS
     0% {
         width: 80%;
     }
-
+    
     50% {
         width: 0%;
     }
-
+    
     100% {
         width: 80%;
     }
@@ -1159,7 +1159,7 @@ Mobile Testimonials CSS
         padding-left: 0px;
         align-items: left;
     }
-
+    
     .dk-footer .contact-us-last {
         margin-left: -50%;
         align-items: left;
@@ -1377,54 +1377,54 @@ Mobile Testimonials CSS
     .site-footer {
         padding: 8em 0;
     }
-
+    
     .dk-footer {
         padding-top: 20% !important;
     }
-
+    
     .footer-logo {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 50px;
     }
-
+    
     .footer-logo img {
         max-width: 100%;
         height: auto;
         width: 300px;
     }
-
+    
     #left-footer {
         display: flex;
         justify-content: center;
         align-items: center;
         padding-bottom: 130%;
     }
-
+    
     .site-footer h2,
     .site-footer h3,
     .site-footer h4,
     .site-footer h5 {
         color: #fff;
     }
-
+    
     .row {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
+    
     .col-md-6 {
         margin-bottom: 20px;
     }
-
+    
     .footer-left-widget {
         padding-left: 0%;
         padding-top: 2%;
     }
-
+    
     .footer-widget {
         padding-top: 2%;
     }
@@ -1560,7 +1560,7 @@ button[type="submit"] {
         text-align: center;
         margin: 0-2%;
     }
-
+    
     .copyrightDev {
         text-align: center;
     }
@@ -1650,7 +1650,7 @@ button[type="submit"] {
 }
 
 @media (max-width: 991.98px) {
-
+    
     .display-1,
     .display-3 {
         font-size: 3rem;
@@ -2225,7 +2225,7 @@ button[type="submit"] {
 }
 
 @media (min-width: 768px) {
-
+    
     .slide-one-item.home-slider .owl-prev,
     .slide-one-item.home-slider .owl-next {
         font-size: 25px;
@@ -3075,13 +3075,13 @@ Showcase Client CSS 1
     #portfolio-section {
         padding-top: 20%;
     }
-
+    
     .project-gallery-menu {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    
     .project-gallery .project-gallery-filter .project-gallery-menu li.filter {
         margin-bottom: 6px;
     }

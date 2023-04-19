@@ -56,156 +56,93 @@
                     <div class="project-gallery-filter d-flex justify-content-center">
                         <ul class="project-gallery-menu">
                             <li class="filter active" data-filter="all">All</li>
-                            <li class="filter" data-filter=".cat-1">Marketing</li>
-                            <li class="filter" data-filter=".cat-2">Management</li>
-                            <li class="filter" data-filter=".cat-3">Consulting</li>
-                            <li class="filter" data-filter=".cat-4">Social Media</li>
+                            <li class="filter" data-filter=".marketing">Marketing</li>
+                            <li class="filter" data-filter=".management">Management</li>
+                            <li class="filter" data-filter=".consulting">Consulting</li>
+                            <li class="filter" data-filter=".social-media">Social Media</li>
                         </ul>
                     </div>
 
                     <div class="row project-gallery-item">
-                        <div class="mix col-md-6 col-lg-4 gallery-item cat-1 cat-3" data-bound="" style="display: inline-block;">
-                            <a href="portfolio.html" class="gallery-item-content pp">
-                                <div class="item-thumbnail">
-                                    <img src="https://via.placeholder.com/500x350.png?text=Project+1" alt="Project 1" class="img-fluid" id="Project-1">
-                                    <div class="content-overlay">
-                                        <div class="content">
-                                            <h4 class="project-title">
-                                                Project Title
-                                            </h4>
-                                            <span class="project-category">Marketing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="mix col-md-6 col-lg-4 gallery-item marketing consulting" data-bound="" style="display: inline-block;">
+                            <div id="project-1"></div>
+                            <script>
+                                $(function(){
+                                  $("#project-1").load("src/portfolio-projects/project-1.html");
+                                });
+                            </script>
                         </div>
 
-                        <div class="mix col-md-6 col-lg-4 gallery-item cat-3 cat-4" data-bound="" style="display: inline-block;">
-                            <a href="portfolio.html" class="gallery-item-content pp">
-                                <div class="item-thumbnail">
-                                    <img src="https://via.placeholder.com/500x350.png?text=Project+2" alt="Project 1" class="img-fluid" id="Project-1">
-                                    <div class="content-overlay">
-                                        <div class="content">
-                                            <h4 class="project-title">
-                                                Project Title
-                                            </h4>
-                                            <span class="project-category">Marketing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="mix col-md-6 col-lg-4 gallery-item consulting social-media" data-bound="" style="display: inline-block;">
+                            <div id="project-2"></div>
+                            <script>
+                                $(function(){
+                                  $("#project-2").load("src/portfolio-projects/project-2.html");
+                                });
+                            </script>
                         </div>
 
-                        <div class="mix col-md-6 col-lg-4 gallery-item cat-2 cat-1" data-bound="" style="display: inline-block;">
-                            <a href="portfolio.html" class="gallery-item-content pp">
-                                <div class="item-thumbnail">
-                                    <img src="https://via.placeholder.com/500x350.png?text=Project+3" alt="Project 1" class="img-fluid" id="Project-1">
-                                    <div class="content-overlay">
-                                        <div class="content">
-                                            <h4 class="project-title">
-                                                Project Title
-                                            </h4>
-                                            <span class="project-category">Marketing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="mix col-md-6 col-lg-4 gallery-item management marketing" data-bound="" style="display: inline-block;">
+                            <div id="project-3"></div>
+                            <script>
+                                $(function(){
+                                  $("#project-3").load("src/portfolio-projects/project-3.html");
+                                });
+                            </script>
                         </div>
 
-                        <div class="mix col-md-6 col-lg-4 gallery-item cat-1 cat-3" data-bound="" style="display: inline-block;">
-                            <a href="portfolio.html" class="gallery-item-content pp">
-                                <div class="item-thumbnail">
-                                    <img src="https://via.placeholder.com/500x350.png?text=Project+4" alt="Project 1" class="img-fluid" id="Project-1">
-                                    <div class="content-overlay">
-                                        <div class="content">
-                                            <h4 class="project-title">
-                                                Project Title
-                                            </h4>
-                                            <span class="project-category">Marketing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="mix col-md-6 col-lg-4 gallery-item marketing consulting" data-bound="" style="display: inline-block;">
+                            <div id="project-4"></div>
+                            <script>
+                                $(function(){
+                                  $("#project-4").load("src/portfolio-projects/project-4.html");
+                                });
+                            </script>
                         </div>
 
-                        <div class="mix col-md-6 col-lg-4 gallery-item cat-3 cat-4" data-bound="" style="display: inline-block;">
-                            <a href="portfolio.html" class="gallery-item-content pp">
-                                <div class="item-thumbnail">
-                                    <img src="https://via.placeholder.com/500x350.png?text=Project+5" alt="Project 1" class="img-fluid" id="Project-1">
-                                    <div class="content-overlay">
-                                        <div class="content">
-                                            <h4 class="project-title">
-                                                Project Title
-                                            </h4>
-                                            <span class="project-category">Marketing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="mix col-md-6 col-lg-4 gallery-item consulting social-media" data-bound="" style="display: inline-block;">
+                            <div id="project-5"></div>
+                            <script>
+                                $(function(){
+                                  $("#project-5").load("src/portfolio-projects/project-5.html");
+                                });
+                            </script>
                         </div>
 
-                        <div class="mix col-md-6 col-lg-4 gallery-item cat-1 cat-2" data-bound="" style="display: inline-block;">
-                            <a href="portfolio.html" class="gallery-item-content pp">
-                                <div class="item-thumbnail">
-                                    <img src="https://via.placeholder.com/500x350.png?text=Project+6" alt="Project 1" class="img-fluid" id="Project-1">
-                                    <div class="content-overlay">
-                                        <div class="content">
-                                            <h4 class="project-title">
-                                                Project Title
-                                            </h4>
-                                            <span class="project-category">Marketing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="mix col-md-6 col-lg-4 gallery-item marketing management" data-bound="" style="display: inline-block;">
+                            <div id="project-6"></div>
+                            <script>
+                                $(function(){
+                                  $("#project-6").load("src/portfolio-projects/project-6.html");
+                                });
+                            </script>
                         </div>
 
-                        <div class="mix col-md-6 col-lg-4 gallery-item cat-4 cat-2" data-bound="" style="display: inline-block;">
-                            <a href="portfolio.html" class="gallery-item-content pp">
-                                <div class="item-thumbnail">
-                                    <img src="https://via.placeholder.com/500x350.png?text=Project+7" alt="Project 1" class="img-fluid" id="Project-1">
-                                    <div class="content-overlay">
-                                        <div class="content">
-                                            <h4 class="project-title">
-                                                Project Title
-                                            </h4>
-                                            <span class="project-category">Marketing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="mix col-md-6 col-lg-4 gallery-item social-media management" data-bound="" style="display: inline-block;">
+                            <div id="project-7"></div>
+                            <script>
+                                $(function(){
+                                  $("#project-7").load("src/portfolio-projects/project-7.html");
+                                });
+                            </script>
                         </div>
 
-                        <div class="mix col-md-6 col-lg-4 gallery-item cat-3 cat-2" data-bound="" style="display: inline-block;">
-                            <a href="portfolio.html" class="gallery-item-content pp">
-                                <div class="item-thumbnail">
-                                    <img src="https://via.placeholder.com/500x350.png?text=Project+8" alt="Project 1" class="img-fluid" id="Project-1">
-                                    <div class="content-overlay">
-                                        <div class="content">
-                                            <h4 class="project-title">
-                                                Project Title
-                                            </h4>
-                                            <span class="project-category">Marketing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="mix col-md-6 col-lg-4 gallery-item consulting management" data-bound="" style="display: inline-block;">
+                            <div id="project-8"></div>
+                            <script>
+                                $(function(){
+                                  $("#project-8").load("src/portfolio-projects/project-8.html");
+                                });
+                            </script>
                         </div>
 
-                        <div class="mix col-md-6 col-lg-4 gallery-item cat-3 cat-1" data-bound="" style="display: inline-block;">
-                            <a href="portfolio.html" class="gallery-item-content pp">
-                                <div class="item-thumbnail">
-                                    <img src="https://via.placeholder.com/500x350.png?text=Project+9" alt="Project 1" class="img-fluid" id="Project-1">
-                                    <div class="content-overlay">
-                                        <div class="content">
-                                            <h4 class="project-title">
-                                                Project Title
-                                            </h4>
-                                            <span class="project-category">Marketing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                        <div class="mix col-md-6 col-lg-4 gallery-item consulting marketing" data-bound="" style="display: inline-block;">
+                            <div id="project-9"></div>
+                            <script>
+                                $(function(){
+                                  $("#project-9").load("src/portfolio-projects/project-9.html");
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>

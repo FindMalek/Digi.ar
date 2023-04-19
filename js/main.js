@@ -4,14 +4,12 @@ AOS.init({
     once: false
 });
 
-
-
 jQuery(document).ready(function($) {
     "use strict";
-
+    
     $(".loader").delay(1000).fadeOut("slow");
     $("#overlayer").delay(1000).fadeOut("slow");
-
+    
     var siteCarousel = function() {
         if ($('.nonloop-block-13').length > 0) {
             $('.nonloop-block-13').owlCarousel({
@@ -45,7 +43,7 @@ jQuery(document).ready(function($) {
                 }
             });
         }
-
+        
         $('.slide-one-item').owlCarousel({
             center: false,
             items: 1,
@@ -61,22 +59,62 @@ jQuery(document).ready(function($) {
         });
     };
     siteCarousel();
-
+    
     // navigation
     var OnePageNavigation = function() {
         var navToggler = $('.site-menu-toggle');
         $("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
             e.preventDefault();
-
+            
             var hash = this.hash;
-
+            
             $('html, body').animate({
                 'scrollTop': $(hash).offset().top - 0
             }, 1000, 'easeInOutCirc', function() {
                 window.location.hash = hash;
             });
-
+            
         });
     };
     OnePageNavigation();
+
+    const carouselContainer = $(".carousel-container");
+              
+    // Get the list of project HTML files
+    $.ajax({
+      url: "src/portfolio-projects/",
+      success: function(data) {
+        const projectFiles = $(data).find("a[href$='.html']");
+  
+        // Load each project HTML file into the carousel
+        projectFiles.each(function(index, file) {
+          const fileName = $(file).attr("href");
+          carouselContainer.append(`<div class="item"><object type="text/html" data="${fileName}" /></div>`);
+        });
+  
+        // Initialize the Owl Carousel
+        carouselContainer.owlCarousel({
+          items: 3,
+          loop: true,
+          margin: 10,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 3
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 3
+            }
+          }
+        });
+      },
+      error: function(xhr, status, error) {
+        console.log("Failed to load portfolio projects:", error);
+      }
+    });
 });
