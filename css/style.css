@@ -3071,9 +3071,18 @@ Showcase Client CSS 1
     padding-top: 15%;
 }
 
+#portfolio-showcase {
+    margin-top: -150px;
+    padding-bottom: 10%;
+}
+
 @media (max-width: 768px) {
     #portfolio-section {
         padding-top: 20%;
+    }
+
+    #portfolio-showcase {
+        padding-bottom: 25%;
     }
     
     .project-gallery-menu {
@@ -3144,7 +3153,7 @@ Showcase Client CSS 1
     height: 86%;
     opacity: 0;
     transform: scale(0);
-    background: #1C1517;
+    background: #e00140b3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3156,13 +3165,14 @@ Showcase Client CSS 1
 }
 
 .gallery-item-content .item-thumbnail .content-overlay .content .project-title {
-    color: #fff;
-    font-size: 18px;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 800;
     line-height: 28px;
 }
 
 .gallery-item-content .item-thumbnail .content-overlay .content .project-category {
-    color: #94A2C7;
+    color: #000000;
 }
 
 .gallery-item-content .item-thumbnail:hover .content-overlay {
