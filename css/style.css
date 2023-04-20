@@ -204,9 +204,13 @@ h2,
     }
     
     .menu-icon {
-        width: 40px;
+        width: 42px;
         height: 30px;
         filter: invert(23%) sepia(87%) saturate(4578%) hue-rotate(337deg) brightness(97%) contrast(104%);
+    }
+
+    .menu-closed-icon {
+        display: none;
     }
 }
 
