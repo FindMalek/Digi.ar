@@ -130,7 +130,7 @@ jQuery(document).ready(function($) {
         },
         
         error: function(xhr, status, error) {
-            console.log("Failed to load portfolio projects:", error);
+            console.log("Failed to load Portfolio Projects Cards: ", error);
         }
     });
 });
