@@ -81,56 +81,37 @@ jQuery(document).ready(function($) {
     // Portfolio Carousel
     const carouselContainer = $(".carousel-container");
     
-    // Get the list of project HTML files
-    $.ajax({
-        url: "//" + window.location.host + "/src/portfolio-projects/",
-        success: function(data) {
-            const projectFiles = $(data).find(".portfolio-item");
-            
-            // Load each project HTML file into the carousel
-            projectFiles.each(function(index, file) {
-                const fileName = $(file).attr("href");
-                carouselContainer.append(`<div class="mix col-md-6 col-lg-4 gallery-item item"><object type="text/html" data="${fileName}" /></div>`);
-            });
-            
-            // Initialize the Owl Carousel
-            carouselContainer.owlCarousel({
-                items: 4,
-                margin: 100,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 1000,
-                autoplayHoverPause: true,
-                dots: false,
-                nav: false,
-                responsive: {
-                    0: {
-                        items: 1,
-                        margin: 50,
-                        stagePadding: 20
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 4
-                    }
-                },
-                
-                center: false,
-                dotsEach: false,
-                navContainer: ".carousel-nav",
-                slideTransition: "linear",
-                mouseDrag: true,
-                touchDrag: true,
-                pullDrag: true,
-                freeDrag: false,
-                startPosition: 0,
-            });
+    // Initialize the Owl Carousel
+    carouselContainer.owlCarousel({
+        items: 4,
+        margin: 100,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+        dots: false,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 50,
+                stagePadding: 20
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
         },
-        
-        error: function(xhr, status, error) {
-            console.log("Failed to load Portfolio Projects Cards: ", error);
-        }
+        center: false,
+        dotsEach: false,
+        navContainer: ".carousel-nav",
+        slideTransition: "linear",
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
+        freeDrag: false,
+        startPosition: 0,
     });
 });
