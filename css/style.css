@@ -867,7 +867,6 @@ Mobile Testimonials CSS
     border-radius: 40px;
     padding: 6px 22px;
     line-height: 1;
-    margin-top: -10px !important;
 }
 
 .btn-fontfixed {
@@ -929,7 +928,7 @@ Mobile Testimonials CSS
     border-color: #E0013F;
     color: #fff;
     position: relative;
-    top: -50px;
+    top: 5px;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
@@ -938,7 +937,7 @@ Mobile Testimonials CSS
 }
 
 .btn-sec.btn-secondary:hover {
-    top: -2px;
+    top: 2px;
     background: #e001402a;
     border-color: #E0013F;
     color: #E0013F;
