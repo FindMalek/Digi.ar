@@ -85,7 +85,7 @@ jQuery(document).ready(function($) {
     $.ajax({
         url: "src/portfolio-projects/",
         success: function(data) {
-            const projectFiles = $(data).find("a[href$='.html']");
+            const projectFiles = $(data).find(".portfolio-item");
             
             // Load each project HTML file into the carousel
             projectFiles.each(function(index, file) {
@@ -95,7 +95,8 @@ jQuery(document).ready(function($) {
             
             // Initialize the Owl Carousel
             carouselContainer.owlCarousel({
-                items: 5,
+                items: 4,
+                margin: 100,
                 loop: true,
                 autoplay: true,
                 autoplayTimeout: 3000,
@@ -104,17 +105,18 @@ jQuery(document).ready(function($) {
                 nav: false,
                 responsive: {
                     0: {
-                        items: 1
+                        items: 1,
+                        margin: 50,
+                        stagePadding: 20
                     },
                     600: {
                         items: 2
                     },
                     1000: {
-                        items: 2,
-                        margin: -620
+                        items: 4
                     }
                 },
-
+                
                 center: false,
                 dotsEach: false,
                 navContainer: ".carousel-nav",

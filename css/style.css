@@ -266,6 +266,31 @@ h2,
     white-space: nowrap;
 }
 
+.mobile-nav .get-started {
+    display: none;
+    position: relative; /* change from absolute to relative */
+    top: 0px !important; /* adjust value to position the button properly */
+    left: -100px;
+    transform: translateX(-50%);
+    animation: slide-up 0.5s forwards;
+}
+
+.mobile-nav.show-button .get-started {
+    display: block;
+}
+
+@keyframes slide-up {
+    from {
+        bottom: -50px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 20px;
+        opacity: 1;
+    }
+}
+
 /*
 ------------------------
       Hero CSS
