@@ -136,8 +136,6 @@ h2,
     display: none;
 }
 
-
-
 .sub-menu {
     display: none;
     position: absolute;
@@ -174,7 +172,7 @@ h2,
     
     .navbarLogo-mobile {
         width: 100%;
-      }
+    }
     
     .navbar-brand {
         flex: 1;
@@ -205,22 +203,24 @@ h2,
         outline: 0px dotted;
         outline: 0px auto -webkit-focus-ring-color;
     }
-
+    
     .menu-icon {
         left: -100%;
         width: 42px;
         height: 30px;
         filter: invert(23%) sepia(87%) saturate(4578%) hue-rotate(337deg) brightness(97%) contrast(104%);
+        transition: all 0.8s ease-out;
     }
-
+      
     .menu-closed-icon {
         display: none;
     }
-
+    
     .get-started-button {
-        left: 0 !important;
+        left: 0%;
+        position: absolute;
+        transition: all 0.6s ease-out;
     }
-
 }
 
 .navbar {
@@ -280,8 +280,10 @@ h2,
     margin-right: 35%;
     margin-left: 35%;
     display: none;
-    position: relative; /* change from absolute to relative */
-    top: 0px !important; /* adjust value to position the button properly */
+    position: relative;
+    /* change from absolute to relative */
+    top: 0px !important;
+    /* adjust value to position the button properly */
     left: -100px;
     transform: translateX(-50%);
     animation: slide-up 0.5s forwards;
@@ -296,7 +298,7 @@ h2,
         bottom: -50px;
         opacity: 0;
     }
-
+    
     to {
         bottom: 20px;
         opacity: 1;
@@ -360,6 +362,7 @@ h2,
 }
 
 @media (max-width: 576px) {
+    
     .site-blocks-cover h1,
     .site-blocks-cover p {
         text-align: left;
@@ -371,7 +374,7 @@ h2,
         margin-left: 18%;
         width: 100%;
     }
-
+    
     .get-started-button {
         margin-top: -50%;
         margin-left: 18%;
@@ -3122,7 +3125,7 @@ Showcase Client CSS 1
     #portfolio-section {
         padding-top: 20%;
     }
-
+    
     #portfolio-showcase {
         padding-bottom: 25%;
     }

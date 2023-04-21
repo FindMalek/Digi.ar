@@ -30,35 +30,57 @@ $(document).ready(function() {
     $(".nav-link").click(function() {
         if ($(this).attr('id') !== 'navbarDropdownMenuLink') {
             setTimeout(function() {
-                $("#navbarToggleExternalContent").collapse("hide");
-            }, 200);
+                    $("#navbarToggleExternalContent").collapse("hide");
+                }
+                
+                , 200);
         }
     });
     
-    // Define the switcher function
-    function switchMenuIcon() {
-        if ($(".navbar-toggler").attr("aria-expanded") !== "true" && $("#menu-closed-icon").is(":visible")) {
-            $(".get-started-button").animate({
-                left: "100px"
-            }, "slow", function() {
-                $(this).hide();
-                $("#menu-closed-icon").show().css("left", "-100px").animate({
-                    left: "0px"
-                }, "slow");
-            });
-        } else if ($(".navbar-toggler").attr("aria-expanded") !== "true") {
-            $("#menu-closed-icon").animate({
-                left: "-100px"
-            }, "slow", function() {
-                $(this).hide();
-                $(".get-started-button").show().css("left", "100px").animate({
-                    left: "0px"
-                }, "slow");
-            });
-        }
-    }
+    // Toggle menu icon every 5 seconds, only if the menu is closed
+    let isMenuClosed = true;
     
-    // Toggle menu
+    let intervalId = setInterval(function() {
+            if ($(".navbar-toggler").attr("aria-expanded") !== "true") {
+                if (isMenuClosed) {
+                    // Slide out the menu icon
+                    $("#menu-closed-icon").css("left", "100%");
+                    
+                    $("#menu-closed-icon").one("transitionend", function() {
+                        $("#menu-closed-icon").hide();
+                        
+                        // Slide in the "Get Started" button
+                        $(".get-started-button").css({
+                            left: '0%'
+                        });
+                        
+                        $(".get-started-button").show().animate({
+                                left: 'calc(10% - 1px)'
+                            }
+                            
+                            , 600);
+                        
+                    });
+                } else {
+                    // Slide out the "Get Started" button
+                    $(".get-started-button").css("left", "100%");
+                    
+                    $(".get-started-button").one("transitionend", function() {
+                        $(".get-started-button").hide();
+                        
+                        // Slide in the menu icon
+                        $("#menu-closed-icon").show();
+                        $("#menu-closed-icon").css("left", "calc(100% - 42px)");
+                    });
+                }
+                
+                isMenuClosed = !isMenuClosed;
+            }
+        }
+        
+        , 5000);
+    
+    // Toggle menu and hide the "Get Started" button when the menu is opened
     $(".navbar-toggler").click(function() {
         if ($(".navbar-toggler").attr("aria-expanded") === "true") {
             $(".get-started-button").hide();
@@ -67,18 +89,11 @@ $(document).ready(function() {
             $("#menu-closed-icon").show();
             $("#menu-open-icon").hide();
         }
+        
         $("#menu-closed-icon").toggle();
         $("#menu-open-icon").toggle();
         $(".get-started-button").hide();
     });
-    
-    // Toggle menu icon every 5 seconds, only if the menu is closed
-    setInterval(function() {
-        if ($(".navbar-toggler").attr("aria-expanded") !== "true") {
-            $("#menu-closed-icon").toggle();
-            $(".get-started-button").toggle();
-        }
-    }, 5000);
     
     
     
@@ -103,6 +118,7 @@ $(document).ready(function() {
             navLinks.removeClass("text-light").addClass("text-dark");
         }
     });
+    
     // Add a click event listener to the "About Us" dropdown menu item
     $('#navbarDropdownMenuLink + .dropdown-menu a:first-child').click(function() {
         setTimeout(function() {
@@ -111,6 +127,7 @@ $(document).ready(function() {
             
             , 200);
     });
+    
     // Show/hide the submenu when hovering over the "About" link
     $("#about").hover(function() {
             $(".dropdown-menu").show();
@@ -124,7 +141,9 @@ $(document).ready(function() {
     // Add/remove the active class when hovering over the submenu items
     $(".dropdown-menu li a").hover(function() {
             $(this).addClass("active");
-        },
+        }
+        
+        ,
         function() {
             $(this).removeClass("active");
         });
