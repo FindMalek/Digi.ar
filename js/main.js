@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
                 margin: 100,
                 loop: true,
                 autoplay: true,
-                autoplayTimeout: 3000,
+                autoplayTimeout: 1000,
                 autoplayHoverPause: true,
                 dots: false,
                 nav: false,
@@ -125,7 +125,6 @@ jQuery(document).ready(function($) {
                 touchDrag: true,
                 pullDrag: true,
                 freeDrag: false,
-                rewind: false,
                 startPosition: 0,
             });
         },
