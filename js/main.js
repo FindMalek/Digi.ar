@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
     
     // Get the list of project HTML files
     $.ajax({
-        url: "src/portfolio-projects/",
+        url: "//" + window.location.host + "/src/portfolio-projects/",
         success: function(data) {
             const projectFiles = $(data).find(".portfolio-item");
             
