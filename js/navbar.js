@@ -30,69 +30,57 @@ $(document).ready(function() {
     $(".nav-link").click(function() {
         if ($(this).attr('id') !== 'navbarDropdownMenuLink') {
             setTimeout(function() {
-                    $("#navbarToggleExternalContent").collapse("hide");
-                }
-                
-                , 200);
+                $("#navbarToggleExternalContent").collapse("hide");
+            }, 200);
         }
     });
     
-    var intervalId;
+    // Define the switcher function
+    function switchMenuIcon() {
+        if ($(".navbar-toggler").attr("aria-expanded") !== "true" && $("#menu-closed-icon").is(":visible")) {
+            $(".get-started-button").animate({
+                left: "100px"
+            }, "slow", function() {
+                $(this).hide();
+                $("#menu-closed-icon").show().css("left", "-100px").animate({
+                    left: "0px"
+                }, "slow");
+            });
+        } else if ($(".navbar-toggler").attr("aria-expanded") !== "true") {
+            $("#menu-closed-icon").animate({
+                left: "-100px"
+            }, "slow", function() {
+                $(this).hide();
+                $(".get-started-button").show().css("left", "100px").animate({
+                    left: "0px"
+                }, "slow");
+            });
+        }
+    }
     
-    // Add an icon switcher to the navbar toggle button
+    // Toggle menu
     $(".navbar-toggler").click(function() {
-        var navbar = $(".mobile-nav");
-        var button = $(".get-started-button");
-        var logo = $(".navbarLogo-mobile");
-        
-        if ($("#menu-closed-icon").is(":visible")) {
-            clearInterval(intervalId); // Clear the interval when the navbar is opened
-            button.hide();
-            logo.show();
-        }
-        else {
-            intervalId = setInterval(function() {
-                if (navbar.hasClass("show-button")) {
-                    button.hide();
-                    logo.show();
-                } else {
-                    button.show();
-                    logo.hide();
-                }
-                
-                navbar.toggleClass("show-button");
-            }, 5000);  
-        }
-        
-        if ($("#menu-closed-icon").is(":visible")) {
-            $("#menu-closed-icon").hide();
-            $("#menu-open-icon").show();
+        if ($(".navbar-toggler").attr("aria-expanded") === "true") {
+            $(".get-started-button").hide();
         } else {
-            $("#menu-open-icon").hide();
+            $(".get-started-button").show();
             $("#menu-closed-icon").show();
+            $("#menu-open-icon").hide();
         }
+        $("#menu-closed-icon").toggle();
+        $("#menu-open-icon").toggle();
+        $(".get-started-button").hide();
     });
     
-    // Show the contact button initially
-    $(".get-started-button").hide();
-    $(".navbarLogo-mobile").show();
-    
-    // Cycle between logo and contact button every 5 seconds
-    intervalId = setInterval(function() {
-        var navbar = $(".mobile-nav");
-        var button = $(".get-started-button");
-        var logo = $(".navbarLogo-mobile");
-        
-        if (navbar.hasClass("show-button")) {
-            button.hide();
-            logo.show();
-        } else {
-            button.show();
-            logo.hide();
+    // Toggle menu icon every 5 seconds, only if the menu is closed
+    setInterval(function() {
+        if ($(".navbar-toggler").attr("aria-expanded") !== "true") {
+            $("#menu-closed-icon").toggle();
+            $(".get-started-button").toggle();
         }
-        
-        navbar.toggleClass("show-button");
     }, 5000);
+    
+    
     
     if ($(window).width() > 992 && navbarLogo.attr("src") === "images/Digital Army - white.svg") {
         navbarLogo.attr("src", "images/Digital Army - black.svg");

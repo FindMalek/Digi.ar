@@ -87,7 +87,7 @@ jQuery(document).ready(function($) {
         margin: 100,
         loop: true,
         autoplay: true,
-        autoplayTimeout: 1000,
+        autoplayTimeout: 3000,
         autoplayHoverPause: true,
         dots: false,
         nav: false,

@@ -173,9 +173,8 @@ h2,
     }
     
     .navbarLogo-mobile {
-        width: 45%;
-        animation: slide-right 0.5s forwards;
-    }
+        width: 100%;
+      }
     
     .navbar-brand {
         flex: 1;
@@ -187,7 +186,8 @@ h2,
     }
     
     .navbar-toggler {
-        width: -30%;
+        flex: 2;
+        text-align: right;
     }
     
     .dropdown-menu {
@@ -196,15 +196,18 @@ h2,
     }
     
     .navbar-toggler {
-        padding: 0;
-        font-size: 1.25rem;
-        line-height: 1;
         background-color: transparent;
         border: 0px solid transparent;
         border-radius: 0;
     }
     
+    button:focus {
+        outline: 0px dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+    }
+
     .menu-icon {
+        left: -100%;
         width: 42px;
         height: 30px;
         filter: invert(23%) sepia(87%) saturate(4578%) hue-rotate(337deg) brightness(97%) contrast(104%);
@@ -213,6 +216,11 @@ h2,
     .menu-closed-icon {
         display: none;
     }
+
+    .get-started-button {
+        left: 0 !important;
+    }
+
 }
 
 .navbar {
@@ -268,26 +276,29 @@ h2,
 }
 
 .mobile-nav .get-started-button {
+    text-align: center;
+    margin-right: 35%;
+    margin-left: 35%;
     display: none;
     position: relative; /* change from absolute to relative */
     top: 0px !important; /* adjust value to position the button properly */
     left: -100px;
     transform: translateX(-50%);
-    animation: slide-right 0.5s forwards;
+    animation: slide-up 0.5s forwards;
 }
 
 .mobile-nav.show-button .get-started-button {
     display: block;
 }
 
-@keyframes slide-right {
+@keyframes slide-up {
     from {
-        left: -200px;
+        bottom: -50px;
         opacity: 0;
     }
 
     to {
-        left: -100px;
+        bottom: 20px;
         opacity: 1;
     }
 }
@@ -854,12 +865,9 @@ Mobile Testimonials CSS
 .btn-sec {
     font-size: 16px;
     border-radius: 40px;
-    padding: 8px 30px;
-    /* decrease the top and bottom padding */
+    padding: 6px 22px;
     line-height: 1;
-    /* set the line-height to match the new height */
-    margin-top: 3px;
-    /* add margin-top to lower the button */
+    margin-top: -10px !important;
 }
 
 .btn-fontfixed {
@@ -921,7 +929,7 @@ Mobile Testimonials CSS
     border-color: #E0013F;
     color: #fff;
     position: relative;
-    top: 0;
+    top: -50px;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
