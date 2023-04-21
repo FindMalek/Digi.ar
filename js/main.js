@@ -129,6 +129,7 @@ jQuery(document).ready(function($) {
                 startPosition: 0,
             });
         },
+        
         error: function(xhr, status, error) {
             console.log("Failed to load portfolio projects:", error);
         }
