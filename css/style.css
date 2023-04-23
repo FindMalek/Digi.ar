@@ -592,11 +592,21 @@ h2,
     #services-cards {
         margin-top: -10px;
     }
+
+    #service-details {
+        margin-top: -30% !important;
+        padding-bottom: 60px !important;
+    }
+    
+    .mb-5, .my-5 {
+        margin-bottom: 1rem !important;
+    }
 }
 
 #service-details {
-    padding-bottom: 30px;
+    padding-bottom: 50px !important;
 }
+
 
 .unit-1 {
     position: relative;
@@ -3117,7 +3127,7 @@ Showcase Client CSS 1
 }
 
 #portfolio-showcase {
-    margin-top: -150px;
+    margin-top: -90px;
     padding-bottom: 10%;
 }
 
