@@ -77,41 +77,4 @@ jQuery(document).ready(function($) {
         });
     };
     OnePageNavigation();
-    
-    // Portfolio Carousel
-    const carouselContainer = $(".carousel-container");
-    
-    // Initialize the Owl Carousel
-    carouselContainer.owlCarousel({
-        items: 4,
-        margin: 100,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        dots: false,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1,
-                margin: 50,
-                stagePadding: 20
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 4
-            }
-        },
-        center: false,
-        dotsEach: false,
-        navContainer: ".carousel-nav",
-        slideTransition: "linear",
-        mouseDrag: true,
-        touchDrag: true,
-        pullDrag: true,
-        freeDrag: false,
-        startPosition: 0,
-    });
 });
