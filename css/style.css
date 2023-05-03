@@ -344,7 +344,15 @@ h2,
     height: 75vh;
 }
 
+#hero_paragraph {
+    margin-top: -40px;
+}
+
 @media (max-width: 768px) {
+    #hero_paragraph {
+        display: none;
+    }
+    
     .site-blocks-cover-bg {
         background-image: url("https://images.pexels.com/photos/1674118/pexels-photo-1674118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
         background-size: cover !important;
