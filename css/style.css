@@ -433,16 +433,26 @@ h2,
 -----------------------
 */
 
+#clients-router {
+    padding-top: 2%;
+    padding-bottom: 8%;
+}
+
 .clients-outer {
-    margin-top: 3.6rem;
     text-align: center;
     position: relative;
+    margin-top: -10% !important;
 }
 
 @media (max-width: 768px) {
     .clients-outer {
         text-align: center;
         position: relative;
+    }
+
+    #clients-router {
+        padding-top: 2%;
+        padding-bottom: 30%;
     }
 }
 
@@ -3126,18 +3136,9 @@ Showcase Client CSS 1
     padding-top: 15%;
 }
 
-#portfolio-showcase {
-    margin-top: -90px;
-    padding-bottom: 10%;
-}
-
 @media (max-width: 768px) {
     #portfolio-section {
         padding-top: 20%;
-    }
-    
-    #portfolio-showcase {
-        padding-bottom: 25%;
     }
     
     .project-gallery-menu {
