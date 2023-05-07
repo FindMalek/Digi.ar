@@ -281,9 +281,7 @@ h2,
     margin-left: 35%;
     display: none;
     position: relative;
-    /* change from absolute to relative */
     top: 0px !important;
-    /* adjust value to position the button properly */
     left: -100px;
     transform: translateX(-50%);
     animation: slide-up 0.5s forwards;
@@ -325,6 +323,10 @@ h2,
     max-width: 700px;
 }
 
+#hero_paragraph {
+    margin-top: -40px;
+}
+
 @media (max-width: 768px) {
     #hero-text-section {
         top: 0;
@@ -333,6 +335,10 @@ h2,
         justify-content: center;
         align-items: flex-start;
         padding: 20px;
+    }
+
+    #hero_paragraph {
+        display: none;
     }
 }
 
@@ -344,15 +350,7 @@ h2,
     height: 75vh;
 }
 
-#hero_paragraph {
-    margin-top: -40px;
-}
-
-@media (max-width: 768px) {
-    #hero_paragraph {
-        display: none;
-    }
-    
+@media (max-width: 768px) {   
     .site-blocks-cover-bg {
         background-image: url("https://images.pexels.com/photos/1674118/pexels-photo-1674118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
         background-size: cover !important;
@@ -2806,6 +2804,14 @@ Showcase Client CSS 1
     #blog-section {
         padding-top: 20%;
     }
+}
+
+.blog-title {
+    color: black;
+}
+
+.blog-title-shorten {
+    color: black;
 }
 
 #blog {
