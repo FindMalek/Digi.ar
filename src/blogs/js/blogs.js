@@ -27,7 +27,7 @@ $(document).ready(function() {
     }
     
     // Call the shortenBlogText function for each blog
-    fetch("./src/blogs/")
+    fetch("./Digi.ar/src/blogs/") // Update the relative path
     .then(response => response.text())
     .then(data => {
         var numFiles = $(data).find("a[href$='.html']").length;
@@ -39,7 +39,6 @@ $(document).ready(function() {
     .catch(error => {
         console.error("Error fetching blog data:", error);
     });
-
     
     function showFullBlogText(blogId) {
         var $blog = $("#blog-" + blogId);
