@@ -27,15 +27,19 @@ $(document).ready(function() {
     }
     
     // Call the shortenBlogText function for each blog
-    $.ajax({
-        url: "https://raw.githubusercontent.com/FindMalek/Digi.ar/main/src/blogs/",
-        success: function(data) {
-            var numFiles = $(data).find("a[href$='.html']").length;
-            for (var i = 0; i <= numFiles; i ++) {
-                shortenBlogText(i);
-            }
+    
+    fetch("./src/blogs/")
+    .then(response => response.text())
+    .then(data => {
+        var numFiles = $(data).find("a[href$='.html']").length;
+        for (var i = 0; i <= numFiles; i++) {
+            shortenBlogText(i);
         }
+    })
+    .catch(error => {
+        console.error("Error fetching blog data:", error);
     });
+
     
     function showFullBlogText(blogId) {
         var $blog = $("#blog-" + blogId);
