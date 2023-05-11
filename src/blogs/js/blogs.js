@@ -28,7 +28,7 @@ $(document).ready(function() {
     
     // Call the shortenBlogText function for each blog
     $.ajax({
-        url: "/src/blogs/",
+        url: "https://raw.githubusercontent.com/FindMalek/Digi.ar/main/src/blogs/",
         success: function(data) {
             var numFiles = $(data).find("a[href$='.html']").length;
             for (var i = 0; i <= numFiles; i ++) {
