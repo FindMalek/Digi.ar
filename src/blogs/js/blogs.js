@@ -27,18 +27,14 @@ $(document).ready(function() {
     }
     
     // Call the shortenBlogText function for each blog
-    fetch("./Digi.ar/src/blogs/") // Update the relative path
-    .then(response => response.text())
-    .then(data => {
-        var numFiles = $(data).find("a[href$='.html']").length;
-        for (var i = 0; i <= numFiles; i++) {
-            console.log("Found " + numFiles + " blog files");
-            shortenBlogText(i);
+    for (var i = 1; ; i++) {
+        var $blog = $("#blog-" + i);
+        if ($blog.length === 0) {
+            break;
         }
-    })
-    .catch(error => {
-        console.error("Error fetching blog data:", error);
-    });
+        shortenBlogText(i);
+    }
+
     
     function showFullBlogText(blogId) {
         var $blog = $("#blog-" + blogId);
