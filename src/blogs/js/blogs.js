@@ -31,8 +31,8 @@ $(document).ready(function() {
     .then(response => response.text())
     .then(data => {
         var numFiles = $(data).find("a[href$='.html']").length;
-        console.log("Found " + numFiles + " blog files");
         for (var i = 0; i <= numFiles; i++) {
+            console.log("Found " + numFiles + " blog files");
             shortenBlogText(i);
         }
     })
