@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // Portfolio Filter Items
     $('.filter').click(function() {
         $(this).addClass('active').siblings().removeClass('active');
 
@@ -12,12 +13,14 @@ $(document).ready(function() {
         }
     });
 
+    // Portfolio Lightbox
     $('.gallery-item').magnificPopup({
         delegate: '.pp:visible',
         type: 'ajax',
         mainClass: "mfp-fade",
         closeBtnInside: true,
         midClick: true,
+        closeOnBgClick: false,
         gallery: {
             enabled: true,
             navigateByImgClick: true,

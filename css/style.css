@@ -3285,11 +3285,15 @@ Showcase Client CSS 1
 
 .ajax-container {
     position: relative;
-    background: #252c48;
+    background: #666666;
     margin: 40px auto;
     max-width: 1170px;
     padding: 30px;
     text-align: left;
+}
+
+.ajax-container h3, h5, p {
+    color: white;
 }
 
 .ajax-container iframe {
@@ -3315,10 +3319,6 @@ Showcase Client CSS 1
     font-weight: 600;
     display: inline-block;
     margin-right: 10px;
-}
-
-.mfp-close-btn-in .mfp-close {
-    color: #fff;
 }
 
 .owl-carousel .owl-stage {
