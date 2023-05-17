@@ -26,6 +26,14 @@ $(document).ready(function() {
             navigateByImgClick: true,
         },
         callbacks: {
+            open : function() {
+                $('.mfp-wrap').css('overflow', 'hidden auto');
+                $('html').css('overflow', 'hidden');
+            },
+            close : function() {
+                $('.mfp-wrap').css('overflow', '');
+                $('html').css('overflow', 'auto');
+            },
             ajaxContentAdded: function() {
                 $(".owl-carousel").each(function(index) {
                     var a = $(this);
