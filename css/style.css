@@ -3208,6 +3208,11 @@ Showcase Client CSS 1
     display: block;
 }
 
+.gallery-item-content img {
+    width: 500px;
+    height: 250px;
+}
+
 .gallery-item-content .item-thumbnail {
     position: relative;
     overflow: hidden;
@@ -3223,7 +3228,7 @@ Showcase Client CSS 1
     height: 86%;
     opacity: 0;
     transform: scale(0);
-    background: #e00140b3;
+    background: #e00140;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3279,6 +3284,7 @@ Showcase Client CSS 1
 .ajax-container .header-area .project-title {
     padding-bottom: 8px;
     font-size: 30px;
+    font-weight: bold;
     text-transform: uppercase;
     line-height: 40px;
     color: white;
@@ -3295,10 +3301,11 @@ Showcase Client CSS 1
 
 .project-details-info h5 {
     color: white;
+    font-weight: 700;
 } 
 
 .project-details-info p {
-    color: white;
+    color: rgb(209, 209, 209);
 } 
 
 .ajax-container iframe {
