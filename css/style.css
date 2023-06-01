@@ -533,12 +533,12 @@ h2,
 -----------------------
 */
 
-#aboutme-section {
+#aboutus-section {
     padding-top: 8%;
 }
 
 @media (max-width: 768px) {
-    #aboutme-section {
+    #aboutus-section {
         padding-top: 20%;
     }
 }
