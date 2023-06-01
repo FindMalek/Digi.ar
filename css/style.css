@@ -836,8 +836,8 @@ h2,
 }
 
 .site-section.testimonial-wrap {
-    padding: 60px 0;
-    background-color: #f8f9fa;
+    padding: 20px 0;
+    background-color: #f6f6f6;
 }
 
 .testimonial-wrap .owl-nav {
@@ -850,13 +850,7 @@ Mobile Testimonials CSS
 -----------------------
 */
 
-@media (max-width: 768px) {
-    #testimonials-section {
-        height: 500px;
-        padding-bottom: 150%;
-        margin-top: -25%;
-    }
-    
+@media (max-width: 768px) {    
     .testimonial {
         max-width: 350px;
         text-align: center;
@@ -2768,6 +2762,12 @@ button[type="submit"] {
 Showcase Client CSS 1
 -----------------------
 */
+
+@media (max-width: 768px) {
+    #showcase-client-section {
+        margin-top: 33%;
+    }
+}
 
 .site-blocks-cover.row {
     display: flex;
