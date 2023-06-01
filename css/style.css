@@ -336,7 +336,7 @@ h2,
         align-items: flex-start;
         padding: 20px;
     }
-
+    
     #hero_paragraph {
         display: none;
     }
@@ -350,7 +350,7 @@ h2,
     height: 75vh;
 }
 
-@media (max-width: 768px) {   
+@media (max-width: 768px) {
     .site-blocks-cover-bg {
         background-image: url("https://images.pexels.com/photos/1674118/pexels-photo-1674118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
         background-size: cover !important;
@@ -455,7 +455,7 @@ h2,
         text-align: center;
         position: relative;
     }
-
+    
     #clients-router {
         padding-top: 2%;
         padding-bottom: 30%;
@@ -542,6 +542,51 @@ h2,
         padding-top: 20%;
     }
 }
+
+.component blockquote.quote {
+    position: relative;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    width: 90%; /* Adjusted width for mobile */
+    /* create space for the quotes */
+    color: #484748;
+    margin: 1rem auto 2rem;
+  }
+
+  .component blockquote.DE {
+    background:
+        linear-gradient(to right, #E0013F 3px, transparent 3px) 0% 0%,
+        linear-gradient(to bottom, #E0013F 3px, transparent 3px) 0% 0%,
+        linear-gradient(to left, #E0013F 3px, transparent 3px) 100% 100%,
+        linear-gradient(to top, #E0013F 3px, transparent 3px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+  }
+
+  /* -- create the quotation marks -- */
+  .component blockquote.quote:before,
+  .component blockquote.quote:after {
+    font-family: FontAwesome;
+    position: absolute;
+    color: #E0013F;
+    font-size: 24px; /* Adjusted font-size for mobile */
+  }
+
+  .component blockquote.DE:before {
+    content: "\f10e";
+    margin-right: -15px; /* Adjusted margin for mobile */
+    bottom: -15px; /* Adjusted bottom position for mobile */
+    right: 100%;
+  }
+
+  .component blockquote.DE:after {
+    content: "\f10d";
+    margin-left: -15px; /* Adjusted margin for mobile */
+    left: 100%;
+    top: -15px; /* Adjusted top position for mobile */
+    bottom: auto;
+  }
+
 
 .btn_02 {
     display: inline-block;
@@ -850,7 +895,7 @@ Mobile Testimonials CSS
 -----------------------
 */
 
-@media (max-width: 768px) {    
+@media (max-width: 768px) {
     .testimonial {
         max-width: 350px;
         text-align: center;
@@ -3302,11 +3347,11 @@ Showcase Client CSS 1
 .project-details-info h5 {
     color: white;
     font-weight: 700;
-} 
+}
 
 .project-details-info p {
     color: rgb(209, 209, 209);
-} 
+}
 
 .ajax-container iframe {
     height: 400px !important;
