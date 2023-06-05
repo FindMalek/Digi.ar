@@ -547,13 +547,14 @@ h2,
     position: relative;
     text-align: center;
     padding: 1rem 1.2rem;
-    width: 90%; /* Adjusted width for mobile */
+    width: 90%;
+    /* Adjusted width for mobile */
     /* create space for the quotes */
     color: #484748;
     margin: 1rem auto 2rem;
-  }
+}
 
-  .component blockquote.DE {
+.component blockquote.DE {
     background:
         linear-gradient(to right, #E0013F 3px, transparent 3px) 0% 0%,
         linear-gradient(to bottom, #E0013F 3px, transparent 3px) 0% 0%,
@@ -561,31 +562,36 @@ h2,
         linear-gradient(to top, #E0013F 3px, transparent 3px) 100% 100%;
     background-repeat: no-repeat;
     background-size: 15px 15px;
-  }
+}
 
-  /* -- create the quotation marks -- */
-  .component blockquote.quote:before,
-  .component blockquote.quote:after {
+/* -- create the quotation marks -- */
+.component blockquote.quote:before,
+.component blockquote.quote:after {
     font-family: FontAwesome;
     position: absolute;
     color: #E0013F;
-    font-size: 24px; /* Adjusted font-size for mobile */
-  }
+    font-size: 24px;
+    /* Adjusted font-size for mobile */
+}
 
-  .component blockquote.DE:before {
+.component blockquote.DE:before {
     content: "\f10e";
-    margin-right: -15px; /* Adjusted margin for mobile */
-    bottom: -15px; /* Adjusted bottom position for mobile */
+    margin-right: -15px;
+    /* Adjusted margin for mobile */
+    bottom: -15px;
+    /* Adjusted bottom position for mobile */
     right: 100%;
-  }
+}
 
-  .component blockquote.DE:after {
+.component blockquote.DE:after {
     content: "\f10d";
-    margin-left: -15px; /* Adjusted margin for mobile */
+    margin-left: -15px;
+    /* Adjusted margin for mobile */
     left: 100%;
-    top: -15px; /* Adjusted top position for mobile */
+    top: -15px;
+    /* Adjusted top position for mobile */
     bottom: auto;
-  }
+}
 
 
 .btn_02 {
@@ -598,6 +604,188 @@ h2,
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Muli:700");
+
+:root {
+    --color-timeline-default: #D2D3D8;
+    --color-step-completed: #5C6174;
+    --color-in-progress: #E0013F;
+    --color-label-default: var(--color-timeline-default);
+    --color-label-completed: var(--color-step-completed);
+    --color-label-loading: var(--color-in-progress);
+    --color-icon-completed: var(--color-step-completed);
+    --color-icon-default: var(--color-timeline-default);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin-top: -16% !important;
+    margin-bottom: -16% !important;
+    font-family: "Muli", sans-serif;
+    background: var(--body-color);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        margin-top: -80% !important;
+        margin-bottom: -80% !important;
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 200ms ease;
+    background: var(--background-modal-color);
+    height: 220px;
+    min-width: 420px;
+    max-width: 750px;
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+.main-container .steps-container {
+    padding: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container .steps-container .step {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms ease;
+    flex-grow: 0;
+    height: 15px;
+    width: 15px;
+    border: 4px solid var(--color-timeline-default);
+    border-radius: 50%;
+}
+
+.main-container .steps-container .step .preloader,
+body .main-container .steps-container .step svg {
+    display: none;
+}
+
+.main-container .steps-container .step.completed {
+    width: 18px;
+    height: 18px;
+    background: var(--color-step-completed);
+    border: none;
+}
+
+.main-container .steps-container .step.completed svg {
+    transition: all 200ms ease;
+    display: block;
+    height: 10px;
+    width: 10px;
+    fill: var(--color-checkmark-completed);
+}
+
+.main-container .steps-container .step.in-progress {
+    width: 18px;
+    height: 18px;
+    background: var(--color-in-progress);
+    border: none;
+}
+
+.main-container .steps-container .step.in-progress .preloader {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.main-container .steps-container .step .label {
+    position: absolute;
+    top: 30px;
+    filter: none;
+    z-index: 2000;
+    color: var(--color-label-default);
+    transition: all 200ms ease;
+    font-weight: 700;
+}
+
+.main-container .steps-container .step .label.completed {
+    color: var(--color-label-completed);
+}
+
+body .main-container .steps-container .step .label.loading {
+    color: var(--color-label-loading);
+}
+
+.main-container .steps-container .step .icon {
+    font-size: 40px;
+    position: absolute;
+    top: -60px;
+    color: var(--color-icon-default);
+    transition: color 200ms ease;
+}
+
+.main-container .steps-container .step .icon.completed {
+    color: var(--color-icon-completed);
+}
+
+.main-container .steps-container .step .icon.in-progress {
+    color: var(--color-in-progress);
+}
+
+.main-container .steps-container .line {
+    transition: all 200ms ease;
+    height: 2px;
+    flex-grow: 1;
+    max-width: 120px;
+    background: var(--color-timeline-default);
+}
+
+.main-container .steps-container .line.completed {
+    background: var(--color-step-completed);
+}
+
+.main-container .steps-container .line.next-step-uncomplete {
+    background: linear-gradient(to right, var(--color-step-completed), var(--color-timeline-default));
+}
+
+.main-container .steps-container .line.next-step-in-progress {
+    background: linear-gradient(to right, var(--color-step-completed), var(--color-in-progress));
+}
+
+.main-container .steps-container .line.prev-step-in-progress {
+    background: linear-gradient(to right, var(--color-in-progress), var(--color-timeline-default));
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .btn_02:hover {
