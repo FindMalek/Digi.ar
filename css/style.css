@@ -343,7 +343,7 @@ h2,
 }
 
 .site-blocks-cover-bg {
-    background-image: url("https://images.pexels.com/photos/1674118/pexels-photo-1674118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
+    background-image: url("https://scontent.ftun14-1.fna.fbcdn.net/v/t1.15752-9/353829383_2194323500755595_4397848611534513951_n.png?_nc_cat=103&cb=99be929b-59f725be&ccb=1-7&_nc_sid=ae9488&_nc_ohc=9nXZO0hm5GcAX-MKP8L&_nc_ht=scontent.ftun14-1.fna&oh=03_AdRQwKyMNVw99VwQW0yFL1Z7MxVYvHibD6tVnHd4pmpm5A&oe=64B312ED") !important;
     background-size: cover !important;
     background-position: center top !important;
     background-repeat: no-repeat !important;
@@ -352,7 +352,7 @@ h2,
 
 @media (max-width: 768px) {
     .site-blocks-cover-bg {
-        background-image: url("https://images.pexels.com/photos/1674118/pexels-photo-1674118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") !important;
+        background-image: url("https://scontent.ftun14-1.fna.fbcdn.net/v/t1.15752-9/353829383_2194323500755595_4397848611534513951_n.png?_nc_cat=103&cb=99be929b-59f725be&ccb=1-7&_nc_sid=ae9488&_nc_ohc=9nXZO0hm5GcAX-MKP8L&_nc_ht=scontent.ftun14-1.fna&oh=03_AdRQwKyMNVw99VwQW0yFL1Z7MxVYvHibD6tVnHd4pmpm5A&oe=64B312ED") !important;
         background-size: cover !important;
         background-position: center top calc(20vh - 190px) !important;
         background-repeat: no-repeat !important;
@@ -416,9 +416,10 @@ h2,
 
 @media (max-width: 768px) {
     .site-blocks-cover p {
-        color: #ffffff;
+        color: #000;
         font-size: 1rem;
-        font-weight: 300;
+        overflow-wrap: break-word;
+        margin-right: 100px;
     }
 }
 
@@ -1054,7 +1055,7 @@ body .main-container .steps-container .step .label.loading {
 
 #testimonials-section {
     height: 500px;
-    margin-top: -5%;
+    padding-bottom: 30px;
 }
 
 .testimonial blockquote {
@@ -1276,7 +1277,6 @@ Mobile Testimonials CSS
 @media (max-width: 767px) {
     .contact-icon {
         display: inline-block;
-        float: left;
         margin-right: 10px;
     }
     
@@ -1285,7 +1285,6 @@ Mobile Testimonials CSS
         margin-left: 10px;
     }
 }
-
 
 
 #dk-footer .container {
@@ -1300,6 +1299,7 @@ Mobile Testimonials CSS
 .footer-logo img {
     max-width: 700px !important;
     width: 600px;
+    padding-bottom: 20%;
 }
 
 .site-footer .border-top {
@@ -1432,8 +1432,6 @@ Mobile Testimonials CSS
 }
 
 .dk-footer {
-    padding-top: 10% !important;
-    padding: 75px 0 0;
     background-color: #f6f6f6;
     position: relative;
     z-index: 2;
@@ -1684,7 +1682,7 @@ Mobile Testimonials CSS
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: -40px !important;
     }
     
     .footer-logo img {
@@ -1697,7 +1695,7 @@ Mobile Testimonials CSS
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-bottom: 130%;
+        padding-bottom: 80%;
     }
     
     .site-footer h2,
@@ -1727,6 +1725,7 @@ Mobile Testimonials CSS
         padding-top: 2%;
     }
 }
+
 
 /*
 ------------------------

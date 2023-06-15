@@ -21,10 +21,9 @@ const startCounting = () => {
     if (isCounting) return;
 
     isCounting = true;
-    counterAnim("#count1", 0, 300, 3000);
-    counterAnim("#count2", 0, 250, 1500);
-    counterAnim("#count3", 0, 150, 2000);
-    counterAnim("#count4", 0, 100, 2500);
+    counterAnim("#count1", 0, 75, 3000);
+    counterAnim("#count2", 0, 150, 1500);
+    counterAnim("#count3", 0, 1000, 2000);
 };
 
 const stopCounting = () => {
