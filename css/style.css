@@ -485,14 +485,10 @@ h2,
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(170deg) brightness(3%);
 }
 
-.client-image {
-    width: 120px;
-    height: auto;
-}
 
 .clients__slides {
     display: flex;
-    animation: slide 60s linear infinite;
+    animation: slide 20s linear infinite;
     margin-left: 1px;
 }
 
@@ -1286,6 +1282,10 @@ Mobile Testimonials CSS
     }
 }
 
+#dk-footer {
+    padding-top: 2.7%;
+}
+
 
 #dk-footer .container {
     max-width: 85%;
@@ -1735,6 +1735,7 @@ Mobile Testimonials CSS
 
 #contact-section {
     padding-top: 10%;
+    padding-bottom: 80px;
 }
 
 @media (max-width: 768px) {
