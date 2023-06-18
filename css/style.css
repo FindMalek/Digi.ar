@@ -2997,7 +2997,8 @@ Showcase Client CSS 1
 
 @media (max-width: 768px) {
     #showcase-client-section {
-        margin-top: 33%;
+        margin-top: -15%;
+        padding-bottom: 10px;
     }
 }
 
