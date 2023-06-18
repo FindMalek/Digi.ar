@@ -9,7 +9,7 @@ for (let i = 1; i <= 27; i++) {
 const clientsSlides = document.querySelector(".clients__slides");
 
 logoLinks.forEach((fileName) => {
-  fetch(`${folderPath}${fileName}`)
+  fetch(`./${folderPath}${fileName}`)
     .then((response) => response.blob())
     .then((blob) => {
       const objectURL = URL.createObjectURL(blob);
