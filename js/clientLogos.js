@@ -1,7 +1,7 @@
 const clientsSlides = document.querySelector(".clients__slides");
 
 // Fetch the logo images from the directory
-fetch("images/clients/")
+fetch("../images/clients/")
   .then((response) => response.text())
   .then((html) => {
     // Create a temporary div element to parse the fetched HTML
