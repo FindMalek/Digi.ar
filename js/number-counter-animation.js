@@ -5,13 +5,15 @@ const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
     const step = (timestamp) => {
         if (!startTimestamp) startTimestamp = timestamp;
         const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        target.innerText = Math.floor(progress * (end - start) + start);
+        const value = Math.floor(progress * (end - start) + start);
+        target.innerText = value >= 1000 ? "1000+" : value;
         if (progress < 1) {
             window.requestAnimationFrame(step);
         }
     };
     window.requestAnimationFrame(step);
 };
+
 //#endregion - end of - number counter animation
 
 const showcaseSection = document.getElementById("showcase-client-section");

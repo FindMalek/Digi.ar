@@ -441,8 +441,8 @@ h2,
 */
 
 #clients-router {
-    padding-top: 2%;
-    padding-bottom: 8%;
+    padding-top: 10%;
+    padding-bottom: 4%;
 }
 
 .clients-outer {
@@ -458,8 +458,8 @@ h2,
     }
     
     #clients-router {
-        padding-top: 2%;
-        padding-bottom: 30%;
+        padding-top: 20%;
+        padding-bottom: 20%;
     }
 }
 
@@ -1046,6 +1046,7 @@ body .main-container .steps-container .step .label.loading {
     max-width: 800px;
     margin: 0 auto !important;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 #testimonials-section {
@@ -3000,6 +3001,11 @@ Showcase Client CSS 1
         margin-top: -15%;
         padding-bottom: 10px;
     }
+}
+
+#showcase-client-section {
+    margin-top: -15%;
+    padding-bottom: 10px;
 }
 
 .site-blocks-cover.row {
