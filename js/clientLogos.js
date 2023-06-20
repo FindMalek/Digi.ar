@@ -1,14 +1,18 @@
-const folderPath = "images/brands/";
+const folderPath = "images/brands-black-white/";
 const logoLinks = [];
 
-for (let i = 1; i <= 27; i++) {
+for (let i = 1; i <= 26; i++) {
   const fileName = `${i}.png`;
   logoLinks.push(fileName);
 }
 
+const logoLinksTwice = [...logoLinks, ...logoLinks];
+
+console.log(logoLinksTwice);
+
 const clientsSlides = document.querySelector(".clients__slides");
 
-logoLinks.forEach((fileName) => {
+logoLinksTwice.forEach((fileName) => {
   fetch(`./${folderPath}${fileName}`)
     .then((response) => response.blob())
     .then((blob) => {
@@ -17,7 +21,7 @@ logoLinks.forEach((fileName) => {
       logoImg.src = objectURL;
       logoImg.style.filter = "grayscale(100%)";
       logoImg.style.padding = "30px";
-      logoImg.style.maxHeight = "150px";
+      logoImg.style.maxHeight = "200px";
       logoImg.style.width = "auto";
       clientsSlides.appendChild(logoImg);
     })
