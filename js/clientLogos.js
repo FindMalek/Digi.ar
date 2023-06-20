@@ -1,31 +1,25 @@
-const folderPath = "https://findmalek.github.io/Digi.ar/images/clients/";
+const folderPath = "images/brands/";
 const logoLinks = [];
 
-fetch(folderPath)
-  .then((response) => response.text())
-  .then((html) => {
-    const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = html;
+for (let i = 1; i <= 27; i++) {
+  const fileName = `${i}.png`;
+  logoLinks.push(fileName);
+}
 
-    const fileLinks = tempDiv.querySelectorAll("a");
-    fileLinks.forEach((link) => {
-      const fileName = decodeURIComponent(link.getAttribute("href").substring(1));
-      if (fileName.endsWith(".png")) {
-        logoLinks.push(fileName);
-      }
-    });
+const clientsSlides = document.querySelector(".clients__slides");
 
-    const clientsSlides = document.querySelector(".clients__slides");
-
-    logoLinks.forEach((fileName) => {
-      const imageUrl = `${folderPath}${fileName}`;
+logoLinks.forEach((fileName) => {
+  fetch(`./${folderPath}${fileName}`)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const objectURL = URL.createObjectURL(blob);
       const logoImg = document.createElement("img");
-      logoImg.src = imageUrl;
+      logoImg.src = objectURL;
       logoImg.style.filter = "grayscale(100%)";
-      logoImg.style.padding = "20px";
+      logoImg.style.padding = "30px";
       logoImg.style.maxHeight = "150px";
       logoImg.style.width = "auto";
       clientsSlides.appendChild(logoImg);
-    });
-  })
-  .catch((error) => console.error(error));
+    })
+    .catch((error) => console.error(error));
+});

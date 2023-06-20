@@ -850,7 +850,16 @@ body .main-container .steps-container .step .label.loading {
 }
 
 #service-details {
-    padding-bottom: 50px !important;
+    padding-bottom: 200px !important;
+}
+
+#why-choose-us {
+    margin-top: 6%;
+}
+
+#why-choose-us-image {
+    width: 130% !important;
+    height: auto;
 }
 
 .unit-1 {
@@ -3004,7 +3013,7 @@ Showcase Client CSS 1
 }
 
 #showcase-client-section {
-    margin-top: -15%;
+    margin-top: -25%;
     padding-bottom: 10px;
 }
 

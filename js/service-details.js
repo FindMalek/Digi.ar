@@ -1,4 +1,3 @@
-
 const learnMoreLinks = document.querySelectorAll('.learn-more');
 
 learnMoreLinks.forEach(link => {
@@ -26,5 +25,13 @@ function loadServiceDetails(url) {
                 top: offsetTop,
                 behavior: 'smooth'
             });
+
+            if (window.innerWidth > 992) {
+                const showcaseClientSection = document.getElementById('showcase-client-section');
+                showcaseClientSection.style.marginTop = '-10%';
+                showcaseClientSection.style.paddingBottom = '10px';
+
+                serviceDetails.style.paddingBottomBottom = '-100px';
+            }
         });
 }
