@@ -9,7 +9,7 @@ type Props = {
 
 export default function MobileNavLinks({ navs }: Props) {
   return (
-    <Disclosure.Panel className="md:hidden">
+    <Disclosure.Panel className="md:hidden bg-slate-100">
       <div className="space-y-1 pb-3 pt-2">
         {/* Current: "block border-l-4 border-pink-500 bg-pink-50 py-2 pl-3 pr-4 text-base font-medium text-pink-700 sm:pl-5 sm:pr-6" */}
 

@@ -1,6 +1,12 @@
-import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Example() {
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
+
+import Logo from "@/components/overall/Logo";
+
+
+export default function Herosection() {
   return (
     <div className="relative isolate overflow-hidden bg-white">
       <svg
@@ -19,59 +25,70 @@ export default function Example() {
             <path d="M.5 200V.5H200" fill="none" />
           </pattern>
         </defs>
-        <rect width="100%" height="100%" strokeWidth={0} fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" />
+        <rect
+          width="100%"
+          height="100%"
+          strokeWidth={0}
+          fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
+        />
       </svg>
+      
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-          <img
-            className="h-11"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-          />
+          <Logo className="xs:hidden lg:block h-11 w-auto" theme="dark" />
           <div className="mt-24 sm:mt-32 lg:mt-16">
-            <a href="#" className="inline-flex space-x-6">
-              <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">
-                What's new
+            <Link href="#" className="inline-flex space-x-6">
+              <span className="rounded-full bg-pink-600/10 px-3 py-1 text-sm font-semibold leading-6 text-pink-600 ring-1 ring-inset ring-pink-600/10">
+                New blog
               </span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-                <span>Just shipped v1.0</span>
-                <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                <span>Blog name</span>
+                <ChevronRightIcon
+                  className="h-5 w-5 text-gray-400"
+                  aria-hidden="true"
+                />
               </span>
-            </a>
+            </Link>
           </div>
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Deploy to the cloud with confidence
+            Rentabilisez vos Activités Marketing
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-            fugiat veniam occaecat fugiat aliqua.
+            Mettez l’accent sur votre DATA pour générer plus de chiffre
+            d’affaires. Nous mesurons l'impact de vos campagnes et les
+            ajustement à entreprendre pour garantir les meilleures prestations à
+            nos clients.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            <Link
+              href="/contact"
+              className="rounded-md bg-pink-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
             >
               Get started
-            </a>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            </Link>
+            <Link
+              href="/about"
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-              <img
-                src="https://tailwindui.com/img/component-images/project-app-screenshot.png"
-                alt="App screenshot"
+
+        <div className="mx-auto mt-20 max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+          <div className="max-w-3xl mt-16 flex-none sm:max-w-5xl lg:max-w-none">
+            <div className="mx-auto sm:flex sm:items-center -m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+              <Image
+                src="/home/herosection.webp"
+                alt="Man working on a paper, using a pen, bright background with a small house, 2 rolled papers."
                 width={2432}
                 height={1442}
-                className="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"
+                className="w-[50rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"
               />
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
