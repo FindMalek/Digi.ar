@@ -6,15 +6,15 @@ module.exports = {
     "./src/components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "./src/lib/**/*.{ts,tsx}"
+    "./src/lib/**/*.{ts,tsx}",
   ],
   theme: {
     screens: {
-      "xs": "320px",
-      "sm": "640px",
-      "md": "768px",
-      "lg": "1024px",
-      "xl": "1280px",
+      xs: "320px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
       "1.5xl": "1440px",
       "2xl": "1600px",
       "2.5xl": "1920px",
@@ -25,6 +25,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        //Purple: 4A017D
+        //Pink: E0013F
+        //Blue : 0B0146i
+        //Grey: 1C1517
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
