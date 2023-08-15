@@ -7,6 +7,8 @@ import TrustUsSection from "@/components/home/TrustUsSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import Statistics from "@/components/home/Statistics";
 import Reviews from "@/components/home/Reviews";
+import Partnership from "@/components/home/Partnership";
+import Footer from "@/components/overall/Footer";
 
 export default function Home() {
   return (
@@ -18,7 +20,8 @@ export default function Home() {
       <ServicesSection />
       <Statistics />
       <Reviews />
-      <Statistics />
+      <Partnership />
+      <Footer />
     </>
   );
 }
