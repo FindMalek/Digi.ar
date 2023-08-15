@@ -9,7 +9,7 @@ export default function AuthorBox() {
             <div className="py-12">
               <div className="flex items-center">
                 <Avatar>
-                  <AvatarImage src="profile-pic/profile.png" />
+                  <AvatarImage src="profile-pic/profile.webp" />
                   <AvatarFallback>Mahmoud Beznaiguia</AvatarFallback>
                 </Avatar>
                 <div className="ml-4">

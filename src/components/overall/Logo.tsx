@@ -9,7 +9,7 @@ interface LogoProps {
 
 const Logo = ({ theme = "light", className }: LogoProps) => {
   const logoSrc =
-    theme === "light" ? "/logos/logo-white.png" : "/logos/logo-black.png";
+    theme === "light" ? "/logos/logo-white.webp" : "/logos/logo-black.webp";
 
   return (
     <Link href="/" className={className}>
