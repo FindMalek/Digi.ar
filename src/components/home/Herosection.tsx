@@ -54,11 +54,12 @@ export default function Herosection() {
             Rentabilisez vos Activités Marketing
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Mettez l’accent sur votre DATA pour générer plus de chiffre
-            d’affaires. Nous mesurons l'impact de vos campagnes et les
-            ajustement à entreprendre pour garantir les meilleures prestations à
-            nos clients.
+            Mettez l&apos;accent sur votre DATA pour générer plus de chiffre
+            d&rsquo;affaires. Nous mesurons l&apos;impact de vos campagnes et
+            les ajustement à entreprendre pour garantir les meilleures
+            prestations à nos clients.
           </p>
+
           <div className="mt-10 flex items-center gap-x-6">
             <Link
               href="/contact"

@@ -8,7 +8,7 @@ type NavLinkProps = {
 {
   /* Current: "border-pink-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */
 }
-function NavLink({ href, text}: NavLinkProps) {
+function NavLink({ href, text }: NavLinkProps) {
   return (
     <Link
       href={href}
@@ -22,8 +22,8 @@ function NavLink({ href, text}: NavLinkProps) {
 export default function NavLinks({ navs }: any) {
   return (
     <div className="hidden md:ml-6 md:flex md:space-x-8">
-      {navs.map((item: any) => (
-        <NavLink text={item.name} href={item.href} />
+      {navs.map((item: any, index: number) => (
+        <NavLink key={index} text={item.name} href={item.href} />
       ))}
     </div>
   );
