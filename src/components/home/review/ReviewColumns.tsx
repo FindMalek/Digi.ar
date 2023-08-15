@@ -3,14 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import Review from "@/components/home/review/Review";
 
 type ReviewProps = {
-  name: string;
-  avatar: string;
-  review: string;
-  rating: number;
-  date: string;
   title: string;
   body: string;
   author: string;
+  rating: number;
+  imageSrc: string;
 };
 
 type ReviewColumnProps = {
