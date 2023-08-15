@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 ::selection {
-  background: #4A017D;
+  background: #4a017d;
   color: #fff;
 }
 
