@@ -2,7 +2,7 @@ import Logo from "@/components/overall/Logo";
 
 export default function LogoSection() {
   return (
-    <div className="flex flex-shrink-0 items-center">
+    <div className="flex flex-shrink-0 items-center z-40">
       <div className="flex items-center">
         <Logo className="block -mt-2 h-8 w-auto lg:hidden" theme="dark" />
         <Logo className="hidden -mt-2 h-8 w-auto lg:block" theme="dark" />

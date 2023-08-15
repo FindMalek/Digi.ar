@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { StarIcon } from "@/icons/StarIcon";
+import { StarIcon } from "@/components/overall/Icons";
 
 type StarRatingProps = {
   rating: number;

@@ -1,4 +1,8 @@
-import { Disclosure } from "@headlessui/react";
+import {Popover } from "@headlessui/react";
+import { ChevronUpIcon, MenuIcon } from "@/components/overall/Icons";
+
+import ContactButton from "@/components/navigation/ContactButton";
+import Animatepresence from "@/components/navigation/Animatepresence";
 
 type Props = {
   navs: {
@@ -9,29 +13,27 @@ type Props = {
 
 export default function MobileNavLinks({ navs }: Props) {
   return (
-    <Disclosure.Panel className="md:hidden bg-slate-100">
-      <div className="space-y-1 pb-3 pt-2">
-        {/* Current: "block border-l-4 border-pink-500 bg-pink-50 py-2 pl-3 pr-4 text-base font-medium text-pink-700 sm:pl-5 sm:pr-6" */}
-
-        {navs.map((item, index) => (
-          <Disclosure.Button
-            key={index} // Add a unique key
-            as="a"
-            href={item.href}
-            className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 sm:pl-5 sm:pr-6"
-          >
-            {item.name}
-          </Disclosure.Button>
-        ))}
-
-        <Disclosure.Button
-          as="a"
-          href="/contact"
-          className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 sm:pl-5 sm:pr-6"
-        >
-          Contact
-        </Disclosure.Button>
-      </div>
-    </Disclosure.Panel>
+    <div className="flex items-center gap-6">
+      <Popover className="md:hidden">
+        {({ open }) => (
+          <>
+            <Popover.Button
+              className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-900 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 active:stroke-gray-900 [&:not(:focus-visible)]:focus:outline-none"
+              aria-label="Toggle site navigation"
+            >
+              {({ open }) =>
+                open ? (
+                  <ChevronUpIcon className="h-6 w-6" />
+                ) : (
+                  <MenuIcon className="h-6 w-6" />
+                )
+              }
+            </Popover.Button>
+            <Animatepresence open={open} navs={navs} />
+          </>
+        )}
+      </Popover>
+      <ContactButton className="xs:hidden sm:hidden md:block lg:block" />
+    </div>
   );
 }
