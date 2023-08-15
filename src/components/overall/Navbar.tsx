@@ -20,14 +20,14 @@ const navigation: NavigationItem[] = [
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white border border-b-2">
+    <Disclosure as="nav" className="bg-white sticky top-0 border border-b-1">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl shadow drop-shadow-xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 justify-between items-center">
               <LogoSection />
               <NavLinks navs={navigation} />
-              <ContactButton className="xs:hidden sm:hidden md:block lg:block"/>
+              <ContactButton className="xs:hidden sm:hidden md:block lg:block" />
               <MobileMenuButton open={open} />
             </div>
           </div>
