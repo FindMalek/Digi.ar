@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/Button";
 import AuthorBox from "@/components/home/AuthorBox";
 
 export default function WeAreSection() {
@@ -10,7 +12,7 @@ export default function WeAreSection() {
         <Image
           className="h-full w-full object-cover"
           src="/we-are/Marketing Plan.webp"
-          alt=""
+          alt="A note with a marketing plan on it."
           height={1200}
           width={1000}
         />
@@ -53,11 +55,10 @@ export default function WeAreSection() {
           </p>
           <AuthorBox />
           <div className="mt-8">
-            <Link
-              href="/about"
-              className="inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              More about us
+            <Link href="/about">
+              <Button className="inline-flex rounded-md bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm hover:bg-white/20 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                More about us
+              </Button>
             </Link>
           </div>
         </div>

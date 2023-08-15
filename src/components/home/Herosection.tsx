@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
 import Logo from "@/components/overall/Logo";
-
 
 export default function Herosection() {
   return (
