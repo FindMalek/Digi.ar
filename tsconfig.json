@@ -24,9 +24,16 @@
       "@/styles/*": ["./styles/*"],
       "@/root/": ["./*"],
       "@/lib/*": ["./src/lib/*"],
-      "@/icons/*": ["./src/icons/*"]
+      "@/icons/*": ["./src/icons/*"],
+      
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/home/Reviews.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/home/Reviews.tsx"
+  ],
   "exclude": ["node_modules"]
 }
