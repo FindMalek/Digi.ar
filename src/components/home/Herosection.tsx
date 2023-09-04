@@ -80,7 +80,7 @@ export default function Herosection() {
           <div className="max-w-3xl mt-16 flex-none sm:max-w-5xl lg:max-w-none">
             <div className="mx-auto sm:flex sm:items-center -m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
               <Image
-                src="/home/herosection.webp"
+                src="/home-page/herosection/herosection.webp"
                 alt="Man working on a paper, using a pen, bright background with a small house, 2 rolled papers."
                 width={2432}
                 height={1442}
