@@ -41,9 +41,9 @@ export default function Quotation() {
           Vision and Value
         </h2>
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          Notre vision d'entreprise est centrée sur le client et ses objectifs,
-          et nous nous efforçons d'avoir des offres complètes répondant à tous
-          ses besoins.
+          Notre vision d&apos;entreprise est centrée sur le client et ses
+          objectifs, et nous nous efforçons d&apos;avoir des offres complètes
+          répondant à tous ses besoins.
         </p>
       </div>
       <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">

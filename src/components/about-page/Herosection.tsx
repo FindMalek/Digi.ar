@@ -17,11 +17,11 @@ export default function Herosection() {
               Notre réseau au sein de Digital Army est un ensemble de
               partenaires et de prestataires, tous unis par des collaborations
               fructueuses. Nous nous engageons à offrir à nos clients le
-              meilleur, à des prix compétitifs, assurant ainsi l'un des
+              meilleur, à des prix compétitifs, assurant ainsi l&apos;un des
               meilleurs rapports qualité-prix du marché. Chez Digital Army, nous
               plaçons le client et sa marque au cœur de nos priorités. Notre
-              modèle commercial est axé sur la rigueur, l'honnêteté et
-              l'indépendance, garantissant à chaque client une expérience
+              modèle commercial est axé sur la rigueur, l&apos;honnêteté et
+              l&apos;indépendance, garantissant à chaque client une expérience
               exceptionnelle
             </p>
           </div>
