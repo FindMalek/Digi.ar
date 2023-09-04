@@ -1,26 +1,27 @@
 "use client";
 
 import Navbar from "@/components/overall/Navbar";
-import Herosection from "@/components/about-page/Herosection";
-import WeAreSection from "@/components/home/WeAreSection";
-import TrustUsSection from "@/components/home/TrustUsSection";
-import ServicesSection from "@/components/home/ServicesSection";
-import Statistics from "@/components/home/Statistics";
-import Reviews from "@/components/home/Reviews";
-import Partnership from "@/components/home/Partnership";
 import Footer from "@/components/overall/Footer";
+
+import Herosection from "@/components/about-page/Herosection";
+import Quotation from "@/components/about-page/Quotation";
+import Timeline from "@/components/about-page/Timeline";
+import OurMission from "@/components/about-page/OurMission";
+import OurValues from "@/components/about-page/OurValues";
+import LogoCloud from "@/components/about-page/LogoCloud";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+
       <Herosection />
-      <WeAreSection />
-      <TrustUsSection />
-      <ServicesSection />
-      <Statistics />
-      <Reviews />
-      <Partnership />
+      <Timeline />
+      <OurMission />
+      <Quotation />
+      <OurValues />
+      <LogoCloud />
+
       <Footer />
     </>
   );
