@@ -1,4 +1,4 @@
-import { Container } from "@/components/Container";
+import { Container } from "@/components/overall/Container";
 import ReviewGrid from "@/components/home/review/ReviewGrid";
 
 const reviews = [
