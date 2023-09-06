@@ -9,7 +9,7 @@ export default function Herosection() {
       <div className="relative isolate overflow-hidden pt-14">
         <Image
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-          alt=""
+          alt="TODO: Add alt"
           height={678}
           width={1155}
           className="absolute inset-0 -z-10 h-full w-full object-cover"
@@ -29,12 +29,12 @@ export default function Herosection() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Explorez Nos Études de Cas et Projets{" "}
+              Explorez Nos Études de Cas et Projets
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
               Découvrez comment nous avons aidé des entreprises comme la vôtre à
-              réussir en ligne. Nos études de cas mettent en avant l'impact de
-              notre travail et les résultats que nous avons obtenus pour nos
+              réussir en ligne. Nos études de cas mettent en avant l&apos;impact
+              de notre travail et les résultats que nous avons obtenus pour nos
               clients.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">

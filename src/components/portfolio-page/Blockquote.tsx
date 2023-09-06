@@ -36,7 +36,10 @@ function BlockquoteWithImage({
       </blockquote>
       <div className="col-start-1 row-start-2 overflow-hidden rounded-xl bg-neutral-100 sm:col-span-5 sm:row-span-full sm:rounded-3xl">
         <Image
-          {...image}
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
           sizes="(min-width: 1024px) 17.625rem, (min-width: 768px) 16rem, (min-width: 640px) 40vw, 3rem"
           className="h-12 w-12 object-cover grayscale sm:aspect-[7/9] sm:h-auto sm:w-full"
         />
