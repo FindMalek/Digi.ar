@@ -74,12 +74,6 @@ export default function ServicesSection() {
                 <dd className="mt-2 text-base leading-7 text-gray-600 lg:min-h-[60px]">
                   {feature.description}
                 </dd>
-                <Link
-                  href="/about"
-                  className="text-sm font-semibold leading-6 text-pink-900"
-                >
-                  Learn more <span aria-hidden="true">→</span>
-                </Link>
               </div>
             ))}
           </dl>
