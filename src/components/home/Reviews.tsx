@@ -116,8 +116,10 @@ export default function Reviews() {
         >
           Everyone is changing their buisness with Digital Army.
         </h2>
-        <p className="mt-2 text-lg text-gray-600 sm:text-center">
-          Thousands of people have doubled their buisness in the last 30 days.
+        <p className="mt-6 text-lg leading-8 text-gray-600 text-center">
+          All of our clients have seen an increase in their sales and a
+          significant improvement in their brand image. With Digital Army, you
+          will be able to reach your goals.
         </p>
         <ReviewGrid reviews={reviews} />
       </Container>

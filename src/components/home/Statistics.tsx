@@ -38,10 +38,11 @@ export default function Statistics() {
         <div className="mx-auto max-w-2xl lg:max-w-none">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Trusted by creators worldwide
+              Nos track records
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-300">
-              We have helped creators earn over $70 million since 2017.
+              Nous avez fait confiance à plus de 75 clients et nous avons mené à
+              bien plus de 150 projets.
             </p>
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">

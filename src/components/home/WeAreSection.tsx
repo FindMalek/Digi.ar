@@ -44,10 +44,10 @@ export default function WeAreSection() {
       <div className="relative mx-auto max-w-7xl py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="pl-6 pr-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
           <h2 className="text-base font-semibold leading-7 text-pink-600">
-            Award winning support
+            Meuilleur agence de marketing digital
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            We are Digital Army
+            Nous somme Digital Army
           </p>
           <p className="mt-6 text-base leading-7 text-gray-300">
             Nous sommes une agence de conseils en marketing et de gestion de
@@ -57,7 +57,7 @@ export default function WeAreSection() {
           <div className="mt-8">
             <Link href="/about">
               <Button className="inline-flex rounded-md bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm hover:bg-white/20 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                More about us
+                En savoir plus
               </Button>
             </Link>
           </div>

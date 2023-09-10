@@ -30,13 +30,13 @@ const features = [
     icon: PresentationChartBarIcon,
   },
   {
-    name: "i forgot",
-    description: "test test",
+    name: "Web Development",
+    description: "Développement web sur mesure.",
     icon: FingerPrintIcon,
   },
   {
-    name: "I forgot",
-    description: "test",
+    name: "Branding & Design",
+    description: "Création de marque et design graphique.",
     icon: FingerPrintIcon,
   },
 ];
@@ -47,15 +47,14 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-pink-600">
-            Deploy faster
+            Les meilleurs services de marketing digital
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to deploy your app
+            Digital Army Services
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-            Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-            In mi viverra elit nunc.
+            Découvrez nos services d’accompagnement des entreprises vers
+            l'excellence numérique
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -80,7 +79,7 @@ export default function ServicesSection() {
         </div>
         <Link href="/contact" className="flex justify-center">
           <Button className="mt-16 text-white shadow-xl bg-gray-900 hover:bg-gray-500">
-            Do not hesitate to contact us
+            Commencer
           </Button>
         </Link>
       </div>

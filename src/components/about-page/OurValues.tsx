@@ -2,34 +2,34 @@ import React from "react";
 
 const values = [
   {
-    name: "Be world-class",
+    name: "Centrés sur le Client",
     description:
-      "Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.",
+      "Nous plaçons nos clients et leurs objectifs au cœur de notre vision d'entreprise. Notre engagement est de fournir des solutions complètes répondant à tous leurs besoins.",
   },
   {
-    name: "Share everything you know",
+    name: "Offres Complètes",
     description:
-      "Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.",
+      "Nous nous efforçons constamment d'offrir des solutions qui couvrent l'ensemble du spectre du marketing digital. Cela inclut le community management, la publicité en ligne, le développement web, le branding, et bien plus encore.",
   },
   {
-    name: "Always learning",
+    name: "Partenaires",
+    description:
+      "Nos valeurs fondamentales sont l'honnêteté dans nos relations avec les clients, la rigueur dans notre approche, l'assistance à chaque étape de la collaboration, et le soutien continu à nos clients.",
+  },
+  {
+    name: "Honnêteté, Rigueur, Assistance, Soutien",
     description:
       "Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.",
   },
   {
-    name: "Be supportive",
+    name: "Accessibilité du Digital Marketing",
     description:
-      "Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.",
+      "Notre mission est de rendre les services de marketing digital accessibles à tous, quel que soit leur secteur d'activité ou leur taille. Nous croyons en l'inclusivité numérique.",
   },
   {
-    name: "Take responsibility",
+    name: "Incubateur de Jeunes Talents",
     description:
-      "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
-  },
-  {
-    name: "Enjoy downtime",
-    description:
-      "Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.",
+      " Nous nous engageons à incuber les jeunes talents, à les soutenir dans l'entrepreneuriat, et à les aider à créer de la valeur. C'est notre contribution à l'éveil nationa",
   },
 ];
 
