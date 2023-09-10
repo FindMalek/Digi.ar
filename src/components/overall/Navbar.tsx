@@ -3,7 +3,6 @@ import React from "react";
 import { Disclosure } from "@headlessui/react";
 import LogoSection from "@/components/navigation/LogoSection";
 import NavLinks from "@/components/navigation/NavLinks";
-import ContactButton from "@/components/navigation/ContactButton";
 import MobileNavLinks from "@/components/navigation/MobileNavLinks";
 
 type NavigationItem = {
@@ -13,7 +12,7 @@ type NavigationItem = {
 
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "#services" },
+  { name: "Services", href: "/#services" },
   { name: "About", href: "/about" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Blog", href: "/blog" },
