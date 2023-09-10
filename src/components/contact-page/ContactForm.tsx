@@ -1,6 +1,5 @@
 "use client";
 
-import Axios from "axios";
 import { useEffect, useState } from "react";
 
 import { Check, ChevronsUpDown } from "lucide-react";
@@ -217,14 +216,6 @@ export default function ContactForm() {
     setIsLoading(true);
     if (values) {
 
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
-
       toast({
         title: `${values.fullname} your message has been sent!`,
         description: "We will contact you soon!",
@@ -232,7 +223,6 @@ export default function ContactForm() {
 
       form.reset();
 
-      const result = Axios.post("/api/contact", values);
     } else {
       toast({
         title: `Please fill the form correctly!`,
