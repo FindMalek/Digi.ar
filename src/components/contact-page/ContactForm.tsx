@@ -107,6 +107,20 @@ const formSchema = z.object({
     .url({
       message: "Please enter a valid URL for your CV link.",
     }),
+  pricing: z
+    .string({
+      required_error: "Please select a pricing.",
+    })
+    .nonempty({
+      message: "Please select a pricing.",
+    }),
+  providedservices: z
+    .string({
+      required_error: "Please select a service.",
+    })
+    .nonempty({
+      message: "Please select a service.",
+    }),
 });
 
 const whatareyou = [
@@ -133,6 +147,18 @@ const areaofinterest = [
   { label: "Sales", value: "Sales" },
 ] as const;
 
+const pricing = [
+  { label: "Fixed Price", value: "Fixed Price" },
+  { label: "Hourly Rate", value: "Hourly Rate" },
+  { label: "Commission", value: "Commission" },
+];
+
+const providedServices = [
+  { label: "Marketing Consulting", value: "Marketing Consulting" },
+  { label: "Legal Consulting", value: "Legal Consulting" },
+  { label: "Accounting Consulting", value: "Accounting Consulting" },
+];
+
 export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
 
@@ -154,6 +180,7 @@ export default function ContactForm() {
       message: "",
       areaofinterest: "",
       cvlink: "",
+      pricing: "",
     },
   });
 
@@ -542,7 +569,106 @@ export default function ContactForm() {
                   </div>
                 </>
               )}
-              {partnershipVisible && <></>}
+              {partnershipVisible && (
+                <>
+                  <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div>
+                      <FormField
+                        control={form.control}
+                        name="pricing"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="block text-sm font-semibold leading-6 text-gray-900">
+                              Pricing
+                            </FormLabel>
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue="Select a pricing"
+                            >
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue>
+                                    {field.value || "Select a pricing"}
+                                  </SelectValue>
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {pricing.map((area) => (
+                                  <SelectItem
+                                    value={area.value}
+                                    key={area.value}
+                                  >
+                                    {area.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    <div>
+                      <FormField
+                        control={form.control}
+                        name="providedservices"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="block text-sm font-semibold leading-6 text-gray-900">
+                              Provided Services
+                            </FormLabel>
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue="Choose a service"
+                            >
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue>
+                                    {field.value || "Choose a service"}
+                                  </SelectValue>
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {providedServices.map((area) => (
+                                  <SelectItem
+                                    value={area.value}
+                                    key={area.value}
+                                  >
+                                    {area.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="block text-sm font-semibold pt-6 leading-6 text-gray-900">
+                            How can you help us?
+                          </FormLabel>
+                          <FormControl>
+                            <Textarea
+                              autoComplete="howcanwehelp"
+                              placeholder="How can you help us?"
+                              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                </>
+              )}
             </div>
 
             <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
