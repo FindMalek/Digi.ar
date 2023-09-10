@@ -8,7 +8,7 @@ export default function LogoSection() {
         <Logo className="hidden -mt-2 h-8 w-auto lg:block" theme="dark" />
       </div>
       <p className="text-zinc-700 xs:text-base xs:pl-3 md:text-sm md:pl-0 font-bold ml-2">
-        Digital Army
+        Digi.ar
       </p>
     </div>
   );

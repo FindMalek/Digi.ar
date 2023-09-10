@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Check, ChevronsUpDown } from "lucide-react";
 
@@ -9,6 +9,8 @@ import { Switch } from "@headlessui/react";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+
+import { cn } from "@/lib/utils";
 
 import {
   Form,
@@ -33,8 +35,10 @@ import {
 } from "@/components/ui/Command";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
+import { Textarea } from "@/components/ui/Textarea";
 
-import { cn } from "@/lib/utils";
+import JobApplicantForm from "@/components/contact-page/JobApplicantForm";
+import PartnershipForm from "@/components/contact-page/PartnershipForm";
 
 const formSchema = z.object({
   fullname: z
@@ -55,9 +59,36 @@ const formSchema = z.object({
       required_error: "Please enter your email address.",
     })
     .email(),
-  whatareyou: z.string({
-    required_error: "Please select which are you!.",
-  }),
+  whatareyou: z
+    .string({
+      required_error: "Please select which are you!.",
+    })
+    .nonempty({
+      message: "Please select which are you!.",
+    }),
+  companyname: z
+    .string({
+      required_error: "Please enter your company name.",
+    })
+    .nonempty({
+      message: "Please enter your company name.",
+    }),
+  neededservices: z
+    .array(
+      z.string({
+        required_error: "Please select at least one service.",
+      })
+    )
+    .refine((services) => services.length > 0, {
+      message: "Please select at least one service.",
+    }),
+  message: z
+    .string({
+      required_error: "Please tell us how can we help you.",
+    })
+    .nonempty({
+      message: "Please tell us how can we help you.",
+    }),
 });
 
 const whatareyou = [
@@ -66,12 +97,26 @@ const whatareyou = [
   { label: "I'm a Partnership", value: "partnership" },
 ] as const;
 
+const services = [
+  { label: "Marketing Consulting", value: "marketing-consulting" },
+  { label: "Social Media Management", value: "social-media-management" },
+  {
+    label: "Marketing Project Management",
+    value: "marketing-project-management",
+  },
+  { label: "Performance Advertising", value: "performance-advertising" },
+  { label: "Branding Your Company", value: "branding-your-company" },
+  { label: "Website Creation & Design", value: "website-creation-and-design" },
+] as const;
+
 export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
 
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+
   const [companyFieldVisible, setCompanyFieldVisible] = useState(false);
-  const [jobApplicant, setJobApplicantVisible] = useState(false);
-  const [partnership, setPartnerShipVisible] = useState(false);
+  const [jobApplicantVisible, setJobApplicantVisible] = useState(false);
+  const [partnershipVisible, setPartnerShipVisible] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     // @ts-expect-error zodResolver is not typed correctly
@@ -80,6 +125,9 @@ export default function ContactForm() {
       fullname: "",
       email: "",
       whatareyou: "",
+      companyname: "",
+      neededservices: [],
+      message: "",
     },
   });
 
@@ -104,6 +152,20 @@ export default function ContactForm() {
 
     form.setValue("whatareyou", value);
   };
+
+  const handleServiceSelection = (serviceValue: string) => {
+    if (selectedServices.includes(serviceValue)) {
+      setSelectedServices((prevSelected) =>
+        prevSelected.filter((item) => item !== serviceValue)
+      );
+    } else {
+      setSelectedServices((prevSelected) => [...prevSelected, serviceValue]);
+    }
+  };
+
+  useEffect(() => {
+    form.setValue("neededservices", selectedServices);
+  }, [selectedServices]);
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
@@ -148,6 +210,7 @@ export default function ContactForm() {
                     </FormLabel>
                     <FormControl>
                       <Input
+                        autoComplete="fullname"
                         placeholder="Name and Lastname"
                         className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
                         {...field}
@@ -169,6 +232,7 @@ export default function ContactForm() {
                     </FormLabel>
                     <FormControl>
                       <Input
+                        autoComplete="email"
                         placeholder="hello@example.com"
                         className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
                         {...field}
@@ -245,73 +309,126 @@ export default function ContactForm() {
             <div className="sm:col-span-2">
               {companyFieldVisible && (
                 <div>
-                  <FormField
-                    control={form.control}
-                    name="whatareyou"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="block text-sm font-semibold leading-6 text-gray-900">
-                          Company Number
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Company Number"
-                            className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div>
+                      <FormField
+                        control={form.control}
+                        name="companyname"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="block text-sm font-semibold leading-6 text-gray-900">
+                              Company Name
+                            </FormLabel>
+                            <FormControl>
+                              <Input
+                                autoComplete="companyname"
+                                placeholder="Company Name"
+                                className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    <div>
+                      <FormField
+                        control={form.control}
+                        name="neededservices"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="block text-sm font-semibold leading-6 text-gray-900">
+                              Services Needed
+                            </FormLabel>
+                            <FormControl>
+                              <Popover>
+                                <PopoverTrigger asChild>
+                                  <FormControl className="w-full flex items-center">
+                                    <Button
+                                      variant="outline"
+                                      role="combobox"
+                                      className={cn(
+                                        "flex-grow text-left",
+                                        !field.value.length &&
+                                          "text-muted-foreground"
+                                      )}
+                                    >
+                                      {field.value.length
+                                        ? `${field.value.length} ${
+                                            field.value.length === 1
+                                              ? "is service"
+                                              : "are services"
+                                          } selected`
+                                        : "Choose service(s)"}
+                                      <span className="flex-grow" />
+                                      <ChevronsUpDown className="h-4 w-4 shrink-0 opacity-50" />
+                                    </Button>
+                                  </FormControl>
+                                </PopoverTrigger>
+                                <PopoverContent asChild>
+                                  <Command className="text-left p-0">
+                                    <CommandGroup>
+                                      {services.map((service) => (
+                                        <CommandItem
+                                          value={service.label}
+                                          key={service.value}
+                                          onSelect={() => {
+                                            handleServiceSelection(
+                                              service.value
+                                            );
+                                          }}
+                                        >
+                                          <Check
+                                            className={cn(
+                                              "mr-2 h-4 w-4",
+                                              selectedServices.includes(
+                                                service.value
+                                              )
+                                                ? "opacity-100"
+                                                : "opacity-0"
+                                            )}
+                                          />
+                                          {service.label}
+                                        </CommandItem>
+                                      ))}
+                                    </CommandGroup>
+                                  </Command>
+                                </PopoverContent>
+                              </Popover>
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="block text-sm font-semibold pt-6 leading-6 text-gray-900">
+                            How Can We Help?
+                          </FormLabel>
+                          <FormControl>
+                            <Textarea
+                              autoComplete="howcanwehelp"
+                              placeholder="How Can We Help?"
+                              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
                 </div>
               )}
-              {jobApplicant && (
-                <div>
-                  <FormField
-                    control={form.control}
-                    name="whatareyou"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="block text-sm font-semibold leading-6 text-gray-900">
-                          Age
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Age"
-                            className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              )}
-              {partnership && (
-                <div>
-                  <FormField
-                    control={form.control}
-                    name="whatareyou"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="block text-sm font-semibold leading-6 text-gray-900">
-                          Favorite Color
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Favorite Color"
-                            className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              )}
+              {jobApplicantVisible && <JobApplicantForm />}
+              {partnershipVisible && <PartnershipForm />}
             </div>
             {/*              
                 <div className="sm:col-span-2">
