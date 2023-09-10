@@ -209,7 +209,7 @@ export default function ContactForm() {
     if (!agreed)
       return toast({
         title: `Please agree to our privacy policy!`,
-        description: "We can't send your message without your agreement!",
+        description: "We can&apos;t send your message without your agreement!",
         variant: "destructive",
       });
 
@@ -226,7 +226,7 @@ export default function ContactForm() {
     } else {
       toast({
         title: `Please fill the form correctly!`,
-        description: "We can't send your message without your agreement!",
+        description: "We can&apos;t send your message without your agreement!",
         variant: "destructive",
       });
     }
@@ -703,7 +703,7 @@ export default function ContactForm() {
               </div>
               <Switch.Label className="text-sm leading-6 text-gray-600">
                 By selecting this, you agree to our{" "}
-                <a href="#" className="font-semibold text-pink-600">
+                <a href="/privacy-and-policy" className="font-semibold text-pink-600">
                   privacy&nbsp;policy
                 </a>
                 .
@@ -724,7 +724,7 @@ export default function ContactForm() {
                 type="submit"
                 className="block w-full rounded-md bg-pink-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
               >
-                Let's talk
+                Let&apos;s talk
               </Button>
             )}
           </div>

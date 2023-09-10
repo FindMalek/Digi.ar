@@ -53,8 +53,8 @@ export default function ServicesSection() {
             Digital Army Services
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Découvrez nos services d’accompagnement des entreprises vers
-            l'excellence numérique
+            Découvrez nos services d&apos;accompagnement des entreprises vers
+            l&apos;excellence numérique
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

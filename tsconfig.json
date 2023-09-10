@@ -23,9 +23,7 @@
       "@/components/*": ["./src/components/*"],
       "@/styles/*": ["./styles/*"],
       "@/root/": ["./*"],
-      "@/lib/*": ["./src/lib/*"],
-      "@/icons/*": ["./src/icons/*"],
-      
+      "@/lib/*": ["./src/lib/*"]
     }
   },
   "include": [
