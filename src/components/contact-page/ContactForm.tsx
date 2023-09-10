@@ -1,8 +1,10 @@
 "use client";
 
+import Axios from "axios";
 import { useEffect, useState } from "react";
 
 import { Check, ChevronsUpDown } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 import { Switch } from "@headlessui/react";
 
@@ -11,11 +13,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { cn } from "@/lib/utils";
+import { useToast } from "@/lib/use-toast";
 
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -26,13 +28,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/Popover";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-} from "@/components/ui/Command";
+import { Command, CommandGroup, CommandItem } from "@/components/ui/Command";
 import {
   Select,
   SelectContent,
@@ -43,85 +39,6 @@ import {
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { Textarea } from "@/components/ui/Textarea";
-
-const formSchema = z.object({
-  fullname: z
-    .string({
-      required_error: "Please enter your full name.",
-    })
-    .refine(
-      (name) => {
-        const words = name.trim().split(" ");
-        return words.length >= 2;
-      },
-      {
-        message: "Full name must be at least 2 words.",
-      }
-    ),
-  email: z
-    .string({
-      required_error: "Please enter your email address.",
-    })
-    .email(),
-  whatareyou: z
-    .string({
-      required_error: "Please select which are you!.",
-    })
-    .nonempty({
-      message: "Please select which are you!.",
-    }),
-  companyname: z
-    .string({
-      required_error: "Please enter your company name.",
-    })
-    .nonempty({
-      message: "Please enter your company name.",
-    }),
-  neededservices: z
-    .array(
-      z.string({
-        required_error: "Please select at least one service.",
-      })
-    )
-    .refine((services) => services.length > 0, {
-      message: "Please select at least one service.",
-    }),
-  message: z
-    .string({
-      required_error: "Please tell us how can we help you.",
-    })
-    .nonempty({
-      message: "Please tell us how can we help you.",
-    }),
-  areaofinterest: z
-    .string({
-      required_error: "Please select your area of interest.",
-    })
-    .nonempty({
-      message: "Please select your area of interest.",
-    }),
-  cvlink: z
-    .string({
-      required_error: "Please enter your CV link.",
-    })
-    .url({
-      message: "Please enter a valid URL for your CV link.",
-    }),
-  pricing: z
-    .string({
-      required_error: "Please select a pricing.",
-    })
-    .nonempty({
-      message: "Please select a pricing.",
-    }),
-  providedservices: z
-    .string({
-      required_error: "Please select a service.",
-    })
-    .nonempty({
-      message: "Please select a service.",
-    }),
-});
 
 const whatareyou = [
   { label: "I'm a Company", value: "company" },
@@ -159,7 +76,76 @@ const providedServices = [
   { label: "Accounting Consulting", value: "Accounting Consulting" },
 ];
 
+const formSchema = z.object({
+  fullname: z
+    .string({
+      required_error: "Please enter your full name.",
+    })
+    .refine(
+      (name) => {
+        const words = name.trim().split(" ");
+        return words.length >= 2;
+      },
+      {
+        message: "Full name must be at least 2 words.",
+      }
+    ),
+  email: z
+    .string({
+      required_error: "Please enter your email address.",
+    })
+    .email(),
+  whatareyou: z
+    .string({
+      required_error: "Please select which are you!.",
+    })
+    .nonempty({
+      message: "Please select which are you!.",
+    }),
+  companyname: z
+    .string({
+      required_error: "Please enter your company name.",
+    })
+    .optional(),
+  neededservices: z
+    .array(
+      z.string({
+        required_error: "Please select at least one service.",
+      })
+    )
+    .optional(),
+  message: z
+    .string({
+      required_error: "Please tell us how can we help you.",
+    })
+    .nonempty({
+      message: "Please tell us how can we help you.",
+    }),
+  areaofinterest: z
+    .string({
+      required_error: "Please select your area of interest.",
+    })
+    .optional(),
+  cvlink: z
+    .string({
+      required_error: "Please enter your CV link.",
+    })
+    .optional(),
+  pricing: z
+    .string({
+      required_error: "Please select a pricing.",
+    })
+    .optional(),
+  providedservices: z
+    .string({
+      required_error: "Please select a service.",
+    })
+    .optional(),
+});
+
 export default function ContactForm() {
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [agreed, setAgreed] = useState(false);
 
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -220,8 +206,42 @@ export default function ContactForm() {
     form.setValue("neededservices", selectedServices);
   }, [selectedServices]);
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (!agreed)
+      return toast({
+        title: `Please agree to our privacy policy!`,
+        description: "We can't send your message without your agreement!",
+        variant: "destructive",
+      });
+
+    setIsLoading(true);
+    if (values) {
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      toast({
+        title: `${values.fullname} your message has been sent!`,
+        description: "We will contact you soon!",
+      });
+
+      form.reset();
+
+      const result = Axios.post("/api/contact", values);
+    } else {
+      toast({
+        title: `Please fill the form correctly!`,
+        description: "We can't send your message without your agreement!",
+        variant: "destructive",
+      });
+    }
+
+    setIsLoading(false);
   }
 
   return (
@@ -404,13 +424,13 @@ export default function ContactForm() {
                                       role="combobox"
                                       className={cn(
                                         "flex-grow text-left",
-                                        !field.value.length &&
+                                        !field?.value?.length &&
                                           "text-muted-foreground"
                                       )}
                                     >
-                                      {field.value.length
-                                        ? `${field.value.length} ${
-                                            field.value.length === 1
+                                      {field?.value?.length
+                                        ? `${field?.value.length} ${
+                                            field?.value.length === 1
                                               ? "is service"
                                               : "are services"
                                           } selected`
@@ -701,12 +721,22 @@ export default function ContactForm() {
             </Switch.Group>
           </div>
           <div className="mt-10">
-            <Button
-              type="submit"
-              className="block w-full rounded-md bg-pink-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
-            >
-              Let's talk
-            </Button>
+            {isLoading ? (
+              <Button
+                disabled
+                className="block w-full rounded-md bg-pink-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
+              >
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Please wait
+              </Button>
+            ) : (
+              <Button
+                type="submit"
+                className="block w-full rounded-md bg-pink-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
+              >
+                Let's talk
+              </Button>
+            )}
           </div>
         </form>
       </Form>
