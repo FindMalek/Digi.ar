@@ -33,12 +33,16 @@ import {
   CommandInput,
   CommandItem,
 } from "@/components/ui/Command";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/Select";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { Textarea } from "@/components/ui/Textarea";
-
-import JobApplicantForm from "@/components/contact-page/JobApplicantForm";
-import PartnershipForm from "@/components/contact-page/PartnershipForm";
 
 const formSchema = z.object({
   fullname: z
@@ -89,6 +93,20 @@ const formSchema = z.object({
     .nonempty({
       message: "Please tell us how can we help you.",
     }),
+  areaofinterest: z
+    .string({
+      required_error: "Please select your area of interest.",
+    })
+    .nonempty({
+      message: "Please select your area of interest.",
+    }),
+  cvlink: z
+    .string({
+      required_error: "Please enter your CV link.",
+    })
+    .url({
+      message: "Please enter a valid URL for your CV link.",
+    }),
 });
 
 const whatareyou = [
@@ -107,6 +125,12 @@ const services = [
   { label: "Performance Advertising", value: "performance-advertising" },
   { label: "Branding Your Company", value: "branding-your-company" },
   { label: "Website Creation & Design", value: "website-creation-and-design" },
+] as const;
+
+const areaofinterest = [
+  { label: "Marketing Consulting", value: "Marketing Consulting" },
+  { label: "Information Technology", value: "Information Technology" },
+  { label: "Sales", value: "Sales" },
 ] as const;
 
 export default function ContactForm() {
@@ -128,6 +152,8 @@ export default function ContactForm() {
       companyname: "",
       neededservices: [],
       message: "",
+      areaofinterest: "",
+      cvlink: "",
     },
   });
 
@@ -243,6 +269,7 @@ export default function ContactForm() {
                 )}
               />
             </div>
+
             <div className="sm:col-span-2">
               <FormField
                 control={form.control}
@@ -308,7 +335,7 @@ export default function ContactForm() {
             </div>
             <div className="sm:col-span-2">
               {companyFieldVisible && (
-                <div>
+                <>
                   <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div>
                       <FormField
@@ -425,99 +452,99 @@ export default function ContactForm() {
                       )}
                     />
                   </div>
-                </div>
+                </>
               )}
-              {jobApplicantVisible && <JobApplicantForm />}
-              {partnershipVisible && <PartnershipForm />}
-            </div>
-            {/*              
-                <div className="sm:col-span-2">
-                <label
-                    htmlFor="company"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                    Company
-                </label>
-                <div className="mt-2.5">
-                    <input
-                    type="text"
-                    name="company"
-                    id="company"
-                    autoComplete="organization"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
-                    />
-                </div>
-                </div>
-                <div className="sm:col-span-2">
-                <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                    Email
-                </label>
-                <div className="mt-2.5">
-                    <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    autoComplete="email"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
-                    />
-                </div>
-                </div>
-                <div className="sm:col-span-2">
-                <label
-                    htmlFor="phone-number"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                    Phone number
-                </label>
-                <div className="relative mt-2.5">
-                    <div className="absolute inset-y-0 left-0 flex items-center">
-                    <label htmlFor="country" className="sr-only">
-                        Country
-                    </label>
-                    <select
-                        id="country"
-                        name="country"
-                        className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm"
-                    >
-                        <option>US</option>
-                        <option>CA</option>
-                        <option>EU</option>
-                    </select>
-                    <ChevronDownIcon
-                        className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
-                        aria-hidden="true"
-                    />
+              {jobApplicantVisible && (
+                <>
+                  <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div>
+                      <FormField
+                        control={form.control}
+                        name="areaofinterest"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="block text-sm font-semibold leading-6 text-gray-900">
+                              Area of Interest
+                            </FormLabel>
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue="Choose an area of interest"
+                            >
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue>
+                                    {field.value ||
+                                      "Choose an area of interest"}
+                                  </SelectValue>
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {areaofinterest.map((area) => (
+                                  <SelectItem
+                                    value={area.value}
+                                    key={area.value}
+                                  >
+                                    {area.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
                     </div>
-                    <input
-                    type="tel"
-                    name="phone-number"
-                    id="phone-number"
-                    autoComplete="tel"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
+                    <div>
+                      <FormField
+                        control={form.control}
+                        name="cvlink"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="block text-sm font-semibold leading-6 text-gray-900">
+                              Portfolio Link or CV Document
+                            </FormLabel>
+                            <FormControl>
+                              <Input
+                                autoComplete="cvlink"
+                                placeholder="Your website or CV Document Link"
+                                className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="block text-sm font-semibold pt-6 leading-6 text-gray-900">
+                            What is your value added?
+                          </FormLabel>
+                          <FormControl>
+                            <Textarea
+                              autoComplete="whatvalueadded"
+                              placeholder="What is your value added?"
+                              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
-                </div>
-                </div>
-                <div className="sm:col-span-2">
-                <label
-                    htmlFor="message"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                    Message
-                </label>
-                <div className="mt-2.5">
-                    <textarea
-                    name="message"
-                    id="message"
-                    rows={4}
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-600 sm:text-sm sm:leading-6"
-                    defaultValue={""}
-                    />
-                </div>
-                </div>
-            */}
+                  </div>
+                </>
+              )}
+              {partnershipVisible && <></>}
+            </div>
+
             <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
               <div className="flex h-6 items-center">
                 <Switch
