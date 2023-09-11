@@ -3,11 +3,10 @@ import CaseStudy from "@/components/portfolio-page/CaseStudy";
 const caseStudies = [
   {
     logo: "/portfolio-page/bw-clients/1.png",
-    client: "Burger King",
+    client: "Panorama Y&R Tunis",
     service: "Web Development",
     date: "2021-01-01",
-    href: "/",
-    title: "Burger King",
+    title: "Project name",
     summary: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
@@ -15,7 +14,7 @@ const caseStudies = [
     testimonial: {
       author: {
         name: "John Doe",
-        role: "CEO of Burger King",
+        role: "CEO of Panorama Y&R Tunis",
       },
       content:
         "Logfdgdfg tetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
@@ -23,11 +22,10 @@ const caseStudies = [
   },
   {
     logo: "/portfolio-page/bw-clients/2.png",
-    client: "Burger King",
+    client: "Wapp Dev",
     service: "Web Development",
     date: "2021-01-01",
-    href: "/",
-    title: "Burger King",
+    title: "Project name",
     summary: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
@@ -35,7 +33,7 @@ const caseStudies = [
     testimonial: {
       author: {
         name: "John Doe",
-        role: "CEO of Burger King",
+        role: "CEO of Wapp Dev",
       },
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
@@ -43,11 +41,10 @@ const caseStudies = [
   },
   {
     logo: "/portfolio-page/bw-clients/3.png",
-    client: "Burger King",
+    client: "Sciences Pro Tunis",
     service: "Web Development",
     date: "2021-01-01",
-    href: "/",
-    title: "Burger King",
+    title: "Project name",
     summary: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
@@ -55,7 +52,7 @@ const caseStudies = [
     testimonial: {
       author: {
         name: "John Doe",
-        role: "CEO of Burger King",
+        role: "CEO of Sciences Pro Tunis",
       },
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
@@ -63,11 +60,10 @@ const caseStudies = [
   },
   {
     logo: "/portfolio-page/bw-clients/4.png",
-    client: "Burger King",
+    client: "Timberland EU",
     service: "Web Development",
     date: "2021-01-01",
-    href: "/",
-    title: "Burger King",
+    title: "Project name",
     summary: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",
@@ -75,7 +71,7 @@ const caseStudies = [
     testimonial: {
       author: {
         name: "John Doe",
-        role: "CEO of Burger King",
+        role: "CEO of Timberland EU",
       },
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam sit amet dictum aliquam, massa diam aliquet nunc, vitae aliquam nisl nunc vitae nisl.",

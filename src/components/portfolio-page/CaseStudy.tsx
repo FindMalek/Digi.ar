@@ -14,7 +14,6 @@ interface CaseStudy {
     client: string;
     service: string;
     date: string;
-    href: string;
     title: string;
     summary: string[];
     testimonial: {
@@ -34,7 +33,7 @@ export default function CaseStudy({ caseStudy }: CaseStudy) {
         <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
           <Image
             src={caseStudy.logo}
-            alt=""
+            alt={caseStudy.client}
             width={500}
             height={500}
             className="h-[100px] w-[100px] flex-none"
@@ -54,24 +53,13 @@ export default function CaseStudy({ caseStudy }: CaseStudy) {
         </div>
       </div>
       <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-        <p className="font-display text-4xl font-medium text-neutral-950">
-          <Link href={caseStudy.href}>{caseStudy.title}</Link>
+        <p className="font-display text-4xl font-semibold text-neutral-950">
+          {caseStudy.title}
         </p>
         <div className="mt-6 space-y-6 text-base text-neutral-600">
           {caseStudy.summary.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-        </div>
-        <div className="mt-8 flex">
-          <Link href={caseStudy.href}>
-            <Button
-              variant="primary"
-              className="shadow-none"
-              aria-label={`Read case study: ${caseStudy.client}`}
-            >
-              Read case study
-            </Button>
-          </Link>
         </div>
         {caseStudy.testimonial && (
           <Blockquote author={caseStudy.testimonial.author} className="mt-12">

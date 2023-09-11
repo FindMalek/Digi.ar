@@ -12,6 +12,10 @@ type Props = {
 };
 
 export default function Animatepresence({ open, navs }: Props) {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  
   return (
     <AnimatePresence initial={false}>
       {open && (
@@ -36,7 +40,6 @@ export default function Animatepresence({ open, navs }: Props) {
             }}
             className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
           >
-            {/* Current: "block border-l-4 border-pink-500 bg-pink-50 py-2 pl-3 pr-4 text-base font-medium text-pink-700 sm:pl-5 sm:pr-6" */}
             {navs.map((item, index) => (
               <Disclosure.Button
                 key={index}
@@ -51,6 +54,7 @@ export default function Animatepresence({ open, navs }: Props) {
               <Link href="/contact">
                 <Button
                   type="button"
+                  onClick={scrollToTop}
                   className="w-full md:w-auto relative inline-flex items-center gap-x-1.5 rounded-3xl bg-pink-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
                 >
                   <LinkIcon className="-ml-0.5 h-5 w-5" aria-hidden="true" />
