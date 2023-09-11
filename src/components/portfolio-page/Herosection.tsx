@@ -39,7 +39,7 @@ export default function Herosection() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link href="/contact">
-                <Button className="rounded-md bg-pink-700 hover:bg-pink-500">
+                <Button variant="primary">
                   Get started
                 </Button>
               </Link>

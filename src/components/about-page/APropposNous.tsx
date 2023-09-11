@@ -19,11 +19,11 @@ export default function AProposNous() {
                 <strong className="font-semibold text-gray-900">
                   Votre Partenaire en Marketing :
                 </strong>{" "}
-                Nous concentrons sur l&apos;analyse et la mesure de la performance de
-                vos campagnes marketing. Grâce à des données et des outils
-                d&apos;analyse avancés, nous mesurons le retour sur investissement de
-                chaque campagne, ce qui nous permet d&apos;ajuster les stratégies en
-                temps réel.
+                Nous concentrons sur l&apos;analyse et la mesure de la
+                performance de vos campagnes marketing. Grâce à des données et
+                des outils d&apos;analyse avancés, nous mesurons le retour sur
+                investissement de chaque campagne, ce qui nous permet
+                d&apos;ajuster les stratégies en temps réel.
               </p>
               <p className="mt-8">
                 <strong className="font-semibold text-gray-900">
@@ -50,18 +50,16 @@ export default function AProposNous() {
                 <strong className="font-semibold text-gray-900">
                   Soutien à l&apos;Entreprenariat :
                 </strong>{" "}
-                Nous croyons en l&apos;entreprenariat et l&apos;éveil national. Digital
-                Army incube les jeunes talents et les guide pour créer de la
-                valeur. Nous proposons également des formations et des ateliers
-                pour partager notre expertise avec les entrepreneurs.
+                Nous croyons en l&apos;entreprenariat et l&apos;éveil national.
+                Digital Army incube les jeunes talents et les guide pour créer
+                de la valeur. Nous proposons également des formations et des
+                ateliers pour partager notre expertise avec les entrepreneurs.
               </p>
             </div>
           </div>
           <div className="mt-10 flex">
             <Link href="/contact">
-              <Button className="rounded-md bg-pink-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">
-                Contactez-nous !
-              </Button>
+              <Button variant={"primary"}>Contactez-nous !</Button>
             </Link>
           </div>
         </div>

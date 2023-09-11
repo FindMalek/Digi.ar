@@ -49,7 +49,7 @@ export default function TrustUsSection() {
               ))}
             </dl>
             <Link href="/contact">
-              <Button className="mt-16 text-white shadow-xl bg-gray-900 hover:bg-gray-500">
+              <Button className="mt-16" variant="primary">
                 Get started
               </Button>
             </Link>

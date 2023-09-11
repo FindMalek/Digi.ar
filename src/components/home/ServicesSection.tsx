@@ -90,7 +90,7 @@ export default function ServicesSection() {
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-pink-600">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-900">
                     <feature.icon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"
@@ -108,8 +108,8 @@ export default function ServicesSection() {
           </dl>
         </div>
         <Link href="/contact" className="flex justify-center">
-          <Button className="mt-16 text-white shadow-xl bg-gray-900 hover:bg-gray-500">
-            Commencer
+          <Button variant={"primary"} className="mt-16">
+            Commencer maintenant
           </Button>
         </Link>
       </div>

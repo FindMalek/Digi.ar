@@ -56,9 +56,7 @@ export default function WeAreSection() {
           <AuthorBox />
           <div className="mt-8">
             <Link href="/about">
-              <Button className="inline-flex rounded-md bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm hover:bg-white/20 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-                En savoir plus
-              </Button>
+              <Button variant="primary">En savoir plus</Button>
             </Link>
           </div>
         </div>

@@ -64,7 +64,11 @@ export default function CaseStudy({ caseStudy }: CaseStudy) {
         </div>
         <div className="mt-8 flex">
           <Link href={caseStudy.href}>
-            <Button className="bg-pink-500 hover:bg-pink-700" aria-label={`Read case study: ${caseStudy.client}`}>
+            <Button
+              variant="primary"
+              className="shadow-none"
+              aria-label={`Read case study: ${caseStudy.client}`}
+            >
               Read case study
             </Button>
           </Link>

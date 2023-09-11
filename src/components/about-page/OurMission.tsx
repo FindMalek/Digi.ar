@@ -42,7 +42,7 @@ export default function OurMission() {
               </p>
             </div>
             <Link href="/contact">
-              <Button className="mt-10 rounded-xl bg-pink-600 hover:bg-pink-800">
+              <Button variant={"primary"} className="mt-10 ">
                 Rejoins-nous
               </Button>
             </Link>

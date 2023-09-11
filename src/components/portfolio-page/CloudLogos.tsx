@@ -19,9 +19,7 @@ export default function CloudLogos() {
             </p>
             <div className="mt-8 flex items-center gap-x-6">
               <Link href="/contact">
-                <Button className="bg-pink-500 hover:bg-pink-400">
-                  Contact us
-                </Button>
+                <Button variant="primary">Contact us</Button>
               </Link>
               <Link href="/about" className="text-sm font-semibold text-white">
                 A Proppos de nous <span aria-hidden="true">&rarr;</span>

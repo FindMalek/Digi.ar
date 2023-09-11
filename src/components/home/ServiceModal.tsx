@@ -21,7 +21,7 @@ export default function ServiceModal({ service }: ServiceModalProps) {
       <Button
         variant={"ghost"}
         onClick={() => setOpen(true)}
-        className="text-sm font-semibold leading-6 text-pink-600 hover:text-pink-900 hover:bg-transparent"
+        className="text-sm p-0 font-semibold leading-6 text-purple-900 hover:text-purple-600 hover:bg-transparent"
       >
         Learn more <span aria-hidden="true">→</span>
       </Button>
@@ -76,7 +76,7 @@ export default function ServiceModal({ service }: ServiceModalProps) {
                             return (
                               <p
                                 key={service.name}
-                                className="text-sm text-gray-500 mt-4"
+                                className="text-left text-sm text-gray-500 mt-4"
                               >
                                 {description}
                               </p>
