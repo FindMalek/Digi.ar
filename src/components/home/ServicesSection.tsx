@@ -70,7 +70,6 @@ const features = [
 ];
 
 export default function ServicesSection() {
-
   return (
     <section id="services" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -103,9 +102,7 @@ export default function ServicesSection() {
                   {feature.description}
                 </dd>
 
-                <ServiceModal
-                  service={feature}
-                />
+                <ServiceModal key={feature.name} service={feature} />
               </div>
             ))}
           </dl>

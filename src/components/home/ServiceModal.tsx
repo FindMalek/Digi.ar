@@ -74,7 +74,10 @@ export default function ServiceModal({ service }: ServiceModalProps) {
                         <div className="mt-2">
                           {service.descriptions.map((description) => {
                             return (
-                              <p className="text-sm text-gray-500 mt-4">
+                              <p
+                                key={service.name}
+                                className="text-sm text-gray-500 mt-4"
+                              >
                                 {description}
                               </p>
                             );

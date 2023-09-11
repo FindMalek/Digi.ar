@@ -51,10 +51,10 @@ export default function Example() {
                 Maximisez Votre Impact en Ligne avec Digital Army
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                Digital Army, l'agence de marketing spécialisée en publicité
-                performante et gestion de projets clé en main, vous accompagne
-                dans la réalisation de vos objectifs marketing et l'augmentation
-                de votre chiffre d'affaires.
+                Digital Army, l&apos;agence de marketing spécialisée en
+                publicité performante et gestion de projets clé en main, vous
+                accompagne dans la réalisation de vos objectifs marketing et
+                l&apos;augmentation de votre chiffre d&apos;affaires.
               </p>
             </div>
           </div>
@@ -75,9 +75,9 @@ export default function Example() {
                 Chez Digital Army, nous mettons la DATA au cœur de notre
                 stratégie. Nous analysons minutieusement les données de nos
                 clients pour mieux comprendre leur entreprise. Cette analyse
-                rigoureuse nous permet de maximiser l'impact de leurs campagnes
-                marketing en atteignant les KPIs qui correspondent à leurs
-                objectifs commerciaux.
+                rigoureuse nous permet de maximiser l&apos;impact de leurs
+                campagnes marketing en atteignant les KPIs qui correspondent à
+                leurs objectifs commerciaux.
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
@@ -118,12 +118,12 @@ export default function Example() {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Une Équipe d'Experts
+                      Une Équipe d&apos;Experts
                     </strong>{" "}
                     Notre équipe est composée de spécialistes passionnés et
                     expérimentés en marketing numérique. Nous recrutons les
-                    meilleurs talents de l'industrie pour garantir des solutions
-                    de qualité.
+                    meilleurs talents de l&apos;industrie pour garantir des
+                    solutions de qualité.
                   </span>
                 </li>
               </ul>
@@ -133,24 +133,24 @@ export default function Example() {
                 partageons notre expertise pour les aider à réussir et à opérer
                 en toute indépendance. Digital Army offre une gamme complète de
                 services de marketing et de gestion de projets, adaptés à vos
-                besoins et à votre budget. De l'amélioration de la présence en
-                ligne à la création de contenu graphique, en passant par le
+                besoins et à votre budget. De l&apos;amélioration de la présence
+                en ligne à la création de contenu graphique, en passant par le
                 développement web et la gestion des réseaux sociaux, nous vous
                 accompagnons à chaque étape de votre stratégie marketing.
               </p>
               <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
-                Une Équipe D'Experts à Votre Service
+                Une Équipe D&apos;Experts à Votre Service
               </h2>
               <p className="mt-6">
-                En résumé, Digital Army est l'agence de marketing numérique
-                tout-en-un qui vous accompagne dans l'atteinte de vos objectifs
-                commerciaux grâce à une stratégie sur mesure. Nous sommes
-                passionnés, créatifs, réactifs, et nous croyons en la
+                En résumé, Digital Army est l&apos;agence de marketing numérique
+                tout-en-un qui vous accompagne dans l&apos;atteinte de vos
+                objectifs commerciaux grâce à une stratégie sur mesure. Nous
+                sommes passionnés, créatifs, réactifs, et nous croyons en la
                 collaboration et la transparence. Notre équipe dédiée est fière
                 de son expertise et est prête à investir dans votre succès. Si
                 vous recherchez une agence de marketing numérique sur laquelle
-                compter, contactez Digital Army dès aujourd'hui pour discuter de
-                vos besoins marketing.
+                compter, contactez Digital Army dès aujourd&apos;hui pour
+                discuter de vos besoins marketing.
               </p>
             </div>
           </div>

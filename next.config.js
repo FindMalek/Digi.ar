@@ -5,9 +5,6 @@ const nextConfig = {
   images: {
     domains: ["images.unsplash.com"],
   },
-  experimental: {
-    scrollRestoration: true,
-  },
 };
 
 module.exports = nextConfig;

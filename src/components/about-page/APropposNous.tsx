@@ -19,10 +19,10 @@ export default function AProposNous() {
                 <strong className="font-semibold text-gray-900">
                   Votre Partenaire en Marketing :
                 </strong>{" "}
-                Nous concentrons sur l'analyse et la mesure de la performance de
+                Nous concentrons sur l&apos;analyse et la mesure de la performance de
                 vos campagnes marketing. Grâce à des données et des outils
-                d'analyse avancés, nous mesurons le retour sur investissement de
-                chaque campagne, ce qui nous permet d'ajuster les stratégies en
+                d&apos;analyse avancés, nous mesurons le retour sur investissement de
+                chaque campagne, ce qui nous permet d&apos;ajuster les stratégies en
                 temps réel.
               </p>
               <p className="mt-8">
@@ -48,9 +48,9 @@ export default function AProposNous() {
               </p>
               <p className="mt-8">
                 <strong className="font-semibold text-gray-900">
-                  Soutien à l'Entreprenariat :
+                  Soutien à l&apos;Entreprenariat :
                 </strong>{" "}
-                Nous croyons en l'entreprenariat et l'éveil national. Digital
+                Nous croyons en l&apos;entreprenariat et l&apos;éveil national. Digital
                 Army incube les jeunes talents et les guide pour créer de la
                 valeur. Nous proposons également des formations et des ateliers
                 pour partager notre expertise avec les entrepreneurs.
