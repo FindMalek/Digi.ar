@@ -421,8 +421,8 @@ export default function ContactForm() {
                                       {field?.value?.length
                                         ? `${field?.value.length} ${
                                             field?.value.length === 1
-                                              ? "is service"
-                                              : "are services"
+                                              ? "service is"
+                                              : "services are"
                                           } selected`
                                         : "Choose service(s)"}
                                       <span className="flex-grow" />
