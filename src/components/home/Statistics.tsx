@@ -29,7 +29,7 @@ export default function Statistics() {
   }, []);
 
   return (
-    <div
+    <section
       id="statistics"
       className="bg-gray-900 py-24 sm:py-32"
       style={{ transition: "all 1s ease" }}
@@ -69,6 +69,6 @@ export default function Statistics() {
           </dl>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

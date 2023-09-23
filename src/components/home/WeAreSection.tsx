@@ -7,7 +7,7 @@ import AuthorBox from "@/components/home/AuthorBox";
 
 export default function WeAreSection() {
   return (
-    <div className="relative bg-gray-900">
+    <section id="introduction" className="relative bg-gray-900">
       <div className="relative h-80 overflow-hidden md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
         <Image
           className="h-full w-full object-cover"
@@ -61,6 +61,6 @@ export default function WeAreSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

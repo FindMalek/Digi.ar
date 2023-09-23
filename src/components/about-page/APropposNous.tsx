@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 
 export default function AProposNous() {
   return (
-    <div className="bg-white">
+    <section id="partenaire" className="bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-base font-semibold leading-7 text-pink-600">
@@ -18,7 +18,7 @@ export default function AProposNous() {
               <p>
                 <strong className="font-semibold text-gray-900">
                   Votre Partenaire en Marketing :
-                </strong>{" "}
+                </strong>
                 Nous concentrons sur l&apos;analyse et la mesure de la
                 performance de vos campagnes marketing. Grâce à des données et
                 des outils d&apos;analyse avancés, nous mesurons le retour sur
@@ -28,7 +28,7 @@ export default function AProposNous() {
               <p className="mt-8">
                 <strong className="font-semibold text-gray-900">
                   Collaboration Personnalisée :
-                </strong>{" "}
+                </strong>
                 Chez Digital Army, nous travaillons main dans la main avec nos
                 clients pour comprendre leur marché et leurs besoins
                 spécifiques. Nos stratégies marketing sont taillées sur mesure
@@ -78,6 +78,6 @@ export default function AProposNous() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

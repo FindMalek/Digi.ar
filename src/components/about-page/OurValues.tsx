@@ -35,7 +35,7 @@ const values = [
 
 export default function Quotation() {
   return (
-    <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+    <section id="vision_et_valeur" className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
       <div className="mx-auto max-w-2xl lg:mx-0">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Vision and Value
@@ -54,6 +54,6 @@ export default function Quotation() {
           </div>
         ))}
       </dl>
-    </div>
+    </section>
   );
 }

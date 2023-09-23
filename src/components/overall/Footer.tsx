@@ -12,29 +12,23 @@ import {
 } from "@/components/overall/Icons";
 
 const navigation = {
-  solutions: [
-    { name: "Marketing", href: "#" },
-    { name: "Analytics", href: "#" },
-    { name: "Commerce", href: "#" },
-    { name: "Insights", href: "#" },
+  home: [
+    { name: "Introduction", href: "/#introduction" },
+    { name: "Services", href: "/#services" },
+    { name: "Nos Tracks", href: "/#statistics" },
+    { name: "Reviews", href: "/#reviews" },
   ],
-  support: [
-    { name: "Pricing", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "API Status", href: "#" },
+  about: [
+    { name: "Nos Historique", href: "/about#timeline" },
+    { name: "Vision et Valeur", href: "/about#vision_et_valeur" },
+    { name: "Nos Impact", href: "/about#impact" },
+    { name: "Votre Partenaire", href: "/about#partenaire" },
   ],
-  company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Partners", href: "#" },
-  ],
-  legal: [
-    { name: "Claim", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+  useful: [
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Case Studies", href: "/portfolio#case_studies" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ],
   social: [
     {
@@ -77,15 +71,15 @@ export default function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm sr-only font-semibold leading-6 text-black">
-                  Solutions
+                  Home
                 </h3>
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-black">
-                  Solutions
+                  Home
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
+                  {navigation.home.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
@@ -101,10 +95,10 @@ export default function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-black">
-                  Company
+                  About
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.company.map((item) => (
+                  {navigation.about.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
@@ -118,10 +112,10 @@ export default function Footer() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-black">
-                  Solutions
+                  Useful Links
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
+                  {navigation.useful.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
