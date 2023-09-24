@@ -27,7 +27,7 @@ const navigation = {
   useful: [
     { name: "Portfolio", href: "/portfolio" },
     { name: "Case Studies", href: "/portfolio#case_studies" },
-    { name: "Blog", href: "/blog" },
+    { name: "Blogs", href: "/blogs" },
     { name: "Contact", href: "/contact" },
   ],
   social: [
@@ -65,7 +65,7 @@ export default function Footer() {
             src="/footer/footer.svg"
             height={1000}
             width={1000}
-            alt="Company name"
+            alt="Digital Army, All the Reasons to Market Your Business Online"
           />
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
@@ -74,7 +74,7 @@ export default function Footer() {
                   Home
                 </h3>
               </div>
-              <div className="mt-10 md:mt-0">
+              <div>
                 <h3 className="text-sm font-semibold leading-6 text-black">
                   Home
                 </h3>

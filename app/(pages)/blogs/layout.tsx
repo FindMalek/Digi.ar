@@ -6,8 +6,8 @@ import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Home | Digital Army",
-  description: "Digital Army is a digital marketing agency in Tunisia. We help businesses grow online with our digital marketing services. We offer SEO, PPC, Social Media Marketing, Content Marketing, and more.",
+  title: "Blogs | Digital Army",
+  description: "Here you can find all the blogs of Digital Army. We write about digital marketing, SEO, social media, and more. We hope you enjoy reading them.",
   author: "Mahmoud Beznaiguia",
   siteUrl: "https://digitalarmy.me",
   social: {

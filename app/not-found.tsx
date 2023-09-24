@@ -37,8 +37,8 @@ const links = [
     icon: BookmarkSquareIcon,
   },
   {
-    name: "Blog",
-    href: "/blog",
+    name: "Blogs",
+    href: "/blogs",
     description: "Read our latest news and articles.",
     icon: RssIcon,
   },
