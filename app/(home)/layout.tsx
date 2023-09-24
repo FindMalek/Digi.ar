@@ -16,23 +16,6 @@ export const metadata = {
     github: "",
     email: "mailto:mahmoudbeznaiguia.pro@gmail.com",
   },
-  keywords: [
-    "digital marketing",
-    "digital marketer",
-    "digital marketing consultant",
-    "digital marketing freelancer",
-    "digital marketing expert",
-    "digital marketing consultant",
-    "digital marketing agency",
-    "digital marketing services",
-    "digital marketing company",
-    "digital marketing agency near me",
-    "digital marketing agency tunisia",
-    "digital marketing agency in tunisia",
-    "digital marketing agency in tunis",
-    "digital marketing agency in sousse",
-    "digital marketing agency in sfax",
-  ],
 };
 
 export default function RootLayout({
@@ -46,7 +29,6 @@ export default function RootLayout({
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="author" content={metadata.author} />
-        <meta name="keywords" content={metadata.keywords.join(", ")} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#000000" />
         <link rel="icon" href="/favicon.ico" />

@@ -41,7 +41,7 @@ export default function Overview() {
               Nos Réussites Avec Nos Clients
             </h2>
             <p className="mt-6 text-xl leading-8 text-gray-600">
-              Nous avons aidé des dizaines d'entreprises à atteindre leurs
+              Nous avons aidé des dizaines d&apos;entreprises à atteindre leurs
               objectifs en ligne. Nous pouvons vous aider à faire de même.
             </p>
             <Image

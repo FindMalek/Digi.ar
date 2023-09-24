@@ -110,7 +110,7 @@ export default function DetailBlog({ open, setOpen, post }: DetailBlogProps) {
 
                       <div className="mt-8 text-gray-600">
                         <p className="text-base font-medium">
-                          Besoin d'expertise professionnelle pour propulser
+                          Besoin d&apos;expertise professionnelle pour propulser
                           votre entreprise vers de nouveaux sommets ? Nous
                           sommes là pour vous.{" "}
                           <Link
