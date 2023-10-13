@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import Link from "next/link";
+
 import { Check, ChevronsUpDown } from "lucide-react";
 import { Loader2 } from "lucide-react";
 
@@ -38,6 +40,8 @@ import {
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { Textarea } from "@/components/ui/Textarea";
+import { ToastAction } from "@/components/ui/Toast";
+
 
 const whatareyou = [
   { label: "I'm a Company", value: "company" },
@@ -154,7 +158,7 @@ export default function ContactForm() {
   const [partnershipVisible, setPartnerShipVisible] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
-    // @ts-expect-error zodResolver is not typed correctly
+    // @ts-ignore zodResolver is not typed correctly
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullname: "",
@@ -214,20 +218,45 @@ export default function ContactForm() {
       });
 
     setIsLoading(true);
-    if (values) {
-      toast({
-        title: `${values.fullname} your message has been sent!`,
-        description: "We will contact you soon!",
-      });
 
-      form.reset();
-    } else {
-      toast({
-        title: `Please fill the form correctly!`,
-        description: "We can't send your message without your agreement!",
-        variant: "destructive",
+    await fetch("/api/", {
+      method: "POST",
+      body: JSON.stringify(values),
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          toast({
+            title: "Message Received",
+            description: `Thank you, ${values.fullname}! Your message has been received. We will get back to you soon at ${values.email}.`,
+          });
+          form.reset();
+        } else {
+          console.log(response);
+          toast({
+            variant: "destructive",
+            title: "Uh oh! Something went wrong.",
+            description: "There was a problem with your request.",
+            action: (
+              <ToastAction altText="Try again">
+                <Link href="/contact">Try again</Link>
+              </ToastAction>
+            ),
+          });
+        }
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        toast({
+          variant: "destructive",
+          title: "Uh oh! Something went wrong.",
+          description: "There was a problem with your Internet Connection.",
+          action: (
+            <ToastAction altText="Try again">
+              <Link href="/contact">Try again</Link>
+            </ToastAction>
+          ),
+        });
       });
-    }
 
     setIsLoading(false);
   }

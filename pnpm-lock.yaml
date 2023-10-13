@@ -134,6 +134,9 @@ dependencies:
   next:
     specifier: 13.4.12
     version: 13.4.12(@babel/core@7.22.10)(react-dom@18.2.0)(react@18.2.0)
+  nodemailer:
+    specifier: ^6.9.6
+    version: 6.9.6
   postcss:
     specifier: 8.4.27
     version: 8.4.27
@@ -3863,6 +3866,11 @@ packages:
 
   /node-releases@2.0.13:
     resolution: {integrity: sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ==}
+    dev: false
+
+  /nodemailer@6.9.6:
+    resolution: {integrity: sha512-s7pDtWwe5fLMkQUhw8TkWB/wnZ7SRdd9HRZslq/s24hlZvBP3j32N/ETLmnqTpmj4xoBZL9fOWyCIZ7r2HORHg==}
+    engines: {node: '>=6.0.0'}
     dev: false
 
   /normalize-path@3.0.0:
