@@ -1,7 +1,6 @@
 "use client";
 
-import Navbar from "@/components/overall/Navbar";
-import Footer from "@/components/overall/Footer";
+
 
 import Herosection from "@/components/home/Herosection";
 import WeAreSection from "@/components/home/WeAreSection";
@@ -14,8 +13,6 @@ import Partnership from "@/components/home/Partnership";
 export default function Home() {
   return (
     <>
-      <Navbar />
-
       <Herosection />
       <WeAreSection />
       <TrustUsSection />
@@ -23,8 +20,6 @@ export default function Home() {
       <Statistics />
       <Reviews />
       <Partnership />
-
-      <Footer />
     </>
   );
 }

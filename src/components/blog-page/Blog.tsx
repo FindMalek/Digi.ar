@@ -1,6 +1,8 @@
-import Image from "next/image";
+"use client"
 
 import { useState } from "react";
+import Image from "next/image";
+
 
 import DetailBlog from "@/components/blog-page/DetailBlog";
 

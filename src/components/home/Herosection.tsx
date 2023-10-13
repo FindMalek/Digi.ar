@@ -40,10 +40,10 @@ export default function Herosection() {
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <Link href="/blogs" className="inline-flex space-x-6">
               <span className="rounded-full bg-pink-600/10 px-3 py-1 text-sm font-semibold leading-6 text-pink-600 ring-1 ring-inset ring-pink-600/10">
-                New blog
+                Newest blog
               </span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-                <span>Les tendances du marketing digital à suivre en 2024</span>
+                <span>Les tendances du...</span>
                 <ChevronRightIcon
                   className="h-5 w-5 text-gray-400"
                   aria-hidden="true"

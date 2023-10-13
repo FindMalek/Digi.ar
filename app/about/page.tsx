@@ -1,7 +1,8 @@
-"use client";
-
-import Navbar from "@/components/overall/Navbar";
-import Footer from "@/components/overall/Footer";
+export const metadata = {
+  title: "About | Digital Army",
+  description:
+    "Online portfolio of Mahmoud Beznaiguia, a digital marketer skilled in SEO, social media, email marketing, and more. View examples of his work and contact him to help your business succeed online.",
+};
 
 import Herosection from "@/components/about-page/Herosection";
 import Quotation from "@/components/about-page/Quotation";
@@ -15,8 +16,6 @@ import AProposNous from "@/components/about-page/APropposNous";
 export default function Home() {
   return (
     <>
-      <Navbar />
-
       <Herosection />
       <Timeline />
       <OurMission />
@@ -25,8 +24,6 @@ export default function Home() {
       <ContentSection />
       <AProposNous />
       <LogoCloud />
-
-      <Footer />
     </>
   );
 }
