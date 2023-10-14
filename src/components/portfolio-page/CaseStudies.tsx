@@ -204,7 +204,7 @@ const caseStudies = [
   },
   {
     logo: "/portfolio-page/bw-clients/25.webp",
-    client: "Circle Agency",
+    client: "Better & Stronger",
     service: "External Consultancy",
     date: "2022-04",
     title: "External Consultancy",
