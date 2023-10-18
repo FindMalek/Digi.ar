@@ -2,11 +2,30 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
-const stats = [
-  { id: 1, name: "Clients Worked With", value: "75" },
-  { id: 2, name: "Project Completed", value: "150" },
-  { id: 3, name: "Succesful Ad Campaigns", value: "100%" },
-  { id: 4, name: "Client Satisfaction", value: "1,000+" },
+const services = [
+  {
+    id: 1,
+    name: "Audit & Consulting ",
+    value:
+      "We listen to your needs and help you to define your objectives and your strategy.",
+  },
+  {
+    id: 2,
+    name: "Collecte & Analyse des Résultats",
+    value:
+      "We help you to understand your data and to make the right decisions.",
+  },
+  {
+    id: 3,
+    name: "Recommandation & Stratégies",
+    value:
+      "We help you to understand your data and to make the right decisions.",
+  },
+  {
+    id: 4,
+    name: "Exécution des Prestations",
+    value: "We help you to implement your strategy and to achieve your goals.",
+  },
 ];
 
 export default function TrustUsSection() {
@@ -14,7 +33,7 @@ export default function TrustUsSection() {
     <div className="relative bg-white">
       <Image
         className="h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2"
-        src="/home-page/trust-us/Mountains.webp"
+        src="/home-page/trust-us/trends.webp"
         alt="A picture from Pexels.com of a mountain and some people hiking and rising their hands in the air."
         height={1000}
         width={1000}
@@ -34,17 +53,17 @@ export default function TrustUsSection() {
               pour optimiser leurs performances marketing.
             </p>
             <dl className="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
-              {stats.map((stat) => (
+              {services.map((service) => (
                 <div
-                  key={stat.id}
-                  className="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6"
+                  key={service.id}
+                  className="flex flex-col gap-y-3 border-l border-pink-600/30 pl-6"
                 >
-                  <dt className="text-sm leading-6 text-gray-600">
-                    {stat.name}
-                  </dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">
-                    {stat.value}
+                  <dd className="order-first text-lg font-bold tracking-tight text-gray-900">
+                    {service.name}
                   </dd>
+                  <dt className="text-smleading-6 text-gray-600">
+                    {service.value}
+                  </dt>
                 </div>
               ))}
             </dl>

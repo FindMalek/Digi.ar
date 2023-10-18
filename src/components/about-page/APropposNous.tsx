@@ -64,20 +64,6 @@ export default function AProposNous() {
           </div>
         </div>
       </div>
-      <div className="relative overflow-hidden pt-16 lg:pt-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Image
-            className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
-            src="/about-page/content/content.webp"
-            alt=""
-            height={1500}
-            width={1500}
-          />
-          <div className="relative" aria-hidden="true">
-            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

@@ -1,38 +1,32 @@
 const timeline = [
   {
-    name: "Founded company",
+    name: "Company Inception",
     description:
-      "Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae.",
-    date: "Aug 2021",
-    dateTime: "2021-08",
+      "Founded with a vision for quality services at the right price, emphasizing excellence and customer satisfaction.",
+    date: "January 2018",
+    dateTime: "2018-01",
   },
   {
-    name: "Secured $65m in funding",
+    name: "Shifting Business Models",
     description:
-      "Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil.",
-    date: "Dec 2021",
-    dateTime: "2021-12",
+      "Pivoted our business model to establish a strong outsourcing network, expanding our reach and catering to large corporations.",
+    date: "January 2020",
+    dateTime: "2020-01",
   },
   {
-    name: "Released beta",
+    name: "A Major Milestone",
     description:
-      "Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis. Hic deleniti dolorem quia et.",
-    date: "Feb 2022",
-    dateTime: "2022-02",
-  },
-  {
-    name: "Global launch of product",
-    description:
-      "Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit.",
-    date: "Dec 2022",
-    dateTime: "2022-12",
+      "Achieved a significant milestone by partnering with our first multinational brands, showcasing the industry's trust in our capabilities.",
+    date: "November 2022",
+    dateTime: "2022-11",
   },
 ];
+
 
 export default function Timeline() {
   return (
     <section id="timeline" className="mx-auto -mt-8 max-w-7xl px-6 lg:px-8">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-3">
         {timeline.map((item) => (
           <div key={item.name}>
             <time

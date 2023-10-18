@@ -9,7 +9,7 @@ export default function Quotation() {
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <Image
                 className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-                src="/about-page/quotation/profile-picture.webp"
+                src="/about-page/quotation/profile.webp"
                 height={1000}
                 width={1000}
                 alt="Image of the CEO of Digital Army: Mahmoud Beznaiguia"

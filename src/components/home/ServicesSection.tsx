@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import {
@@ -10,7 +12,6 @@ import {
 } from "@heroicons/react/24/outline";
 
 import ServiceModal from "@/components/home/ServiceModal";
-import { useState } from "react";
 
 const features = [
   {

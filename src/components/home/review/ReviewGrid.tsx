@@ -1,6 +1,8 @@
+"use client";
+
 import clsx from "clsx";
 import { useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 import { splitArray } from "@/lib/utils";
 
@@ -18,6 +20,7 @@ type Review = {
 
 function ReviewGrid({ reviews }: Review) {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  
   let isInView = useInView(containerRef, { once: true, amount: 0.4 });
   let columns = splitArray({ array: reviews, numParts: 3 });
   columns = [
@@ -25,7 +28,6 @@ function ReviewGrid({ reviews }: Review) {
     columns[1],
     splitArray({ array: columns[2], numParts: 2 }),
   ];
-
 
   return (
     <div

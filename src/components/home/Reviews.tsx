@@ -5,7 +5,7 @@ const reviews = [
   {
     title: "YR PANAROMA",
     body: "A propos du C.E.O: Profil assez complet, avec une vision stratégique et des aptitudes commerciales prouvées.",
-    author: "M.A.E (DG, Access)",
+    author: "M.A.E (DG, YR PANAROMA)",
     rating: 4,
     imageSrc: "/home-page/reviews/YR PANORAMA TUNIS.webp",
   },

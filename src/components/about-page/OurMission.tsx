@@ -4,9 +4,9 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 import { Button } from "@/components/ui/Button";
 
 const stats = [
-  { label: "Transactions every 24 hours", value: "44 million" },
-  { label: "Assets under holding", value: "$119 trillion" },
-  { label: "New users annually", value: "46,000" },
+  { label: "Clients Worked With", value: "75" },
+  { label: "Project Completed", value: "150" },
+  { label: "Successful Ad Campaigns", value: "1,000+" },
 ];
 
 export default function OurMission() {
