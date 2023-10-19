@@ -3,22 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface LogoProps {
-  theme: "light" | "dark";
   className: string;
   special?: boolean;
 }
 
-const Logo = ({ theme = "light", className, special }: LogoProps) => {
-  const logoSrc =
-    theme === "light" ? "/logos/logo-white.webp" : "/logos/logo-black.webp";
+const Logo = ({ className, special }: LogoProps) => {
   if (special)
     return (
       <Link href="/">
         <Image
-          src={logoSrc}
+          src="/logos/logo-black.webp"
           alt="The 'D' in the Digital Army Logo."
-          width={40}
-          height={25}
+          width={200}
+          height={100}
           className={className}
         />
       </Link>
@@ -27,10 +24,10 @@ const Logo = ({ theme = "light", className, special }: LogoProps) => {
     return (
       <Link href="/" className={className}>
         <Image
-          src={logoSrc}
-          alt="The 'D' in the Digital Army Logo."
-          width={40}
-          height={25}
+          src="/logos/Digi-ar.svg"
+          alt="The 'Digi.ar' Logo for the Digital Army."
+          width={200}
+          height={100}
         />
       </Link>
     );

@@ -7,9 +7,8 @@ const posts = [
     href: "#",
     description:
       "Le marketing digital est en constante évolution et il est important pour les professionnels du marketing de rester à jour sur les dernières tendances pour réussir dans ce domaine. En 2024, nous prévoyons de nombreuses nouvelles tendances qui vont impacter le marketing digital, basées sur l'analyse des données de notre base la plus récente. Dans cet article, nous allons explorer les tendances les plus prometteuses à suivre en 2024.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    imageAlt: "Image alt text 1",
+    imageUrl: "/blogs-page/1.webp",
+    imageAlt: "Image of Marketing Digital blog post.",
     date: "2023/09/24",
     datetime: "20:00",
     category: {
@@ -62,9 +61,8 @@ const posts = [
     href: "#",
     description:
       "L'expérience utilisateur est devenue un aspect clé du marketing digital moderne. Les entreprises qui réussissent sont celles qui placent l'utilisateur au cœur de leur stratégie de marketing. En effet, l'expérience utilisateur (UX) est la manière dont un utilisateur interagit avec une entreprise en ligne. Cela inclut l'ensemble des interactions qu'un utilisateur a avec votre entreprise, allant de la navigation sur votre site web, la consultation de vos contenus, à l'achat de vos produits.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    imageAlt: "Image alt text 2",
+    imageUrl: "/blogs-page/2.webp",
+    imageAlt: "Image of Important of UX blog post.",
     date: "2023/09/24",
     datetime: "20:00",
     category: {
@@ -105,10 +103,8 @@ const posts = [
     href: "#",
     description:
       "Les réseaux sociaux sont devenus un élément essentiel de toute stratégie de marketing en ligne. Ils offrent une plateforme puissante pour atteindre votre public cible, promouvoir vos produits ou services, et générer des conversions. Cependant, pour réussir dans le paysage concurrentiel des médias sociaux, il est crucial d'optimiser vos campagnes publicitaires. Voici quelques-unes des meilleures pratiques pour y parvenir :",
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-
-    imageAlt: "Image alt text 3",
+    imageUrl: "/blogs-page/3.webp",
+    imageAlt: "Image of Social Media Ads blog post.",
     date: "2023/09/24",
     datetime: "20:00",
     category: {
@@ -196,9 +192,8 @@ const posts = [
     href: "#",
     description:
       "Une stratégie marketing solide est essentielle pour atteindre vos objectifs commerciaux et maximiser l'impact de votre entreprise. Que vous soyez une startup en plein essor ou une entreprise établie, voici un guide en 5 étapes pour vous aider à définir une stratégie marketing efficace.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    imageAlt: "Image alt text 4",
+    imageUrl: "/blogs-page/4.webp",
+    imageAlt: "Image of Stratégie Marketing blog post.",
     date: "2023/09/24",
     datetime: "20:00",
     category: {

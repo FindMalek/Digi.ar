@@ -33,7 +33,7 @@ export default function TrustUsSection() {
     <div className="relative bg-white">
       <Image
         className="h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2"
-        src="/home-page/trust-us/trends.webp"
+        src="/home-page/trust-us/Mountains.webp"
         alt="A picture from Pexels.com of a mountain and some people hiking and rising their hands in the air."
         height={1000}
         width={1000}

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Container } from "@/components/overall/Container";
 import ReviewGrid from "@/components/home/review/ReviewGrid";
 
@@ -6,7 +8,7 @@ const reviews = [
     title: "YR PANAROMA",
     body: "A propos du C.E.O: Profil assez complet, avec une vision stratégique et des aptitudes commerciales prouvées.",
     author: "M.A.E (DG, YR PANAROMA)",
-    rating: 4,
+    rating: 5,
     imageSrc: "/home-page/reviews/YR PANORAMA TUNIS.webp",
   },
   {
@@ -20,14 +22,14 @@ const reviews = [
     title: "Better & Stronger",
     body: "Digital Army, l'entreprise à contacter en cas de besoin. Leur niveau de français élevé et leur esprit d'initiative font la différence pour une sous-traitance réussie. Un regard client centric et un marketing 360 sans équivoque !",
     author: "Ronnan.C  (COO, Better & Stronger)",
-    rating: 4,
+    rating: 5,
     imageSrc: "/home-page/reviews/Calque 1.webp",
   },
   {
     title: "Circle Agency",
     body: "Digital Army m’a permis d’offrir des services de conseils d’excellence aux clients de mon agence créative. Nous sommes très satisfait de collaborer avec une telle expertise dans la publicité et le marketing.",
     author: "Amine.K (CEO, Circle Agency)",
-    rating: 4,
+    rating: 5,
     imageSrc: "/home-page/reviews/Circle Agency.webp",
   },
   {
@@ -41,7 +43,7 @@ const reviews = [
     title: "WappDev",
     body: "Très surpris de la réactivité et du temps d'exécution de cette agence formatrice en community management.",
     author: "Malek Laz. (Co-Founder, WappDev)",
-    rating: 4,
+    rating: 5,
     imageSrc: "/home-page/reviews/Wapp Dev.webp",
   },
 ];
@@ -51,7 +53,7 @@ export default function Reviews() {
     <section
       id="reviews"
       aria-labelledby="reviews-title"
-      className="pb-16 pt-20 sm:pb-24 sm:pt-32"
+      className="pt-20 sm:pb-6 sm:pt-32"
     >
       <Container>
         <h2
@@ -67,6 +69,21 @@ export default function Reviews() {
         </p>
         <ReviewGrid reviews={reviews} />
       </Container>
+
+      <div className="py-8">
+        <div className="flex justify-center">
+          <p className="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/5">
+            <span className="hidden md:inline">
+              Plus de 75 clients nous ont fait confiance et nous avons mené à
+              bien plus de 150 projets.
+            </span>
+            <Link href="/about" className="font-semibold text-purple-900">
+              <span className="absolute inset-0" aria-hidden="true" /> Read our
+              customer stories <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

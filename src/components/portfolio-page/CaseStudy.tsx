@@ -34,7 +34,7 @@ export default function CaseStudy({ caseStudy }: CaseStudy) {
           <Image
             src={caseStudy.logo}
             alt={caseStudy.client}
-            width={500}
+            width={700}
             height={500}
             className="h-[100px] w-[100px] flex-none"
             unoptimized

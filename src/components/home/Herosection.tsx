@@ -36,7 +36,7 @@ export default function Herosection() {
 
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
-          <Logo className="xs:hidden lg:block h-11 w-auto" theme="dark" />
+          <Logo className="xs:hidden lg:block h-11 w-auto" special={true} />
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <Link href="/blogs" className="inline-flex space-x-6">
               <span className="rounded-full bg-pink-600/10 px-3 py-1 text-sm font-semibold leading-6 text-pink-600 ring-1 ring-inset ring-pink-600/10">
