@@ -31,13 +31,17 @@ const services = [
 export default function TrustUsSection() {
   return (
     <div className="relative bg-white">
-      <Image
-        className="h-56 w-full bg-gray-50 object-cover lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2"
-        src="/home-page/trust-us/Mountains.webp"
-        alt="A picture from Pexels.com of a mountain and some people hiking and rising their hands in the air."
-        height={1000}
-        width={1000}
-      />
+      <div className="relative h-40 w-full lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
+        <Image
+          className="absolute inset-0 object-cover w-full h-full"
+          src="/home-page/trust-us/Standing.webp"
+          alt="A picture from Pexels.com of a mountain and some people hiking and rising their hands in the air."
+          height={1000}
+          width={1000}
+        />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-gray-50" />
+      </div>
+
       <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
         <div className="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-1 lg:px-8 lg:pt-32">
           <div className="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">

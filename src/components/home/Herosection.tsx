@@ -78,8 +78,8 @@ export default function Herosection() {
           <div className="max-w-3xl mt-16 flex-none sm:max-w-5xl lg:max-w-none">
             <div className="mx-auto sm:flex sm:items-center -m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
               <Image
-                src="/home-page/herosection/herosection.webp"
-                alt="Man working on a paper, using a pen, bright background with a small house, 2 rolled papers."
+                src="/home-page/herosection/hero-section.webp"
+                alt="Circle divided by 4 and filled with different colors. Each color represents a different service. The circle is surrounded by a yellow background"
                 width={2432}
                 height={1442}
                 className="w-[50rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"

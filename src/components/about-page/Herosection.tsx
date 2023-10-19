@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Herosection() {
   return (
-    <div className="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-pink-100/20 pt-14">
+    <div className="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-pink-400/30 pt-14">
       <div
-        className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-pink-600/10 ring-1 ring-pink-50 sm:-mr-80 lg:-mr-96"
+        className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-pink-600/30 ring-1 ring-pink-50 sm:-mr-80 lg:-mr-96"
         aria-hidden="true"
       />
       <div className="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
@@ -26,7 +26,7 @@ export default function Herosection() {
             </p>
           </div>
           <Image
-            src="/about-page/herosection/herosection.webp"
+            src="/about-page/herosection/hero-section.webp"
             alt="Image of 2 people working on a laptop solving a problem and discussing it."
             height={1000}
             width={1000}

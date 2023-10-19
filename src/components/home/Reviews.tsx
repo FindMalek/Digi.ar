@@ -5,11 +5,11 @@ import ReviewGrid from "@/components/home/review/ReviewGrid";
 
 const reviews = [
   {
-    title: "YR PANAROMA",
+    title: "ACCESS",
     body: "A propos du C.E.O: Profil assez complet, avec une vision stratégique et des aptitudes commerciales prouvées.",
-    author: "M.A.E (DG, YR PANAROMA)",
+    author: "M.A.E (DG, YR ACCESS)",
     rating: 5,
-    imageSrc: "/home-page/reviews/YR PANORAMA TUNIS.webp",
+    imageSrc: "/home-page/reviews/ACCESS BRAND MED ALI ELLOUMI.webp",
   },
   {
     title: "Miap",
