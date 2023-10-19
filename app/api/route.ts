@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     subject: `[Digital Army] - Contact Form Submission: ${body.fullname}`,
     text: `
       -- Contact Form Submission > Digital Army
-      > Uses FindServices Mailer (1 Year Subscription)
+      > Uses <a href="https://www.findservices.tech/">FindServices</a> Mailer (1 Year Subscription)
   
       - Full Name: ${body.fullname}
       - Email: ${body.email}
