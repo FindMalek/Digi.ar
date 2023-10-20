@@ -4,6 +4,7 @@ import TrustUsSection from "@/components/home/TrustUsSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import Statistics from "@/components/home/Statistics";
 import Reviews from "@/components/home/Reviews";
+import LogoCloud from "@/components/home/LogoCloud";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <Statistics />
       <Reviews />
+      <LogoCloud />
     </>
   );
 }

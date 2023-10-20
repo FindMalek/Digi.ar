@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 export default function AProposNous() {
   return (
     <section id="partenaire" className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <p className="text-base font-semibold leading-7 text-pink-600">
             À Propos de Digital Army
