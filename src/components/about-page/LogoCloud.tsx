@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 
 export default function LogoCloud() {
   return (
@@ -35,40 +36,38 @@ export default function LogoCloud() {
           />
         </svg>
       </div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
-          Trusted by the world&apos;s most innovative teams
-        </h2>
-        <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+      <div className="whitespace-nowrap flex marqueex-animation">
+        {[
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+          10, 11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4,
+          5, 6, 7, 8, 9, 10, 11, 12, 13,
+        ].map((number) => (
           <Image
-            className="col-span-2 max-h-24 w-full object-contain lg:col-span-1"
-            src="/partnerships/1.webp"
-            alt="Panorama Y&R Tunisie"
-            width={1000}
-            height={1000}
-          />
-          <Image
-            className="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
-            src="/partnerships/2.webp"
-            alt="Wapp Devv"
+            key={number}
+            className="max-h-24 w-full object-contain"
+            src={`/partnerships/${number}.webp`}
+            alt="Cloud Logo"
             width={158}
             height={48}
           />
+        ))}
+      </div>
+      <div className="whitespace-nowrap flex marqueexx-animation">
+        {[
+          26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 26, 25, 24, 23,
+          22, 21, 20, 19, 18, 17, 16, 15, 14, 26, 25, 24, 23, 22, 21, 20, 19,
+          18, 17, 16, 15, 14, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15,
+          14,
+        ].map((number) => (
           <Image
-            className="col-span-2 max-h-32 w-full object-contain lg:col-span-1"
-            src="/partnerships/3.webp"
-            alt="Wapp Devv"
+            key={number}
+            className="max-h-24 w-full object-contain"
+            src={`/partnerships/${number}.webp`}
+            alt="Cloud Logo"
             width={158}
             height={48}
           />
-          <Image
-            className="col-span-2 max-h-40 w-full object-contain lg:col-span-1"
-            src="/partnerships/4.webp"
-            alt="Wapp Devv"
-            width={158}
-            height={48}
-          />
-        </div>
+        ))}
       </div>
     </div>
   );
