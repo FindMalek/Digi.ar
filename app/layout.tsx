@@ -34,8 +34,10 @@ export default function RootLayout({
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="author" content={metadata.author} />
-        <meta name="google-site-verification" content="IlB74JDj9nkPb55-dstbETe__2fG_6yxCtHavoKBKb0" />
       </Head>
+
+      <meta name="google-site-verification" content="IlB74JDj9nkPb55-dstbETe__2fG_6yxCtHavoKBKb0" />
+      
       <body className={montserrat.className}>
         <Navbar />
         {children}
