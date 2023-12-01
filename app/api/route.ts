@@ -12,7 +12,7 @@ export async function POST(req: Request) {
   });
 
   const mailOptions = {
-    from: process.env.SENDER_EMAIL,
+    from: `FindMalek Mailer <` + process.env.SENDER_EMAIL + `>`,
     to: process.env.MAIN_EMAIL,
     subject: `[Digital Army] - Contact Form Submission: ${body.fullname}`,
     text: `
