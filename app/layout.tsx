@@ -34,10 +34,7 @@ export default function RootLayout({
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="author" content={metadata.author} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <meta name="google-site-verification" content="IlB74JDj9nkPb55-dstbETe__2fG_6yxCtHavoKBKb0" />
       </Head>
       <body className={montserrat.className}>
         <Navbar />
