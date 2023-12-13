@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 
 import Head from "next/head";
-import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import Navbar from "@/components/overall/Navbar";
 import Footer from "@/components/overall/Footer";
@@ -18,7 +18,6 @@ export const metadata = {
   social: {
     twitter: "https://twitter.com/digitalarmy_me",
     linkedin: "https://www.linkedin.com/in/mahmoudbeznaiguia/",
-    github: "",
     email: "mailto:mahmoudbeznaiguia.pro@gmail.com",
   },
 };
@@ -36,13 +35,13 @@ export default function RootLayout({
         <meta name="author" content={metadata.author} />
       </Head>
 
-      <meta name="google-site-verification" content="IlB74JDj9nkPb55-dstbETe__2fG_6yxCtHavoKBKb0" />
+      <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION} />
       
       <body className={montserrat.className}>
         <Navbar />
         {children}
         <Footer />
-        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
