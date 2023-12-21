@@ -140,12 +140,12 @@ export default function NotFound() {
           <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
             &copy; {new Date().getFullYear()} Digital Army, Inc. | Created by{" "}
             <Link
-              href="https://findservices.vercel.app/"
+              href="https://findservices.tech/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-pink-500 hover:text-pink-600"
             >
-              FindServices
+              FindMalek
             </Link>
             . All rights reserved.
           </p>
